@@ -1,0 +1,45 @@
+# Environment variables & secrets
+.env
+*.env
+.env.*
+!.env.example
+
+# Raw Data files (CSV, Excel, etc.)
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.jsonl
+*.parquet
+*.feather
+BOT_csv_raw_data/
+**/BOT_csv_raw_data/
+data/
+**/data/
+
+# Python & Jupyter cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints/
+.pytest_cache/
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE & OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db
+.DS_Store
+
+# Logs & Database temp files
+*.log
+*.err
+*.pid
+*.dmp
