@@ -33,12 +33,19 @@ thai_customs/
 │   ├── normalizers.py           # การแปลงปี พ.ศ. -> ค.ศ., Pad 0 พิกัด HS และรหัสสถิติ
 │   ├── fact_transformers.py     # Streaming Chunk Transformers
 │   └── loaders.py               # Atomic Partition Overwrite & Audit Logging
+├── master_data/                 # Master Dimension Reference Files
+│   ├── Dim_HS Code.csv          # Master ลำดับชั้นสินค้า 4 ระดับ (2, 4, 8, 11 หลัก)
+│   └── Dim_COUNTRY_REGION_CIA.xlsx # Master รหัสประเทศและลำดับชั้นภูมิภาค CIA / ISO 3166
 ├── scripts/
+│   ├── check_status.py          # ตรวจสอบจำนวนแถวและสถานะการนำเข้าแบบ Real-Time
 │   ├── download_customs_data.py # ดาวน์โหลดข้อมูลทั้ง 8 ชุดจาก CKAN API
-│   ├── ingest_all_customs.py    # Ingest ข้อมูลย้อนหลังทั้งหมดลง MySQL
+│   ├── ingest_all_customs.py    # Ingest ข้อมูลย้อนหลังทั้งหมดลง MySQL (Resumable)
+│   ├── load_dim_country.py      # โหลด Master ประเทศและภูมิภาคเข้า dim_country
+│   ├── load_dim_hs_code.py      # โหลด Master ลำดับชั้นสินค้าเข้า dim_hs_code
 │   ├── sync_monthly_customs.py  # ตรวจสอบและอัปเดต Restatement ย้อนหลัง 2 ปีอัตโนมัติ
+│   ├── tune_db.py               # ปรับแต่ง Buffer Pool และ Indexes ประสิทธิภาพสูง
 │   └── verify_customs_db.py     # ตรวจสอบความถูกต้องและสถิติภาพรวม
-├── raw_data/                    # โฟลเดอร์เก็บข้อมูลดิบ (~10GB, ถูก Ignore ไม่ขึ้น Git)
+├── raw_data/                    # โฟลเดอร์เก็บข้อมูลดิบชั่วคราว (ถูก Ignore ไม่ขึ้น Git)
 └── README.md
 ```
 

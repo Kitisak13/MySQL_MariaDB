@@ -20,9 +20,12 @@ def pad_code(val, length):
     return s.zfill(length)[:length]
 
 def load_dim_hs_code():
-    csv_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "raw_data", "Dim_HS Code.csv"))
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    csv_path = os.path.join(base_dir, "master_data", "Dim_HS Code.csv")
     if not os.path.exists(csv_path):
-        raise FileNotFoundError(f"File not found: {csv_path}")
+        csv_path = os.path.join(base_dir, "raw_data", "Dim_HS Code.csv")
+    if not os.path.exists(csv_path):
+        raise FileNotFoundError(f"File not found in master_data or raw_data: {csv_path}")
 
     print(f"Reading Multi-Level HS Code Master from: {csv_path}")
     df = pd.read_csv(csv_path, encoding="utf-8")
@@ -32,7 +35,7 @@ def load_dim_hs_code():
     cursor = conn.cursor()
 
     try:
-        # Step 1: Drop & Recreate dim_hs_code with comprehensive 4-level hierarchy
+        # Step 1: Drop & Recreate dim_hs_code
         print("Recreating `dim_hs_code` table structure...")
         cursor.execute("DROP TABLE IF EXISTS `dim_hs_code`;")
         cursor.execute("""
@@ -59,7 +62,11 @@ def load_dim_hs_code():
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Dimension: 4-Level HS Code & Statistical Commodity Hierarchy (2, 4, 8, 11 Digits)';
         """)
 
-        # Step 2: Prepare records from CSV
+        # Step 2: Prepare lookup maps for inheritance
+        hs8_map = {}
+        hs4_map = {}
+        hs2_map = {}
+
         records = []
         seen_11 = set()
 
@@ -70,10 +77,6 @@ def load_dim_hs_code():
             hs2 = pad_code(row.get("HS_2 Digit"), 2)
             stat = hs11[8:11] if len(hs11) == 11 else "000"
 
-            if hs11 in seen_11:
-                continue
-            seen_11.add(hs11)
-
             desc_11_en = clean_text(row.get("HS 11 Digit EN_Des"), max_len=500)
             desc_11_th = clean_text(row.get("HS 11 Digit TH_Des"), max_len=500)
             desc_8_th = clean_text(row.get("HS 8 Digit TH_Des"), max_len=500)
@@ -81,40 +84,57 @@ def load_dim_hs_code():
             desc_4_en = clean_text(row.get("HS 4 Digit EN_Des"), max_len=500)
             desc_2_en = clean_text(row.get("HS 2 Digit EN_Des"), max_len=500)
 
+            if hs8 not in hs8_map:
+                hs8_map[hs8] = (desc_8_th, desc_8_en, hs4, hs2, desc_4_en, desc_2_en)
+            if hs4 not in hs4_map:
+                hs4_map[hs4] = (desc_4_en, hs2, desc_2_en)
+            if hs2 not in hs2_map:
+                hs2_map[hs2] = desc_2_en
+
+            if hs11 in seen_11:
+                continue
+            seen_11.add(hs11)
+
             records.append((
                 hs11, hs8, stat, hs4, hs2,
                 desc_11_th, desc_11_en, desc_8_th, desc_8_en, desc_4_en, desc_2_en, None
             ))
 
-        # Step 3: Check distinct hs_code & stat_code from fact tables to backfill any missing items
-        print("Checking for existing commodities across fact tables to ensure 100% coverage...")
-        cursor.execute("""
-            SELECT DISTINCT hs_code, stat_code, unit_code 
-            FROM fact_trade_by_country;
-        """)
-        fact_commodities = cursor.fetchall()
-        print(f"Total distinct (hs_code, stat_code) in fact_trade_by_country: {len(fact_commodities):,}")
+        # Step 3: Check all 4 fact tables for distinct (hs_code, stat_code)
+        print("Gathering distinct commodities from all fact tables...")
+        fact_commodities = set()
+        for tbl in ["fact_trade_by_country", "fact_trade_by_transport", "fact_trade_by_port", "fact_trade_by_office"]:
+            cursor.execute(f"SELECT DISTINCT hs_code, stat_code, unit_code FROM `{tbl}`;")
+            for r in cursor.fetchall():
+                fact_commodities.add((pad_code(r[0], 8), pad_code(r[1], 3), clean_text(r[2], max_len=10)))
+
+        print(f"Total distinct (hs_code, stat_code) across fact tables: {len(fact_commodities):,}")
 
         backfill_count = 0
-        for r in fact_commodities:
-            hs8 = pad_code(r[0], 8)
-            stat = pad_code(r[1], 3)
-            unit = clean_text(r[2], max_len=10)
+        for hs8, stat, unit in fact_commodities:
             hs11 = hs8 + stat
-            hs4 = hs8[:4]
-            hs2 = hs8[:2]
-
             if hs11 not in seen_11:
                 seen_11.add(hs11)
+                
+                # Try to inherit from hs8_map
+                if hs8 in hs8_map:
+                    d8_th, d8_en, hs4, hs2, d4_en, d2_en = hs8_map[hs8]
+                else:
+                    hs4 = hs8[:4]
+                    hs2 = hs8[:2]
+                    d8_th, d8_en = None, None
+                    d4_en = hs4_map.get(hs4, (None,))[0] if hs4 in hs4_map else None
+                    d2_en = hs2_map.get(hs2)
+
                 records.append((
                     hs11, hs8, stat, hs4, hs2,
-                    None, None, None, None, None, None, unit
+                    d8_th, d8_en, d8_th, d8_en, d4_en, d2_en, unit
                 ))
                 backfill_count += 1
 
-        print(f"Backfilled {backfill_count} additional commodity codes from fact tables.")
+        print(f"Backfilled {backfill_count} additional commodity records with inherited hierarchy.")
 
-        # Step 4: Bulk Insert into dim_hs_code
+        # Step 4: Bulk Insert
         print(f"Inserting total {len(records):,} records into `dim_hs_code`...")
         insert_sql = """
             INSERT INTO `dim_hs_code` (
@@ -139,12 +159,17 @@ def load_dim_hs_code():
         conn.commit()
         print(f"Successfully loaded {len(records):,} multi-level HS Code records into `dim_hs_code`!")
 
-        # Step 5: Verification
-        cursor.execute("SELECT hs_11_code, hs_8_code, hs_4_code, hs_2_code, desc_11_th, desc_2_en FROM dim_hs_code ORDER BY hs_11_code LIMIT 5;")
-        sample_rows = cursor.fetchall()
-        df_sample = pd.DataFrame(sample_rows, columns=["hs_11_code", "hs_8_code", "hs_4_code", "hs_2_code", "desc_11_th", "desc_2_en"])
-        print("\nSample records in upgraded dim_hs_code:")
-        print(df_sample.to_string(index=False))
+        # Step 5: Verify 100% match
+        cursor.execute("""
+            SELECT COUNT(*) AS unmatched 
+            FROM fact_trade_by_country f 
+            LEFT JOIN dim_hs_code d 
+              ON f.hs_code = d.hs_8_code 
+             AND f.stat_code = d.stat_code 
+            WHERE d.hs_11_code IS NULL;
+        """)
+        unmatched_cnt = cursor.fetchone()[0]
+        print(f"\nFinal Validation: Unmatched Fact Records = {unmatched_cnt} (Target: 0)")
 
     finally:
         cursor.close()

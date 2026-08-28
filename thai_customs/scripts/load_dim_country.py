@@ -19,9 +19,12 @@ def clean_val(v):
     return s if s and s.lower() not in ("nan", "none", "null") else None
 
 def load_dim_country():
-    excel_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "raw_data", "Dim_COUNTRY_REGION_CIA.xlsx"))
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    excel_path = os.path.join(base_dir, "master_data", "Dim_COUNTRY_REGION_CIA.xlsx")
     if not os.path.exists(excel_path):
-        raise FileNotFoundError(f"File not found: {excel_path}")
+        excel_path = os.path.join(base_dir, "raw_data", "Dim_COUNTRY_REGION_CIA.xlsx")
+    if not os.path.exists(excel_path):
+        raise FileNotFoundError(f"File not found in master_data or raw_data: {excel_path}")
 
     print(f"Reading Country Master from: {excel_path}")
     df = pd.read_excel(excel_path, sheet_name="Dim_Country")
