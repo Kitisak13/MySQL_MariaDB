@@ -96,11 +96,18 @@ erDiagram
 #### Table: `dim_hs_code`
 | Column Name | Data Type | Constraints | Description |
 | :--- | :--- | :--- | :--- |
-| `hs_code` | `CHAR(8)` | `PK (Part 1)` | พิกัดศุลกากร 8 หลัก (Pad 0 ด้านหน้าครบ 8 หลัก) |
-| `stat_code` | `CHAR(3)` | `PK (Part 2)` | รหัสสถิติ 3 หลัก (Pad 0 ด้านหน้าครบ 3 หลัก) |
-| `unit_code` | `VARCHAR(10)` | `PK (Part 3)` | หน่วยตามรหัสสถิติ เช่น KGM, C62, TNE |
-| `desc_th` | `VARCHAR(500)` | - | คำอธิบายพิกัดภาษาไทย |
-| `desc_en` | `VARCHAR(500)` | - | คำอธิบายพิกัดภาษาอังกฤษ |
+| `hs_11_code` | `CHAR(11)` | `PRIMARY KEY` | Level 4: รหัสสินค้า 11 หลัก (พิกัด 8 หลัก + รหัสสถิติ 3 หลัก) |
+| `hs_8_code` | `CHAR(8)` | `INDEX` | Level 3: พิกัดศุลกากร 8 หลัก (Sub-heading) |
+| `stat_code` | `CHAR(3)` | - | รหัสสถิติ 3 หลัก |
+| `hs_4_code` | `CHAR(4)` | `INDEX` | Level 2: รหัสกลุ่มสินค้า 4 หลัก (Heading) |
+| `hs_2_code` | `CHAR(2)` | `INDEX` | Level 1: รหัสหมวดหมู่ใหญ่ 2 หลัก (Chapter) |
+| `desc_11_th` | `VARCHAR(500)` | - | คำอธิบายสินค้า 11 หลัก ภาษาไทย |
+| `desc_11_en` | `VARCHAR(500)` | - | คำอธิบายสินค้า 11 หลัก ภาษาอังกฤษ |
+| `desc_8_th` | `VARCHAR(500)` | - | คำอธิบายพิกัด 8 หลัก ภาษาไทย |
+| `desc_8_en` | `VARCHAR(500)` | - | คำอธิบายพิกัด 8 หลัก ภาษาอังกฤษ |
+| `desc_4_en` | `VARCHAR(500)` | - | คำอธิบายกลุ่มสินค้า 4 หลัก ภาษาอังกฤษ (Heading Description) |
+| `desc_2_en` | `VARCHAR(500)` | - | คำอธิบายหมวดสินค้า 2 หลัก ภาษาอังกฤษ (Chapter Description) |
+| `unit_code` | `VARCHAR(10)` | - | หน่วยตามรหัสสถิติ เช่น KGM, C62, TNE |
 
 #### Table: `dim_country`
 | Column Name | Data Type | Constraints | Description |

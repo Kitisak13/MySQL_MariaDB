@@ -11,18 +11,28 @@ USE `thai_customs`;
 -- 1. DIMENSION TABLES
 -- ============================================================================
 
--- 1.1 HS Code & Commodity Master
+-- 1.1 HS Code & Commodity Master (4-Level Product Hierarchy)
 CREATE TABLE IF NOT EXISTS `dim_hs_code` (
-    `hs_code` CHAR(8) NOT NULL COMMENT '8-digit Harmonized System Code',
-    `stat_code` CHAR(3) NOT NULL DEFAULT '000' COMMENT '3-digit Statistical Code',
-    `unit_code` VARCHAR(10) NOT NULL DEFAULT '' COMMENT 'Statistical Measurement Unit Code (e.g., KGM, C62, TNE)',
-    `desc_th` VARCHAR(500) NULL COMMENT 'Commodity Description in Thai',
-    `desc_en` VARCHAR(500) NULL COMMENT 'Commodity Description in English',
+    `hs_11_code` CHAR(11) NOT NULL COMMENT 'Level 4: 11-digit Full Tariff Line (hs_8 + stat_code)',
+    `hs_8_code` CHAR(8) NOT NULL COMMENT 'Level 3: 8-digit Harmonized System Sub-heading',
+    `stat_code` CHAR(3) NOT NULL DEFAULT '000' COMMENT 'Statistical Code',
+    `hs_4_code` CHAR(4) NOT NULL COMMENT 'Level 2: 4-digit HS Heading',
+    `hs_2_code` CHAR(2) NOT NULL COMMENT 'Level 1: 2-digit HS Chapter',
+    `desc_11_th` VARCHAR(500) NULL COMMENT 'Commodity Description 11-digit (Thai)',
+    `desc_11_en` VARCHAR(500) NULL COMMENT 'Commodity Description 11-digit (English)',
+    `desc_8_th` VARCHAR(500) NULL COMMENT 'Commodity Description 8-digit (Thai)',
+    `desc_8_en` VARCHAR(500) NULL COMMENT 'Commodity Description 8-digit (English)',
+    `desc_4_en` VARCHAR(500) NULL COMMENT 'Group Description 4-digit Heading (English)',
+    `desc_2_en` VARCHAR(500) NULL COMMENT 'Broad Category 2-digit Chapter (English)',
+    `unit_code` VARCHAR(10) NULL COMMENT 'Statistical Measurement Unit (e.g. KGM, C62, TNE)',
     `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    PRIMARY KEY (`hs_code`, `stat_code`, `unit_code`),
-    INDEX `idx_hs_code` (`hs_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Dimension: HS Code & Statistical Commodity Classifications';
+    PRIMARY KEY (`hs_11_code`),
+    INDEX `idx_hs8` (`hs_8_code`),
+    INDEX `idx_hs4` (`hs_4_code`),
+    INDEX `idx_hs2` (`hs_2_code`),
+    INDEX `idx_hs8_stat` (`hs_8_code`, `stat_code`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Dimension: 4-Level HS Code & Statistical Commodity Hierarchy (2, 4, 8, 11 Digits)';
 
 -- 1.2 Country Master (CIA & ISO 3166 Hierarchies)
 CREATE TABLE IF NOT EXISTS `dim_country` (
