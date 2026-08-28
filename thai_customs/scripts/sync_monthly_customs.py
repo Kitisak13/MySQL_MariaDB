@@ -123,4 +123,9 @@ def sync_customs_data(rolling_years: int = 2):
         conn.close()
 
 if __name__ == "__main__":
-    sync_customs_data(rolling_years=2)
+    import argparse
+    parser = argparse.ArgumentParser(description="Thai Customs Monthly & Restatement Sync Runner")
+    parser.add_argument("--years", "-y", type=int, default=2, help="Number of rolling years to check for restatements (default: 2)")
+    args = parser.parse_args()
+
+    sync_customs_data(rolling_years=args.years)
