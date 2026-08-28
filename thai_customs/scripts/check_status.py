@@ -18,7 +18,7 @@ print(f"Total Fact Rows Ingested: {row['total_rows'] or 0:,} rows")
 print(f"Total Value Processed: {row['total_thb'] or 0:,.2f} THB")
 
 print("\nDimension Tables Summary:")
-for tbl in ["dim_hs_code", "dim_transport_type", "dim_customs_port", "dim_customs_office"]:
+for tbl in ["dim_hs_code", "dim_country", "dim_transport_type", "dim_customs_port", "dim_customs_office"]:
     cur.execute(f"SELECT COUNT(*) AS c FROM `{tbl}`;")
     print(f"  - {tbl:<22}: {cur.fetchone()['c']:,} records")
 

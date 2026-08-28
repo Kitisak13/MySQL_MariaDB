@@ -105,9 +105,16 @@ erDiagram
 #### Table: `dim_country`
 | Column Name | Data Type | Constraints | Description |
 | :--- | :--- | :--- | :--- |
-| `country_code` | `VARCHAR(10)` | `PRIMARY KEY` | รหัสประเทศ เช่น US, CN, JP, LA, MM |
-| `country_name_th` | `VARCHAR(150)` | - | ชื่อประเทศภาษาไทย |
-| `country_name_en` | `VARCHAR(150)` | - | ชื่อประเทศภาษาอังกฤษ |
+| `country_code` | `VARCHAR(10)` | `PRIMARY KEY` | รหัสประเทศ 2 หลัก ISO Alpha-2 เช่น US, CN, JP, TH |
+| `alpha_3` | `VARCHAR(10)` | `INDEX` | รหัสประเทศ 3 หลัก ISO Alpha-3 เช่น USA, CHN, JPN |
+| `numeric_code` | `INT` | - | รหัสตัวเลขมาตรฐานประเทศ เช่น 840, 156, 764 |
+| `country_name` | `VARCHAR(150)` | `NOT NULL` | ชื่อประเทศมาตรฐานสากล (ISO 3166) |
+| `country_name_cia` | `VARCHAR(150)` | - | ชื่อประเทศตามนิยาม CIA |
+| `region_cia` | `VARCHAR(100)` | `INDEX` | กลุ่มภูมิภาคตาม CIA (เช่น ASEAN, OTHER ASIA, OTHER EUROPE, AFRICA) |
+| `iso_region` | `VARCHAR(100)` | `INDEX` | ทวีป/ภูมิภาคหลัก ISO (เช่น Asia, Europe, Americas, Africa, Oceania) |
+| `iso_sub_region` | `VARCHAR(100)` | - | ภูมิภาคย่อย ISO (เช่น South-eastern Asia, Eastern Asia, Northern America) |
+| `iso_intermediate_region`| `VARCHAR(100)` | - | ภูมิภาคระดับกลาง |
+| `iso_3166_2` | `VARCHAR(50)` | - | รหัสอ้างอิงมาตรฐาน ISO 3166-2 |
 
 #### Table: `dim_transport_type`
 | Column Name | Data Type | Constraints | Description |

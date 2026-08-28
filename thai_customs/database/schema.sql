@@ -24,15 +24,25 @@ CREATE TABLE IF NOT EXISTS `dim_hs_code` (
     INDEX `idx_hs_code` (`hs_code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Dimension: HS Code & Statistical Commodity Classifications';
 
--- 1.2 Country Master
+-- 1.2 Country Master (CIA & ISO 3166 Hierarchies)
 CREATE TABLE IF NOT EXISTS `dim_country` (
-    `country_code` VARCHAR(10) NOT NULL COMMENT 'Country ISO/Customs Code (e.g. US, JP, CN)',
-    `country_name_th` VARCHAR(150) NULL COMMENT 'Country Name in Thai',
-    `country_name_en` VARCHAR(150) NULL COMMENT 'Country Name in English',
+    `country_code` VARCHAR(10) NOT NULL COMMENT 'ISO 2-letter Alpha-2 Country Code (e.g. US, CN, JP)',
+    `alpha_3` VARCHAR(10) NULL COMMENT 'ISO 3-letter Alpha-3 Code (e.g. USA, CHN, JPN)',
+    `numeric_code` INT NULL COMMENT 'Numeric Country Code (e.g. 840, 156, 392)',
+    `country_name` VARCHAR(150) NOT NULL COMMENT 'Standard Country Name (ISO 3166)',
+    `country_name_cia` VARCHAR(150) NULL COMMENT 'Country Name (CIA)',
+    `region_cia` VARCHAR(100) NULL COMMENT 'Region Code (CIA, e.g. ASEAN, OTHER ASIA, EUROPE)',
+    `iso_region` VARCHAR(100) NULL COMMENT 'ISO Region (e.g. Asia, Europe, Americas, Africa, Oceania)',
+    `iso_sub_region` VARCHAR(100) NULL COMMENT 'ISO Sub Region (e.g. South-eastern Asia, Eastern Asia)',
+    `iso_intermediate_region` VARCHAR(100) NULL COMMENT 'ISO Intermediate Region',
+    `iso_3166_2` VARCHAR(50) NULL COMMENT 'ISO 3166-2 Reference Code',
     `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    PRIMARY KEY (`country_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Dimension: Country of Origin and Destination';
+    PRIMARY KEY (`country_code`),
+    INDEX `idx_alpha3` (`alpha_3`),
+    INDEX `idx_iso_region` (`iso_region`),
+    INDEX `idx_region_cia` (`region_cia`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Dimension: Comprehensive Country, CIA and ISO Regional Hierarchy';
 
 -- 1.3 Transport Mode Master
 CREATE TABLE IF NOT EXISTS `dim_transport_type` (
