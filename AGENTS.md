@@ -54,6 +54,26 @@ The ultimate goal is to achieve **structured data, accurate data types, and maxi
 - **Error Handling & Logging:** Implement robust `try-except` blocks (or language equivalent) alongside descriptive logging that clearly identifies problematic rows or files.
 - **Security & Config:** Store credentials (DB host, user, password, API keys) in a `.env` or configuration file. Never hardcode credentials into source code.
 
+### 5. Multi-Database Repository Structure Standard
+
+To maintain clean separation between multiple databases in this repository and ensure easy tracking, every MariaDB/MySQL database implementation MUST adhere to the following directory layout:
+
+1. **Root Directory Level:**
+   - `README.md`: Master catalog indexing all database projects.
+   - `.gitignore`: Strict exclusions for raw data files (`*.csv`, `*.xlsx`, `data/`), secrets (`.env`), cache (`__pycache__/`, `.ipynb_checkpoints/`), and database dump files.
+   - `.env.example`: Safe configuration template without secrets.
+   - `AGENTS.md`: Core system architecture and data engineering rules.
+
+2. **Per-Database Subdirectory (`<database_name>/`):**
+   - `config/`: Database connection management & pooling (`db_config.py`).
+   - `database/`:
+     - `schema.sql`: DDL statements (tables, constraints, indexes, utf8mb4 collation).
+     - `init_db.py`: Initialization script to apply schema.
+     - `data_dictionary.md`: Automated metadata dictionary and Mermaid.js ER-Diagram.
+   - `etl/`: Modular transformation and loader modules (`transformers.py`, `loaders.py`).
+   - `scripts/`: Executable runners (`ingest_historical.py`, `ingest_monthly.py`, `verify_database.py`).
+   - `README.md`: Dedicated documentation and CLI instructions for that specific database.
+
 ---
 
 ## Agent Workflow (How to Assist Me)
