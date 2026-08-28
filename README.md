@@ -15,12 +15,20 @@ MySQL_MariaDB/
 ├── AGENTS.md                       # ข้อกำหนดทางสถาปัตยกรรมและมาตรฐานวิศวกรรมข้อมูล
 ├── README.md                       # เอกสารสารบัญภาพรวมของคลังข้อมูล
 │
-├── bot_exchange_rates/             # [Database 1] ฐานข้อมูลอัตราแลกเปลี่ยนเงินตราต่างประเทศ (ธปท.)
+├── db-bot_exchange_rates/          # [Database 1] ฐานข้อมูลอัตราแลกเปลี่ยนเงินตราต่างประเทศ (ธปท.)
 │   ├── config/                     # Connection helper & database configuration
 │   ├── database/                   # DDL schema.sql, init_db.py, data_dictionary.md
 │   ├── etl/                        # Data cleaning, transformation & bulk loaders
 │   ├── scripts/                    # Ingestion runners (historical, monthly batch, verification)
-│   └── README.md                   # คู่มือเฉพาะสำหรับฐานข้อมูล bot_exchange_rates
+│   └── README.md                   # คู่มือเฉพาะสำหรับฐานข้อมูล db-bot_exchange_rates
+│
+├── db-thai_customs/                # [Database 2] ฐานข้อมูลสถิติการนำเข้า-ส่งออกสินค้า (กรมศุลกากรไทย)
+│   ├── config/                     # Connection helper & Max Packet configuration
+│   ├── database/                   # DDL schema.sql, init_db.py, data_dictionary.md
+│   ├── etl/                        # Fact transformers, normalizers & loaders
+│   ├── master_data/                # Master reference data (HS Code & Country/Region)
+│   ├── scripts/                    # CKAN Downloader, Ingestion, Monthly Sync, Verification
+│   └── README.md                   # คู่มือเฉพาะสำหรับฐานข้อมูล db-thai_customs
 │
 ├── demo/                           # โค้ดตัวอย่างการใช้งาน MySQL Connector / Tutorials
 │   ├── mysql-connector-create-tables.ipynb
@@ -36,17 +44,17 @@ MySQL_MariaDB/
 
 ## 2. รายชื่อฐานข้อมูลใน Repository (Databases Catalog)
 
-| ลำดับ | โฟลเดอร์โปรเจกต์                             | ชื่อฐานข้อมูล (`DB_NAME`) | รายละเอียด                                                               | รูปแบบสถาปัตยกรรม                                        |
-| :---: | :------------------------------------------- | :------------------------ | :----------------------------------------------------------------------- | :------------------------------------------------------- |
-|   1   | [`bot_exchange_rates/`](bot_exchange_rates/) | `bot_exchange_rates`      | ข้อมูลอัตราแลกเปลี่ยนรายวันจากธนาคารแห่งประเทศไทย (BOT) ปี 2002–ปัจจุบัน | Star Schema (`dim_currency`, `fact_daily_exchange_rate`) |
-|   2   | [`thai_customs/`](thai_customs/)             | `thai_customs`            | ข้อมูลสถิติการนำเข้า-ส่งออกสินค้า กรมศุลกากรไทย (8 Datasets) ปี 2017–ปัจจุบัน | Star Schema (4 Fact Tables, 5 Dimension Tables)          |
-|   3   | _(Future Databases)_                         | _TBD_                     | _(สามารถเพิ่มโฟลเดอร์สำหรับฐานข้อมูลใหม่ได้ตามโครงสร้างนี้)_             | -                                                        |
+| ลำดับ | โฟลเดอร์โปรเจกต์                                      | ชื่อฐานข้อมูล (`DB_NAME`) | รายละเอียด                                                               | รูปแบบสถาปัตยกรรม                                        |
+| :---: | :---------------------------------------------------- | :------------------------ | :----------------------------------------------------------------------- | :------------------------------------------------------- |
+|   1   | [`db-bot_exchange_rates/`](db-bot_exchange_rates/)   | `bot_exchange_rates`      | ข้อมูลอัตราแลกเปลี่ยนรายวันจากธนาคารแห่งประเทศไทย (BOT) ปี 2002–ปัจจุบัน | Star Schema (`dim_currency`, `fact_daily_exchange_rate`) |
+|   2   | [`db-thai_customs/`](db-thai_customs/)               | `thai_customs`            | ข้อมูลสถิติการนำเข้า-ส่งออกสินค้า กรมศุลกากรไทย (8 Datasets) ปี 2017–ปัจจุบัน | Star Schema (4 Fact Tables, 5 Dimension Tables)          |
+|   3   | _(Future Databases: `db-<project_name>/`)_            | _TBD_                     | _(สามารถเพิ่มโฟลเดอร์สำหรับฐานข้อมูลใหม่ได้ตามโครงสร้างนี้)_             | -                                                        |
 
 ---
 
 ## 3. มาตรฐานการเพิ่ม Database ใหม่ (Contribution Guidelines)
 
-เมื่อต้องการเพิ่มฐานข้อมูลใหม่เข้าไปใน Repository ให้สร้างโฟลเดอร์ย่อยระดับ Root เช่น `<new_database_name>/` โดยมีโครงสร้างภายในดังนี้:
+เมื่อต้องการเพิ่มฐานข้อมูลใหม่เข้าไปใน Repository ให้สร้างโฟลเดอร์ย่อยระดับ Root โดยใช้ชื่อ `db-<database_name>/` เช่น `db-my_project/` โดยมีโครงสร้างภายในดังนี้:
 
 1. `config/`: จัดการ Connection สำหรับ Database นั้นๆ
 2. `database/`: บรรจุ `schema.sql`, `init_db.py`, และ `data_dictionary.md`
@@ -71,22 +79,17 @@ MySQL_MariaDB/
    ```bash
    pip install mysql-connector-python pandas python-dotenv
    ```
-4. เลือกไปยังโฟลเดอร์ฐานข้อมูลที่ต้องการใช้งาน เช่น [`bot_exchange_rates/`](bot_exchange_rates/) และปฏิบัติตามคู่มือในโฟลเดอร์นั้นๆ
+4. เลือกไปยังโฟลเดอร์ฐานข้อมูลที่ต้องการใช้งาน เช่น [`db-bot_exchange_rates/`](db-bot_exchange_rates/) หรือ [`db-thai_customs/`](db-thai_customs/) และปฏิบัติตามคู่มือในโฟลเดอร์นั้นๆ
 
-## 5. การรัน Script Update ข้อมูลรายเดือนใหม่ (ตัวอย่าง: bot_exchange_rates)
+## 5. การรัน Script Update ข้อมูลรายเดือนใหม่ (ตัวอย่าง: db-bot_exchange_rates)
 
 ### แบบที่ 1: รันจาก Root Directory (`D:\MySQL\mysql`) [แนะนำ]
 ```powershell
-python bot_exchange_rates/scripts/ingest_monthly.py --file "bot_exchange_rates\BOT_csv_raw_data\EX_BOT_EX_Raw_2026_08.csv"
+python db-bot_exchange_rates/scripts/ingest_monthly.py --file "path\to\new_file.csv"
 ```
 
-### แบบที่ 2: รันจากโฟลเดอร์ของฐานข้อมูล (`D:\MySQL\mysql\bot_exchange_rates`)
+### แบบที่ 2: รันจากโฟลเดอร์ของฐานข้อมูล (`D:\MySQL\mysql\db-bot_exchange_rates`)
 ```powershell
-cd bot_exchange_rates
-python scripts/ingest_monthly.py --file "BOT_csv_raw_data\EX_BOT_EX_Raw_2026_08.csv"
-```
-
-### แบบที่ 3: รันจาก Directory ใดๆ ก็ได้ในเครื่อง (Absolute Path)
-```powershell
-python "D:\MySQL\mysql\bot_exchange_rates\scripts\ingest_monthly.py" --file "D:\path\to\your_new_file.csv"
+cd db-bot_exchange_rates
+python scripts/ingest_monthly.py --file "path\to\new_file.csv"
 ```

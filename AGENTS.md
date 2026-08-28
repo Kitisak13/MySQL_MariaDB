@@ -64,13 +64,14 @@ To maintain clean separation between multiple databases in this repository and e
    - `.env.example`: Safe configuration template without secrets.
    - `AGENTS.md`: Core system architecture and data engineering rules.
 
-2. **Per-Database Subdirectory (`<database_name>/`):**
+2. **Per-Database Subdirectory (`db-<database_name>/`):**
    - `config/`: Database connection management & pooling (`db_config.py`).
    - `database/`:
      - `schema.sql`: DDL statements (tables, constraints, indexes, utf8mb4 collation).
      - `init_db.py`: Initialization script to apply schema.
      - `data_dictionary.md`: Automated metadata dictionary and Mermaid.js ER-Diagram.
    - `etl/`: Modular transformation and loader modules (`transformers.py`, `loaders.py`).
+   - `master_data/`: Reference data files and lookups (`*.csv`, `*.xlsx`).
    - `scripts/`: Executable runners (`ingest_historical.py`, `ingest_monthly.py`, `verify_database.py`).
    - `README.md`: Dedicated documentation and CLI instructions for that specific database.
 
