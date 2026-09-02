@@ -31,7 +31,8 @@ logging.getLogger("urllib3").setLevel(logging.ERROR)
 
 class DITPriceDownloader:
     """
-    High-performance, resilient, and parallelized DIT Price API Downloader.
+    High-performance, resilient, and parallelized DIT Price API Downloader
+    with Auto-Resume Checkpoints and Multi-Pass Retries.
     """
     BASE_URL = "https://dataapi.moc.go.th"
     DEFAULT_HEADERS = {
@@ -53,6 +54,7 @@ class DITPriceDownloader:
         self.backoff_factor = backoff_factor
         self.timeout = timeout
         self.rate_limit_delay = rate_limit_delay
+        self.file_lock = threading.Lock()
         self._thread_local = threading.local()
 
     def _create_session(self) -> requests.Session:
@@ -138,6 +140,7 @@ class DITPriceDownloader:
                             df["unit"] = data.get("unit", "")
                             return df, None
                         else:
+                            # Legitimate case: product has no price recorded for this period
                             return None, None
                     else:
                         last_error = f"Unexpected JSON structure: {type(data)}"
@@ -161,14 +164,57 @@ class DITPriceDownloader:
         return None, error_record
 
     def fetch_all_prices(
-        self, product_ids: List[str], from_date: str, to_date: str, max_passes: int = 3
+        self,
+        product_ids: List[str],
+        from_date: str,
+        to_date: str,
+        max_passes: int = 3,
+        checkpoint_csv: Optional[str] = None,
+        checked_log_path: Optional[str] = None,
+        resume: bool = True
     ) -> Tuple[pd.DataFrame, pd.DataFrame]:
         """
-        Concurrently fetches prices for all product_ids with multi-pass retries.
+        Concurrently fetches prices for all product_ids with:
+        - Auto-Resume Checkpointing (skips already checked IDs)
+        - Real-time incremental saving
+        - Multi-pass failed ID retries
         """
-        logger.info(f"Starting parallel fetch for {len(product_ids)} products ({from_date} to {to_date})...")
+        completed_ids = set()
+
+        # Step 1: Check for existing tracking log for auto-resume
+        if resume and checked_log_path and os.path.exists(checked_log_path):
+            try:
+                with open(checked_log_path, "r", encoding="utf-8") as f:
+                    for line in f:
+                        pid = line.strip()
+                        if pid:
+                            completed_ids.add(pid)
+                if completed_ids:
+                    logger.info(f"Auto-Resume: Found {len(completed_ids)} completed products in tracking log.")
+            except Exception as e:
+                logger.warning(f"Could not read tracking log: {e}")
+
+        # Fallback: check checkpoint CSV if tracking log is empty
+        if resume and not completed_ids and checkpoint_csv and os.path.exists(checkpoint_csv) and os.path.getsize(checkpoint_csv) > 0:
+            try:
+                cp_df = pd.read_csv(checkpoint_csv)
+                if not cp_df.empty and "product_id" in cp_df.columns:
+                    completed_ids = set(cp_df["product_id"].astype(str).unique())
+                    logger.info(f"Auto-Resume: Found {len(completed_ids)} products in checkpoint CSV.")
+            except Exception as e:
+                logger.warning(f"Could not read checkpoint CSV: {e}")
+
+        pending_ids = [pid for pid in product_ids if pid not in completed_ids]
+
+        if not pending_ids:
+            logger.info("All products have already been processed in checkpoint! Loading cached data...")
+            if checkpoint_csv and os.path.exists(checkpoint_csv) and os.path.getsize(checkpoint_csv) > 0:
+                return pd.read_csv(checkpoint_csv), pd.DataFrame()
+            return pd.DataFrame(), pd.DataFrame()
+
+        logger.info(f"Targeting {len(pending_ids)} remaining products (Skipping {len(completed_ids)} already checked)...")
+
         combined_dfs = []
-        pending_ids = list(product_ids)
         final_errors = []
 
         for pass_num in range(1, max_passes + 1):
@@ -195,9 +241,21 @@ class DITPriceDownloader:
                         df_res, err = future.result()
                         if df_res is not None and not df_res.empty:
                             combined_dfs.append(df_res)
+                            # Real-time incremental CSV append
+                            if checkpoint_csv:
+                                with self.file_lock:
+                                    exists = os.path.exists(checkpoint_csv) and os.path.getsize(checkpoint_csv) > 0
+                                    df_res.to_csv(checkpoint_csv, mode="a", header=not exists, index=False, encoding="utf-8")
                         elif err is not None:
                             pass_failed_ids.append(p_id)
                             pass_errors.append(err)
+
+                        # Crash-safe tracking log append
+                        if err is None and checked_log_path:
+                            with self.file_lock:
+                                with open(checked_log_path, "a", encoding="utf-8") as f:
+                                    f.write(f"{p_id}\n")
+
                     except Exception as exc:
                         pass_failed_ids.append(p_id)
                         pass_errors.append({"product_id": p_id, "error_detail": str(exc), "from_date": from_date, "to_date": to_date})
@@ -213,9 +271,16 @@ class DITPriceDownloader:
                 else:
                     time.sleep(3.0)
             else:
-                logger.info(f"Pass {pass_num}: All products completed successfully.")
+                logger.info(f"Pass {pass_num}: All target products completed successfully.")
                 pending_ids = []
 
-        df_final = pd.concat(combined_dfs, ignore_index=True) if combined_dfs else pd.DataFrame()
+        # Compile final dataframe from memory or checkpoint
+        if checkpoint_csv and os.path.exists(checkpoint_csv) and os.path.getsize(checkpoint_csv) > 0:
+            df_final = pd.read_csv(checkpoint_csv).drop_duplicates()
+        elif combined_dfs:
+            df_final = pd.concat(combined_dfs, ignore_index=True).drop_duplicates()
+        else:
+            df_final = pd.DataFrame()
+
         df_errs = pd.DataFrame(final_errors) if final_errors else pd.DataFrame()
         return df_final, df_errs

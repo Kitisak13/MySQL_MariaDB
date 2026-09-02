@@ -65,14 +65,22 @@ def sync_monthly_prices(
             product_ids = df_prods["product_id"].dropna().unique().tolist()
             print(f"\n[Step 1/3] Loaded {len(product_ids)} target products dynamically from DIT API.")
 
-        # Step 2: Fetch Prices from API
-        print(f"\n[Step 2/3] Calling DIT API (3 parallel workers with auto-backoff)...")
+        # Step 2: Setup Checkpoint paths for Crash-Safe Auto-Resume
+        period_str = f"{from_date}_{to_date}".replace("-", "_")
+        checkpoint_csv = os.path.join(raw_dir, f"checkpoint_{period_str}.csv")
+        checked_log_path = os.path.join(raw_dir, f"checked_ids_{period_str}.txt")
+        failed_csv_path = os.path.join(raw_dir, f"failed_ids_{period_str}.csv")
+
+        print(f"\n[Step 2/3] Calling DIT API (3 parallel workers with auto-resume & backoff)...")
         downloader = DITPriceDownloader(max_workers=max_workers, retry_count=5, rate_limit_delay=0.1)
         df_prices, df_errors = downloader.fetch_all_prices(
             product_ids=product_ids,
             from_date=from_date,
             to_date=to_date,
-            max_passes=3
+            max_passes=3,
+            checkpoint_csv=checkpoint_csv,
+            checked_log_path=checked_log_path,
+            resume=True
         )
 
         if df_prices.empty:
@@ -81,7 +89,12 @@ def sync_monthly_prices(
 
         print(f"  -> Retrieved {len(df_prices):,} total price observations.")
 
-        # Optionally save raw CSV
+        # Export persistent failures if any
+        if not df_errors.empty:
+            df_errors.to_csv(failed_csv_path, index=False, encoding="utf-8")
+            print(f"  -> Saved {len(df_errors)} failed items to: {failed_csv_path}")
+
+        # Save monthly raw CSV snapshot
         if save_raw_csv:
             csv_name = f"dit_price_monthly_{from_date[:7].replace('-', '_')}.csv"
             raw_csv_path = os.path.join(raw_dir, csv_name)
@@ -94,7 +107,14 @@ def sync_monthly_prices(
         total_upserted = upsert_fact_prices(conn, fact_records, chunk_size=10000)
         print(f"  -> Successfully upserted {total_upserted:,} records into database.")
 
+        # Clean up temporary checkpoints upon successful DB load
+        if os.path.exists(checkpoint_csv):
+            os.remove(checkpoint_csv)
+        if os.path.exists(checked_log_path):
+            os.remove(checked_log_path)
+
         duration = round(time.time() - start_time, 2)
+        status_str = "PARTIAL" if not df_errors.empty else "SUCCESS"
 
         # Audit Log
         log_ingestion(
@@ -105,7 +125,7 @@ def sync_monthly_prices(
             period_end=to_date,
             total_rows=total_upserted,
             file_hash=None,
-            status="SUCCESS",
+            status=status_str,
             duration_seconds=duration
         )
 
