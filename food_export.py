@@ -104,9 +104,9 @@ class Config:
     HS_CODE_PREFIXES = ["07", "08", "20"]            # Targets Chapter 07, 08, 20 (Veg, Fruit, Prep)
 
     # Network & Concurrency Settings (Tuned for MOC Server Stability)
-    MAX_WORKERS = 3          # 2 to 3 workers prevents MOC server rate-limit errors
-    REQUEST_DELAY = 0.20     # Delay between requests (0.2s)
-    REQUEST_TIMEOUT = 35     # HTTP Timeout (35s)
+    MAX_WORKERS = 2          # 2 workers prevents MOC server rate-limit blocks on Colab
+    REQUEST_DELAY = 0.30     # Delay between requests (0.3s)
+    REQUEST_TIMEOUT = 30     # HTTP Timeout (30s)
     MAX_RETRIES_PER_QUERY = 3 # Retries per item on 500/502/Timeout
     RESUME_CHECKPOINT = True # Auto-Resume from previous run
 
@@ -243,7 +243,9 @@ class TradeExportScraper:
                 last_err = str(e)
                 time.sleep(1.0 * attempt)
 
-        return None, {"year": year, "month": month, "hs_code": hs_code, "error": last_err or "Max retries exceeded"}
+        err_msg = last_err or "Max retries exceeded"
+        logger.warning(f"⚠️ [Error] Year: {year}, Month: {month:02d}, HS: {hs_code} -> {err_msg}")
+        return None, {"year": year, "month": month, "hs_code": hs_code, "error": err_msg}
 
     def fetch_trade_data(self, hs_df: pd.DataFrame) -> Tuple[List[pd.DataFrame], List[Dict[str, Any]]]:
         """
