@@ -88,7 +88,7 @@ if is_colab():
 class Config:
     # Base directories based on environment
     if is_colab():
-        BASE_DIR = "/gdrive/Shareddrives/Manual API/Custom Thai Rice Export"
+        BASE_DIR = "/gdrive/My Drive/Food-Export"
     else:
         BASE_DIR = "./data"  # Local folder fallback
 
