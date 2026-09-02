@@ -35,22 +35,32 @@ CREATE TABLE IF NOT EXISTS `dim_hs11_code` (
     INDEX `idx_active` (`is_active_2022`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Master Dimension: 4-Level HS Codes across all revisions (2007-2022)';
 
--- 2. Dimension: Country Reference
+-- 2. Dimension: Comprehensive Country & Geographical Region Catalog
 CREATE TABLE IF NOT EXISTS `dim_country` (
-    `country_code` VARCHAR(10) NOT NULL COMMENT 'ISO 2-letter or Customs Country Code (e.g. US, CN, JP)',
-    `country_name_th` VARCHAR(150) NOT NULL COMMENT 'Country Name in Thai',
+    `country_code` VARCHAR(10) NOT NULL COMMENT 'ISO 2-letter Country Code (e.g. US, CN, JP)',
+    `alpha_3` VARCHAR(10) NULL COMMENT 'ISO 3-letter Country Code',
+    `numeric_code` INT NULL COMMENT 'UN M.49 Numeric Code',
+    `country_name` VARCHAR(150) NOT NULL COMMENT 'Primary Country Name',
+    `country_name_th` VARCHAR(150) NULL COMMENT 'Country Name in Thai',
     `country_name_en` VARCHAR(150) NULL COMMENT 'Country Name in English',
-    `region_code` VARCHAR(50) NULL COMMENT 'CIA / Geographic Region Code',
-    `region_name` VARCHAR(100) NULL COMMENT 'Geographic Region Name',
+    `country_name_cia` VARCHAR(150) NULL COMMENT 'CIA World Factbook Country Name',
+    `region_cia` VARCHAR(100) NULL COMMENT 'CIA Geographical Region',
+    `iso_region` VARCHAR(100) NULL COMMENT 'UN ISO Region',
+    `iso_sub_region` VARCHAR(100) NULL COMMENT 'UN ISO Sub-region',
+    `iso_intermediate_region` VARCHAR(100) NULL COMMENT 'UN ISO Intermediate Region',
+    `iso_3166_2` VARCHAR(50) NULL COMMENT 'ISO 3166-2 Code',
     `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (`country_code`),
-    INDEX `idx_region` (`region_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Dimension: Country & Geographical Region Catalog';
+    INDEX `idx_alpha3` (`alpha_3`),
+    INDEX `idx_region_cia` (`region_cia`),
+    INDEX `idx_iso_region` (`iso_region`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Dimension: Comprehensive Country & Geographical Region Catalog';
 
 -- 3. Fact Table: Monthly Food & Commodity Export Data
 CREATE TABLE IF NOT EXISTS `fact_food_export` (
     `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `export_date` DATE NOT NULL COMMENT 'First day of observation month (e.g. 2016-01-01)',
     `export_year` SMALLINT NOT NULL COMMENT 'Year of export (e.g. 2015 - 2026)',
     `export_month` TINYINT NOT NULL COMMENT 'Month of export (1 - 12)',
     `country_code` VARCHAR(10) NOT NULL COMMENT 'Destination country code (FK)',
@@ -64,7 +74,8 @@ CREATE TABLE IF NOT EXISTS `fact_food_export` (
     `unit_code` VARCHAR(20) NULL COMMENT 'Unit code',
     `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    UNIQUE KEY `uq_year_month_country_hs` (`export_year`, `export_month`, `country_code`, `hs_11_code`),
+    UNIQUE KEY `uq_date_country_hs` (`export_date`, `country_code`, `hs_11_code`),
+    INDEX `idx_date` (`export_date`),
     INDEX `idx_year_month` (`export_year`, `export_month`),
     INDEX `idx_hs11` (`hs_11_code`),
     INDEX `idx_country` (`country_code`),
