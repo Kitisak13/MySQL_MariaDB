@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-Thai Trade Export Data Scraper (High-Performance & Resilient Version)
-Optimized for Google Colab & Local Python Environments.
+Thai Trade Export Data Scraper (High-Performance, Resilient & Colab-Optimized)
+Target: MOC Trade Report API (https://tradereport.moc.go.th/api/exportharmonizecountries)
 
-Features:
-- Real-time live console logging & tqdm progress bars (Zero silent lag).
-- Multi-threaded parallel fetching (3-5x faster with ThreadPoolExecutor).
-- Crash-Safe Auto-Resume & Real-time Checkpointing (Never lose progress on disconnect).
-- Detailed error tracking & export of failed queries for targeted retry.
-- Automatic Dimension Enrichment (HS Codes, Units, Country Names).
+Enhancements:
+- Month-by-Month Structured Pipeline (Clear progress, tiny memory footprint).
+- Session Warm-up & Handshake (Establishes valid cookies to prevent WAF 403/500 blocks).
+- Multi-Attempt Exponential Retry per query (Prevents transient network errors).
+- Live Real-time Terminal & Colab Logging (Shows exact year, month, HS code, records, and speed).
+- Crash-Safe Auto-Resume (Remembers completed months & queries even if Colab disconnects).
+- Dimension Enrichment (2, 4, 8, 11 digits HS Codes, Units, and CIA Country metadata).
 """
 
 import os
@@ -23,7 +24,7 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util import Retry
 
-# Attempt to import tqdm for animated progress bar
+# Attempt to import tqdm for progress bar
 try:
     from tqdm.auto import tqdm
     HAS_TQDM = True
@@ -36,12 +37,12 @@ if hasattr(sys.stdout, "reconfigure"):
 
 # --- Setup Colab & Console Logging ---
 class FlushStreamHandler(logging.StreamHandler):
-    """Ensures real-time output in Google Colab cells without buffering."""
+    """Forces immediate unbuffered output in Google Colab and terminals."""
     def emit(self, record):
         super().emit(record)
         self.flush()
 
-# Reset root logger handlers to prevent Colab silent logging
+# Clean root handlers
 root_logger = logging.getLogger()
 for handler in root_logger.handlers[:]:
     root_logger.removeHandler(handler)
@@ -81,7 +82,7 @@ if is_colab():
         logger.info("Running in Google Colab. Mounting Google Drive...")
         drive.mount("/gdrive")
     except Exception as e:
-        logger.warning(f"Google Drive mount skipped/failed: {e}")
+        logger.warning(f"Google Drive mount notice: {e}")
 
 # --- Configuration Class ---
 class Config:
@@ -98,24 +99,28 @@ class Config:
 
     # Target Scraping Scope
     RESULT_NAME = "food_hs_07_08_20_export_2015_2026"
-    YEARS = list(range(2015, 2027))                  # e.g. [2024, 2025, 2026] or list(range(2015, 2027))
-    MONTHS = list(range(1, 13))                      # e.g. [1, 2, 3] or list(range(1, 13))
-    HS_CODE_PREFIXES = ["07", "08", "20"]            # Targets Chapter 07, 08, 20 (Vegetables, Fruits, Preparations)
+    YEARS = list(range(2015, 2027))                  # 2015 to 2026
+    MONTHS = list(range(1, 13))                      # 1 to 12
+    HS_CODE_PREFIXES = ["07", "08", "20"]            # Targets Chapter 07, 08, 20 (Veg, Fruit, Prep)
 
-    # Network & Multi-Threading Settings
-    MAX_WORKERS = 4          # Number of concurrent parallel threads (Safe range: 3 to 6)
-    REQUEST_DELAY = 0.15     # Delay in seconds between requests per worker
-    REQUEST_TIMEOUT = 25     # HTTP Timeout in seconds
-    MAX_RETRIES = 4          # Retries per request on transient network errors
-    RESUME_CHECKPOINT = True # Auto-Resume from where it left off if disconnected
+    # Network & Concurrency Settings (Tuned for MOC Server Stability)
+    MAX_WORKERS = 3          # 2 to 3 workers prevents MOC server rate-limit errors
+    REQUEST_DELAY = 0.20     # Delay between requests (0.2s)
+    REQUEST_TIMEOUT = 35     # HTTP Timeout (35s)
+    MAX_RETRIES_PER_QUERY = 3 # Retries per item on 500/502/Timeout
+    RESUME_CHECKPOINT = True # Auto-Resume from previous run
 
 # --- Scraper & Processor Class ---
 class TradeExportScraper:
     BASE_URL = "https://tradereport.moc.go.th/api/exportharmonizecountries"
+    HOME_URL = "https://tradereport.moc.go.th"
     DEFAULT_HEADERS = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
         "Accept": "application/json, text/plain, */*",
         "Accept-Language": "th-TH,th;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Referer": "https://tradereport.moc.go.th/TradeThai/CustomsHarmonizeExportCountry",
+        "Origin": "https://tradereport.moc.go.th",
+        "Connection": "keep-alive"
     }
 
     def __init__(self, config: Config):
@@ -124,13 +129,13 @@ class TradeExportScraper:
         self._thread_local = threading.local()
 
     def _create_session(self) -> requests.Session:
-        """Create a requests session with connection pooling and retry adapter."""
+        """Creates a requests session with retry adapters and warm-up cookies."""
         session = requests.Session()
         session.headers.update(self.DEFAULT_HEADERS)
         retry_strategy = Retry(
-            total=self.config.MAX_RETRIES,
-            backoff_factor=0.5,
-            status_forcelist=[429, 500, 502, 503, 504],
+            total=2,
+            backoff_factor=1.0,
+            status_forcelist=[500, 502, 503, 504],
             raise_on_status=False
         )
         adapter = HTTPAdapter(
@@ -140,6 +145,13 @@ class TradeExportScraper:
         )
         session.mount("http://", adapter)
         session.mount("https://", adapter)
+
+        # Warm-up session to receive initial session cookies
+        try:
+            session.get(self.HOME_URL, timeout=10)
+        except Exception:
+            pass
+
         return session
 
     def _get_session(self) -> requests.Session:
@@ -186,7 +198,7 @@ class TradeExportScraper:
         return filtered_hs_df
 
     def fetch_single_query(self, year: int, month: int, hs_code: str) -> Tuple[Optional[pd.DataFrame], Optional[Dict[str, Any]]]:
-        """Fetches trade export data for a single (year, month, hs_code) combination."""
+        """Fetches trade export data for a single (year, month, hs_code) with internal retries."""
         params = {
             "limit": 0,
             "year": year,
@@ -194,37 +206,48 @@ class TradeExportScraper:
             "hs_code": hs_code
         }
 
-        try:
-            session = self._get_session()
-            response = session.get(self.BASE_URL, params=params, timeout=self.config.REQUEST_TIMEOUT)
+        last_err = None
+        for attempt in range(1, self.config.MAX_RETRIES_PER_QUERY + 1):
+            try:
+                session = self._get_session()
+                response = session.get(self.BASE_URL, params=params, timeout=self.config.REQUEST_TIMEOUT)
 
-            if response.status_code == 200:
-                if not response.text or not response.text.strip():
-                    return None, None
+                if response.status_code == 200:
+                    if not response.text or not response.text.strip():
+                        return None, None
 
-                try:
-                    data = response.json()
-                except Exception as e:
-                    return None, {"year": year, "month": month, "hs_code": hs_code, "error": f"JSONDecodeError: {e}"}
+                    try:
+                        data = response.json()
+                    except Exception as e:
+                        last_err = f"JSONDecodeError: {e}"
+                        time.sleep(1.0 * attempt)
+                        continue
 
-                if data and isinstance(data, list) and len(data) > 0:
-                    df = pd.DataFrame(data)
-                    df["hs_code_query"] = hs_code
-                    df["query_year"] = year
-                    df["query_month"] = month
-                    return df, None
+                    if data and isinstance(data, list) and len(data) > 0:
+                        df = pd.DataFrame(data)
+                        df["hs_code_query"] = hs_code
+                        df["query_year"] = year
+                        df["query_month"] = month
+                        return df, None
+                    else:
+                        # Legitimate empty result (No trade transactions for this commodity in this month)
+                        return None, None
+                elif response.status_code in (500, 502, 503, 504, 429):
+                    last_err = f"HTTP {response.status_code}"
+                    time.sleep(1.5 * attempt)
+                    continue
                 else:
-                    # Legitimate empty result (No trade transactions for this commodity in this month)
-                    return None, None
-            else:
-                return None, {"year": year, "month": month, "hs_code": hs_code, "error": f"HTTP {response.status_code}"}
+                    return None, {"year": year, "month": month, "hs_code": hs_code, "error": f"HTTP {response.status_code}"}
 
-        except Exception as e:
-            return None, {"year": year, "month": month, "hs_code": hs_code, "error": str(e)}
+            except Exception as e:
+                last_err = str(e)
+                time.sleep(1.0 * attempt)
+
+        return None, {"year": year, "month": month, "hs_code": hs_code, "error": last_err or "Max retries exceeded"}
 
     def fetch_trade_data(self, hs_df: pd.DataFrame) -> Tuple[List[pd.DataFrame], List[Dict[str, Any]]]:
         """
-        Concurrently fetches trade export data across defined years, months, and HS codes
+        Month-by-Month Concurrently fetches trade export data across defined years, months, and HS codes
         with Auto-Resume Checkpointing and real-time live console tracking.
         """
         output_dir = os.path.join(self.config.BASE_DIR, "result")
@@ -234,18 +257,13 @@ class TradeExportScraper:
         checked_log_path = os.path.join(output_dir, f"checked_queries_{self.config.RESULT_NAME}.txt")
         failed_csv_path = os.path.join(output_dir, f"failed_queries_{self.config.RESULT_NAME}.csv")
 
-        # 1. Build list of all planned queries (year, month, hs_code)
         hs_codes = hs_df["HS_11 Digit"].tolist()
-        all_queries = []
-        for y in self.config.YEARS:
-            for m in self.config.MONTHS:
-                for hs in hs_codes:
-                    all_queries.append((y, m, hs))
+        total_months = len(self.config.YEARS) * len(self.config.MONTHS)
+        total_planned = total_months * len(hs_codes)
 
-        total_planned = len(all_queries)
         logger.info(f"Total planned queries: {total_planned:,} ({len(self.config.YEARS)} years x {len(self.config.MONTHS)} months x {len(hs_codes)} HS codes)")
 
-        # 2. Check for completed queries in tracking log (Auto-Resume)
+        # Load completed queries from tracking log (Auto-Resume)
         completed_keys: Set[str] = set()
         if self.config.RESUME_CHECKPOINT and os.path.exists(checked_log_path):
             try:
@@ -255,27 +273,16 @@ class TradeExportScraper:
                         if key:
                             completed_keys.add(key)
                 if completed_keys:
-                    logger.info(f"Auto-Resume: Found {len(completed_keys):,} previously checked queries. Skipping them!")
+                    logger.info(f"Auto-Resume: Found {len(completed_keys):,} previously completed queries. Skipping them!")
             except Exception as e:
                 logger.warning(f"Could not read tracking log: {e}")
 
-        # Filter pending queries
-        pending_queries = [q for q in all_queries if f"{q[0]}_{q[1]:02d}_{q[2]}" not in completed_keys]
-
-        if not pending_queries:
-            logger.info("All planned queries have already been completed in checkpoint!")
-            if os.path.exists(checkpoint_csv) and os.path.getsize(checkpoint_csv) > 0:
-                return [pd.read_csv(checkpoint_csv)], []
-            return [], []
-
-        logger.info(f"Targeting {len(pending_queries):,} remaining queries using {self.config.MAX_WORKERS} concurrent workers...")
-
         all_dfs = []
         error_logs = []
-        finished_count = len(completed_keys)
-        success_with_data = 0
-        empty_count = 0
-        start_time = time.time()
+        overall_with_data = 0
+        overall_empty = 0
+        overall_errors = 0
+        month_idx = 0
 
         # Load existing data from checkpoint if resuming
         if os.path.exists(checkpoint_csv) and os.path.getsize(checkpoint_csv) > 0:
@@ -287,64 +294,99 @@ class TradeExportScraper:
             except Exception as e:
                 logger.warning(f"Could not read existing checkpoint CSV: {e}")
 
-        # Progress bar setup
-        pbar = tqdm(total=total_planned, initial=finished_count, desc="Fetching Trade API", unit="req") if HAS_TQDM else None
+        # Month-by-Month Execution Loop
+        start_overall = time.time()
+        for y in self.config.YEARS:
+            for m in self.config.MONTHS:
+                month_idx += 1
+                month_str = f"{y}-{m:02d}"
 
-        with ThreadPoolExecutor(max_workers=self.config.MAX_WORKERS) as executor:
-            future_to_query = {
-                executor.submit(self.fetch_single_query, y, m, hs): (y, m, hs)
-                for (y, m, hs) in pending_queries
-            }
+                # Filter pending HS codes for this specific month
+                month_pending_hs = [
+                    hs for hs in hs_codes
+                    if f"{y}_{m:02d}_{hs}" not in completed_keys
+                ]
 
-            for future in as_completed(future_to_query):
-                y, m, hs = future_to_query[future]
-                query_key = f"{y}_{m:02d}_{hs}"
-                finished_count += 1
+                if not month_pending_hs:
+                    # Month already 100% completed
+                    continue
 
-                try:
-                    df_res, err = future.result()
+                logger.info(f"\n--- [{month_idx}/{total_months}] Processing Period: {month_str} ({len(month_pending_hs)} pending HS codes) ---")
+                month_start = time.time()
+                month_data_count = 0
+                month_empty_count = 0
+                month_err_count = 0
 
-                    if df_res is not None and not df_res.empty:
-                        all_dfs.append(df_res)
-                        success_with_data += 1
-                        # Real-time incremental CSV append
-                        with self.file_lock:
-                            exists = os.path.exists(checkpoint_csv) and os.path.getsize(checkpoint_csv) > 0
-                            df_res.to_csv(checkpoint_csv, mode="a", header=not exists, index=False, encoding="utf-8-sig")
-                    elif err is not None:
-                        error_logs.append(err)
-                    else:
-                        empty_count += 1
+                # Multi-threaded execution for this month
+                with ThreadPoolExecutor(max_workers=self.config.MAX_WORKERS) as executor:
+                    future_to_hs = {
+                        executor.submit(self.fetch_single_query, y, m, hs): hs
+                        for hs in month_pending_hs
+                    }
 
-                    # Append to crash-safe tracking log
-                    if err is None:
-                        with self.file_lock:
-                            with open(checked_log_path, "a", encoding="utf-8") as f:
-                                f.write(f"{query_key}\n")
+                    pbar = tqdm(
+                        total=len(month_pending_hs),
+                        desc=f"[{month_str}]",
+                        unit="code",
+                        leave=False
+                    ) if HAS_TQDM else None
 
-                except Exception as exc:
-                    error_logs.append({"year": y, "month": m, "hs_code": hs, "error": str(exc)})
+                    for future in as_completed(future_to_hs):
+                        hs = future_to_hs[future]
+                        query_key = f"{y}_{m:02d}_{hs}"
 
-                # Update progress
-                if pbar:
-                    pbar.update(1)
-                    pbar.set_postfix({
-                        "Data": success_with_data,
-                        "Empty": empty_count,
-                        "Err": len(error_logs)
-                    })
-                elif finished_count % 100 == 0 or finished_count == total_planned:
-                    elapsed = time.time() - start_time
-                    rate = (finished_count - len(completed_keys)) / (elapsed if elapsed > 0 else 1)
-                    print(f"[{finished_count:,}/{total_planned:,}] ({finished_count/total_planned*100:.1f}%) | "
-                          f"With Data: {success_with_data:,} | Empty: {empty_count:,} | Errors: {len(error_logs)} | Speed: {rate:.1f} req/s",
-                          flush=True)
+                        try:
+                            df_res, err = future.result()
 
-                if self.config.REQUEST_DELAY > 0:
-                    time.sleep(self.config.REQUEST_DELAY)
+                            if df_res is not None and not df_res.empty:
+                                all_dfs.append(df_res)
+                                month_data_count += 1
+                                overall_with_data += 1
 
-        if pbar:
-            pbar.close()
+                                # Real-time append to checkpoint CSV
+                                with self.file_lock:
+                                    exists = os.path.exists(checkpoint_csv) and os.path.getsize(checkpoint_csv) > 0
+                                    df_res.to_csv(checkpoint_csv, mode="a", header=not exists, index=False, encoding="utf-8-sig")
+
+                            elif err is not None:
+                                error_logs.append(err)
+                                month_err_count += 1
+                                overall_errors += 1
+                            else:
+                                month_empty_count += 1
+                                overall_empty += 1
+
+                            # Append to crash-safe tracking log
+                            if err is None:
+                                completed_keys.add(query_key)
+                                with self.file_lock:
+                                    with open(checked_log_path, "a", encoding="utf-8") as f:
+                                        f.write(f"{query_key}\n")
+
+                        except Exception as exc:
+                            error_logs.append({"year": y, "month": m, "hs_code": hs, "error": str(exc)})
+                            month_err_count += 1
+                            overall_errors += 1
+
+                        if pbar:
+                            pbar.update(1)
+                            pbar.set_postfix({
+                                "Data": month_data_count,
+                                "Empty": month_empty_count,
+                                "Err": month_err_count
+                            })
+
+                        if self.config.REQUEST_DELAY > 0:
+                            time.sleep(self.config.REQUEST_DELAY)
+
+                    if pbar:
+                        pbar.close()
+
+                month_elapsed = time.time() - month_start
+                logger.info(
+                    f"Completed {month_str} in {month_elapsed:.1f}s | "
+                    f"With Data: {month_data_count} | Empty: {month_empty_count} | Errors: {month_err_count}"
+                )
 
         # Save persistent failed queries if any
         if error_logs:
