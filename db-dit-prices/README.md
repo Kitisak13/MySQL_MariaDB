@@ -6,9 +6,9 @@
 
 ## 1. ข้อมูลภาพรวม (Overview & Architecture)
 
-* **ชื่อฐานข้อมูล (`DB_NAME`):** `dit_product_prices`
-* **ระบบการจัดเก็บ:** Star Schema Architecture
-* **ชุดข้อมูลหลัก:**
+- **ชื่อฐานข้อมูล (`DB_NAME`):** `dit_product_prices`
+- **ระบบการจัดเก็บ:** Star Schema Architecture
+- **ชุดข้อมูลหลัก:**
   1. **`dim_product` (Dimension):** บัญชีสินค้า 730 รายการ จำแนกตาม `product_id`, ชื่อสินค้า, หมวดหมู่ (`category_name`), กลุ่มสินค้า (`group_name`) และหน่วยนับ (`unit`)
   2. **`fact_daily_product_price` (Fact):** ราคาต่ำสุด (`price_min`), ราคาสูงสุด (`price_max`), และราคาเฉลี่ย (`price_avg`) รายวันตั้งแต่ปี 2010 ถึงปัจจุบัน (~2.17+ ล้านแถว)
   3. **`data_ingestion_log` (Audit):** บันทึกประวัติและ SHA-256 Checksum ของทุกการประมวลผล
@@ -68,11 +68,13 @@ db-dit-prices/
 ## 3. วิธีการใช้งานสคริปต์ (How to Run)
 
 ### 3.1 สร้าง Database และโครงสร้างตาราง
+
 ```powershell
 python db-dit-prices/database/init_db.py
 ```
 
 ### 3.2 โหลดข้อมูลประวัติศาสตร์ทั้งหมด (~2.17 ล้านแถว)
+
 ```powershell
 python db-dit-prices/scripts/ingest_historical.py
 ```
@@ -90,9 +92,16 @@ python db-dit-prices/scripts/sync_monthly_api.py --month 2026-08
 
 # 3. ระบุช่วงวันที่แบบ Custom Range
 python db-dit-prices/scripts/sync_monthly_api.py --from-date 2026-08-01 --to-date 2026-08-31
+
+# 4. ดึงซ้ำเฉพาะรายการที่เคยล้มเหลว (Targeted Retry Failed Items)
+python db-dit-prices/scripts/sync_monthly_api.py --month 2026-08 --retry-failed db-dit-prices/raw_data/failed_ids_2026_08_01_2026_08_31.csv
+
+# 5. ดึงเฉพาะรหัสสินค้าที่ระบุเจาะจง
+python db-dit-prices/scripts/sync_monthly_api.py --month 2026-08 --products P11001,P11002,P11009
 ```
 
 ### 3.4 ตรวจสอบสถานะและรายงานความถูกต้อง
+
 ```powershell
 # ดูสรุปจำนวนข้อมูลปัจจุบัน
 python db-dit-prices/scripts/check_status.py
@@ -124,3 +133,26 @@ with DAG(
         bash_command="python D:/MySQL/mysql/db-dit-prices/scripts/sync_monthly_api.py"
     )
 ```
+
+## 5. New System
+
+1. สืบทอดข้อดีเดิม: มีระบบ Crash-Safe Auto-Resume & Checkpointing 100%
+   ไม่เริ่มใหม่ตั้งแต่ศูนย์หากเน็ตหลุด (Auto-Resume):
+
+- ขณะที่ระบบกำลังยิง API จะมีการบันทึกรหัสสินค้าที่ดึงสำเร็จแล้วลงไฟล์ checked_ids_2026_08.txt และ checkpoint_2026_08.csv แบบ Real-time ทันที
+- หากเน็ตตัด ไฟดับ หรือกดปิดกลางคัน เมื่อเปิดเครื่องมารันคำสั่งเดิมซ้ำ ระบบจะขึ้นแจ้งเตือนว่า:
+  Auto-Resume: Found 450 completed products in tracking log. Targeting 278 remaining products (Skipping 450 already checked)...
+- ทำให้ระบบ ดึงต่อเฉพาะสินค้าที่ยังเหลืออยู่ทันที ไม่ต้องเสียเวลายิงซ้ำรายการที่เสร็จไปแล้ว
+
+2. Multi-Pass Auto-Retry (วนซ้ำรายการที่ล้มเหลว 3 รอบ):
+
+- หากรายการใดเจอปัญหา DIT Server สะดุด (Timeout/Empty Response) ระบบจะมีกลไก Exponential Backoff หน่วงเวลาแล้ววนกลับมาดึงซ้ำใน Pass ที่ 2 และ 3 ให้จนครบ
+- หากรายการใดยังล้มเหลวจริงๆ จะถูก Export ออกมาเป็น failed_ids_2026_08.csv และบันทึกสถานะ PARTIAL ลงในตาราง data_ingestion_log ให้ทราบ
+
+| ฟังก์ชันการทำงาน             | ระบบเดิมที่คุณเคยทำ                                                                                              | ระบบใหม่ที่เราปรับปรุงให้                                                                                                             |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| **ความเร็วในการดึงข้อมูล**   | รันทีละรายการ (Single Thread) ช้ามาก                                                                             | **3 Parallel Threads** (ThreadPoolExecutor) เร็วขึ้น 3-5 เท่า โดยไม่โดน Server บล็อก                                                  |
+| **กระบวนการรวมข้อมูล**       | ต้องรันสคริปต์แยก → ได้ CSV รายเดือน → เปิด `combine.py` อ่าน CSV 2 ล้านแถวมา `concat` → เสี่ยง RAM หมดและช้ามาก | **End-to-End Pipeline ในคำสั่งเดียว** สตรีมข้อมูลตรงเข้า MariaDB ทันที ไม่ต้องรวมไฟล์ CSV อีกต่อไป                                    |
+| **การป้องกันข้อมูลซ้ำซ้อน**  | เสี่ยงข้อมูลเบิ้ลหากรันเดือนเดิมซ้ำ                                                                              | **Idempotent 100%** ด้วย Primary Key (`price_date`, `product_id`) และ `ON DUPLICATE KEY UPDATE` ทำให้รันซ้ำกี่ครั้งข้อมูลก็ยังถูกต้อง |
+| **การตรวจสอบย้อนหลัง**       | ไม่มีประวัติบันทึก                                                                                               | มีตาราง **`data_ingestion_log`** บันทึกเวลา จำนวนแถว และสถานะการทำงานทุกรอบ                                                           |
+| **การใช้งานร่วมกับ Airflow** | ต้องเขียนสคริปต์เชื่อมโยงหลายไฟล์                                                                                | **พร้อมเสียบเข้า Airflow DAG ได้ทันที** ด้วยคำสั่ง CLI ที่รองรับ Parameter                                                            |

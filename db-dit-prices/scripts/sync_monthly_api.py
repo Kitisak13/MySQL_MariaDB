@@ -31,7 +31,8 @@ def sync_monthly_prices(
     from_date: str,
     to_date: str,
     save_raw_csv: bool = True,
-    max_workers: int = 3
+    max_workers: int = 3,
+    target_product_ids: Optional[List[str]] = None
 ):
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     master_product_path = os.path.join(base_dir, "master_data", "tbl_product&unit.csv")
@@ -47,23 +48,27 @@ def sync_monthly_prices(
     # Step 1: Read Product Catalog
     conn = get_connection()
     try:
-        cursor = conn.cursor(dictionary=True)
-        cursor.execute("SELECT product_id FROM `dim_product` ORDER BY product_id;")
-        db_products = [r["product_id"] for r in cursor.fetchall()]
-        cursor.close()
-
-        if db_products:
-            product_ids = db_products
-            print(f"\n[Step 1/3] Loaded {len(product_ids)} target products from `dim_product`.")
-        elif os.path.exists(master_product_path):
-            df_prods = pd.read_csv(master_product_path, encoding="utf-8")
-            product_ids = df_prods["product_id"].dropna().unique().tolist()
-            print(f"\n[Step 1/3] Loaded {len(product_ids)} target products from {master_product_path}.")
+        if target_product_ids:
+            product_ids = target_product_ids
+            print(f"\n[Step 1/3] Targeted Retry Mode: {len(product_ids)} specific products.")
         else:
-            downloader_temp = DITPriceDownloader(max_workers=max_workers)
-            df_prods = downloader_temp.get_product_list()
-            product_ids = df_prods["product_id"].dropna().unique().tolist()
-            print(f"\n[Step 1/3] Loaded {len(product_ids)} target products dynamically from DIT API.")
+            cursor = conn.cursor(dictionary=True)
+            cursor.execute("SELECT product_id FROM `dim_product` ORDER BY product_id;")
+            db_products = [r["product_id"] for r in cursor.fetchall()]
+            cursor.close()
+
+            if db_products:
+                product_ids = db_products
+                print(f"\n[Step 1/3] Loaded {len(product_ids)} target products from `dim_product`.")
+            elif os.path.exists(master_product_path):
+                df_prods = pd.read_csv(master_product_path, encoding="utf-8")
+                product_ids = df_prods["product_id"].dropna().unique().tolist()
+                print(f"\n[Step 1/3] Loaded {len(product_ids)} target products from {master_product_path}.")
+            else:
+                downloader_temp = DITPriceDownloader(max_workers=max_workers)
+                df_prods = downloader_temp.get_product_list()
+                product_ids = df_prods["product_id"].dropna().unique().tolist()
+                print(f"\n[Step 1/3] Loaded {len(product_ids)} target products dynamically from DIT API.")
 
         # Step 2: Setup Checkpoint paths for Crash-Safe Auto-Resume
         period_str = f"{from_date}_{to_date}".replace("-", "_")
@@ -80,11 +85,14 @@ def sync_monthly_prices(
             max_passes=3,
             checkpoint_csv=checkpoint_csv,
             checked_log_path=checked_log_path,
-            resume=True
+            resume=(target_product_ids is None)
         )
 
         if df_prices.empty:
             print("\n[Warning] No price data returned from DIT API for this period.")
+            if not df_errors.empty:
+                df_errors.to_csv(failed_csv_path, index=False, encoding="utf-8")
+                print(f"  -> Saved {len(df_errors)} failed items to: {failed_csv_path}")
             return
 
         print(f"  -> Retrieved {len(df_prices):,} total price observations.")
@@ -134,7 +142,7 @@ def sync_monthly_prices(
         print(f"Total Rows Ingested: {total_upserted:,}")
         print(f"Duration           : {duration:.2f} seconds ({duration/60:.2f} mins)")
         if not df_errors.empty:
-            print(f"Errors             : {len(df_errors)} failed requests (see log)")
+            print(f"Errors             : {len(df_errors)} failed requests (see {failed_csv_path})")
         print("=" * 80)
 
     finally:
@@ -146,7 +154,22 @@ if __name__ == "__main__":
     parser.add_argument("--to-date", type=str, default=None, help="End date (YYYY-MM-DD)")
     parser.add_argument("--month", type=str, default=None, help="Month to sync (YYYY-MM)")
     parser.add_argument("--workers", type=int, default=3, help="Number of concurrent workers (default: 3)")
+    parser.add_argument("--retry-failed", type=str, default=None, help="Path to failed_ids_*.csv file to retry specific failed items")
+    parser.add_argument("--products", type=str, default=None, help="Comma-separated product IDs to sync (e.g. P11001,P11002)")
     args = parser.parse_args()
+
+    target_ids = None
+    if args.retry_failed:
+        if os.path.exists(args.retry_failed):
+            df_failed = pd.read_csv(args.retry_failed)
+            if "product_id" in df_failed.columns:
+                target_ids = df_failed["product_id"].dropna().unique().tolist()
+                print(f"Loaded {len(target_ids)} failed product IDs from {args.retry_failed}")
+        else:
+            print(f"Error: Failed file not found: {args.retry_failed}")
+            sys.exit(1)
+    elif args.products:
+        target_ids = [p.strip() for p in args.products.split(",") if p.strip()]
 
     if args.month:
         year, month = map(int, args.month.split("-"))
@@ -159,4 +182,9 @@ if __name__ == "__main__":
     else:
         f_date, t_date = get_default_monthly_dates()
 
-    sync_monthly_prices(from_date=f_date, to_date=t_date, max_workers=args.workers)
+    sync_monthly_prices(
+        from_date=f_date,
+        to_date=t_date,
+        max_workers=args.workers,
+        target_product_ids=target_ids
+    )
