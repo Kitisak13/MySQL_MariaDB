@@ -3,11 +3,14 @@ import sys
 import time
 import json
 import argparse
+import threading
 import requests
 import pandas as pd
 from typing import List, Dict, Any, Tuple, Optional, Set
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, datetime
+from requests.adapters import HTTPAdapter
+from urllib3.util import Retry
 
 # Ensure UTF-8 output
 sys.stdout.reconfigure(encoding="utf-8")
@@ -32,13 +35,33 @@ DEFAULT_HEADERS = {
     "Accept": "application/json, text/plain, */*",
     "Accept-Language": "th-TH,th;q=0.9,en-US;q=0.8,en;q=0.7",
     "Referer": "https://tradereport.moc.go.th/TradeThai/CustomsHarmonizeExportCountry",
-    "Connection": "close"
+    "Connection": "keep-alive"
 }
 
 FOOD_CHAPTERS = ["07", "08", "10", "11", "15", "16", "18", "19", "20", "21", "22", "23", "35"]
 MASTER_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "master_data"))
 CHECKPOINT_FILE = os.path.join(MASTER_DIR, "checkpoint_completed_queries.json")
 FAILED_QUERIES_FILE = os.path.join(MASTER_DIR, "failed_queries_food_export.csv")
+
+# Thread-local session management for connection pooling
+_thread_local = threading.local()
+
+def get_thread_session() -> requests.Session:
+    """Returns or creates a thread-local requests Session with retry adapter and connection pooling."""
+    if not hasattr(_thread_local, "session"):
+        session = requests.Session()
+        session.headers.update(DEFAULT_HEADERS)
+        retry_strat = Retry(
+            total=2,
+            backoff_factor=0.3,
+            status_forcelist=[500, 502, 503, 504],
+            raise_on_status=False
+        )
+        adapter = HTTPAdapter(max_retries=retry_strat, pool_connections=10, pool_maxsize=10)
+        session.mount("http://", adapter)
+        session.mount("https://", adapter)
+        _thread_local.session = session
+    return _thread_local.session
 
 def load_checkpoint() -> Set[str]:
     """Loads set of completed query keys (e.g. '2016-05_10063040001')."""
@@ -58,7 +81,7 @@ def save_checkpoint(completed_set: Set[str]):
         json.dump(list(completed_set), f)
 
 def log_failed_query(year: int, month: int, hs_code: str, error_msg: str):
-    """Appends failed query to CSV for easy review and retrying."""
+    """Appends true technical failure to CSV for audit and targeted retrying."""
     os.makedirs(MASTER_DIR, exist_ok=True)
     file_exists = os.path.exists(FAILED_QUERIES_FILE)
     df_err = pd.DataFrame([{
@@ -92,12 +115,43 @@ def wait_for_connection_recovery(max_wait_seconds: int = 600):
     print("❌ [Fatal Error] Network did not recover within timeout period.")
     return False
 
-def get_target_hs_codes(chapters: List[str] = FOOD_CHAPTERS) -> List[str]:
-    """Queries dim_hs11_code to retrieve all unique 11-digit HS codes for target food chapters."""
+def get_applicable_hs_codes_for_year(year: int, chapters: List[str] = FOOD_CHAPTERS) -> List[str]:
+    """
+    Queries dim_hs11_code and applies Smart Revision Filtering:
+    - Year <= 2016: Revision 2012 era (first_seen_revision <= 2012)
+    - Year 2017 to 2021: Revision 2017 era (first_seen_revision <= 2017 AND latest_revision >= 2017)
+    - Year >= 2022: Revision 2022 era (latest_revision >= 2022)
+    """
     conn = get_connection()
     cursor = conn.cursor()
     placeholders = ", ".join(["%s"] * len(chapters))
-    query = f"SELECT hs_11_code FROM dim_hs11_code WHERE hs_2_code IN ({placeholders}) ORDER BY hs_11_code;"
+
+    if year <= 2016:
+        query = f"""
+            SELECT hs_11_code 
+            FROM dim_hs11_code 
+            WHERE hs_2_code IN ({placeholders}) 
+              AND first_seen_revision <= 2012
+            ORDER BY hs_11_code;
+        """
+    elif 2017 <= year <= 2021:
+        query = f"""
+            SELECT hs_11_code 
+            FROM dim_hs11_code 
+            WHERE hs_2_code IN ({placeholders}) 
+              AND first_seen_revision <= 2017 
+              AND latest_revision >= 2017
+            ORDER BY hs_11_code;
+        """
+    else: # 2022+
+        query = f"""
+            SELECT hs_11_code 
+            FROM dim_hs11_code 
+            WHERE hs_2_code IN ({placeholders}) 
+              AND latest_revision >= 2022
+            ORDER BY hs_11_code;
+        """
+
     cursor.execute(query, tuple(chapters))
     codes = [row[0] for row in cursor.fetchall()]
     cursor.close()
@@ -105,25 +159,31 @@ def get_target_hs_codes(chapters: List[str] = FOOD_CHAPTERS) -> List[str]:
     return codes
 
 def fetch_single_hs_code(year: int, month: int, hs_code: str, max_retries: int = 3) -> Tuple[str, List[Dict[str, Any]], Optional[str]]:
-    """Fetches export trade data for a single HS code with retries and exception safety."""
+    """
+    Fetches export trade data for a single HS code.
+    Distinguishes clearly between 'No Trade Data' (HTTP 200 Empty) vs 'Technical Failure' (HTTP 500 / Timeout).
+    """
     params = {
         "limit": 0,
         "year": year,
         "month": month,
         "hs_code": hs_code
     }
-    
+    session = get_thread_session()
     last_err = None
+
     for attempt in range(1, max_retries + 1):
         try:
-            r = requests.get(BASE_URL, params=params, headers=DEFAULT_HEADERS, timeout=25)
+            r = session.get(BASE_URL, params=params, timeout=25)
             if r.status_code == 200:
                 if not r.text or not r.text.strip():
+                    # Valid Empty: Server responded successfully, no trade data for this code
                     return hs_code, [], None
                 try:
                     data = r.json()
                     if isinstance(data, list) and len(data) > 0:
                         return hs_code, data, None
+                    # Valid Empty: Empty JSON array []
                     return hs_code, [], None
                 except Exception as e:
                     last_err = f"JSONDecodeError: {e}"
@@ -134,12 +194,13 @@ def fetch_single_hs_code(year: int, month: int, hs_code: str, max_retries: int =
         except Exception as e:
             last_err = str(e)
 
-        time.sleep(0.3 * attempt)
+        time.sleep(0.2 * attempt)
 
+    # Technical failure after all retries exhausted
     return hs_code, [], last_err
 
 def sync_monthly_food_export(year: int, month: int, hs_codes: List[str], 
-                              completed_checkpoint: Set[str], max_workers: int = 6) -> Tuple[int, int, int]:
+                              completed_checkpoint: Set[str], max_workers: int = 8) -> Tuple[int, int, int]:
     """
     Pulls target HS codes for a single month concurrently, loads in batches, and updates checkpoints.
     """
@@ -149,10 +210,10 @@ def sync_monthly_food_export(year: int, month: int, hs_codes: List[str],
     pending_codes = [code for code in hs_codes if f"{period_str}_{code}" not in completed_checkpoint]
     
     if not pending_codes:
-        print(f"⚡ Period {period_str}: All {len(hs_codes):,} HS codes already synced in checkpoint. Skipping!")
+        print(f"⚡ Period {period_str}: All {len(hs_codes):,} applicable HS codes already synced in checkpoint. Skipping!")
         return 0, 0, 0
 
-    print(f"\n--- Processing Period: {period_str} ({len(pending_codes):,} pending / {len(hs_codes):,} total HS codes) ---")
+    print(f"\n--- Processing Period: {period_str} ({len(pending_codes):,} pending / {len(hs_codes):,} applicable HS codes) ---")
     
     month_start_time = time.time()
     collected_facts = []
@@ -179,7 +240,7 @@ def sync_monthly_food_export(year: int, month: int, hs_codes: List[str],
                 consecutive_errors += 1
                 log_failed_query(year, month, hs_code, err)
 
-                # Check if network dropped
+                # Check if entire network dropped
                 if consecutive_errors >= 6:
                     if not check_internet_health():
                         wait_for_connection_recovery()
@@ -291,21 +352,17 @@ def retry_failed_queries(max_workers: int = 4):
             os.remove(FAILED_QUERIES_FILE)
         print("🎉 ALL previously failed queries successfully resolved and cleared!")
 
-def run_sync_pipeline(years: List[int], months: List[int], chapters: List[str], max_workers: int = 6):
+def run_sync_pipeline(years: List[int], months: List[int], chapters: List[str], max_workers: int = 8):
     pipeline_start = time.time()
     print("=" * 80)
-    print("THAILAND FOOD EXPORT DATA WAREHOUSE - MOC API INGESTION PIPELINE")
+    print("THAILAND FOOD EXPORT DATA WAREHOUSE - SMART MOC API INGESTION PIPELINE")
     print("=" * 80)
     print(f"Target Years    : {years}")
     print(f"Target Months   : {months}")
     print(f"Target Chapters : {chapters} (13 Food & Agricultural Chapters)")
-    print(f"Concurrency     : {max_workers} parallel workers")
+    print(f"Concurrency     : {max_workers} parallel workers with HTTP Connection Pooling")
 
-    # 1. Retrieve HS Codes
-    hs_codes = get_target_hs_codes(chapters)
-    print(f"Retrieved {len(hs_codes):,} unique 11-digit HS codes from `dim_hs11_code`.")
-
-    # 2. Load Checkpoint
+    # Load Checkpoint
     completed_checkpoint = load_checkpoint()
     print(f"Loaded Checkpoint: {len(completed_checkpoint):,} previously completed query tasks.")
 
@@ -315,11 +372,15 @@ def run_sync_pipeline(years: List[int], months: List[int], chapters: List[str], 
     grand_total_errors = 0
 
     for y in sorted(years):
+        # Dynamically retrieve applicable HS codes for this specific year (Smart Revision Filtering)
+        applicable_hs_codes = get_applicable_hs_codes_for_year(y, chapters)
+        print(f"\n[Year {y}] Smart Revision Filter: {len(applicable_hs_codes):,} applicable HS codes for year {y}.")
+
         for m in sorted(months):
             current_period += 1
             print(f"\n[Period {current_period}/{total_periods}]")
             facts_loaded, data_codes, errors = sync_monthly_food_export(
-                year=y, month=m, hs_codes=hs_codes,
+                year=y, month=m, hs_codes=applicable_hs_codes,
                 completed_checkpoint=completed_checkpoint,
                 max_workers=max_workers
             )
@@ -328,7 +389,7 @@ def run_sync_pipeline(years: List[int], months: List[int], chapters: List[str], 
 
     total_duration = round(time.time() - pipeline_start, 2)
     print("\n" + "=" * 80)
-    print("INGESTION PIPELINE EXECUTION SUMMARY")
+    print("SMART INGESTION PIPELINE EXECUTION SUMMARY")
     print(f"Total Fact Rows Ingested : {grand_total_facts:,}")
     print(f"Total Errors Recorded    : {grand_total_errors:,}")
     print(f"Total Processing Time    : {total_duration:.2f} seconds ({total_duration/60:.2f} mins)")
@@ -339,7 +400,7 @@ def main():
     parser.add_argument("--years", nargs="+", type=int, default=[2016, 2017], help="Target observation years (default: 2016 2017)")
     parser.add_argument("--months", nargs="+", type=int, default=list(range(1, 13)), help="Target observation months (1 to 12)")
     parser.add_argument("--chapters", nargs="+", type=str, default=FOOD_CHAPTERS, help="Target 2-digit HS chapters")
-    parser.add_argument("--workers", type=int, default=6, help="Concurrent worker threads (default 6)")
+    parser.add_argument("--workers", type=int, default=8, help="Concurrent worker threads (default: 8)")
     parser.add_argument("--retry-failed", action="store_true", help="Retry all failed queries recorded in CSV")
 
     args = parser.parse_args()
