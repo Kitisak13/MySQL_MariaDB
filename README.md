@@ -38,6 +38,13 @@ MySQL_MariaDB/
 │   ├── scripts/                    # API Downloader, Historical Ingest, Monthly Sync, Verify
 │   └── README.md                   # คู่มือเฉพาะสำหรับฐานข้อมูล db-dit-prices
 │
+├── db-food-export/                  # [Database 4] ฐานข้อมูลสถิติการส่งออกสินค้าอาหารและพิกัดศุลกากร (ก.พาณิชย์)
+│   ├── config/                     # Database connection helper
+│   ├── database/                   # DDL schema.sql, init_db.py, data_dictionary.md
+│   ├── master_data/                # Master reference data (dim_hs11_code_master.csv)
+│   ├── scripts/                    # Master HS builder, API scrapers, Verification
+│   └── README.md                   # คู่มือเฉพาะสำหรับฐานข้อมูล db-food-export
+│
 ├── demo/                           # โค้ดตัวอย่างการใช้งาน MySQL Connector / Tutorials
 │   ├── mysql-connector-create-tables.ipynb
 │   ├── mysql-connector-insert-data.ipynb
@@ -57,7 +64,8 @@ MySQL_MariaDB/
 |   1   | [`db-bot_exchange_rates/`](db-bot_exchange_rates/)   | `bot_exchange_rates`      | ข้อมูลอัตราแลกเปลี่ยนรายวันจากธนาคารแห่งประเทศไทย (BOT) ปี 2002–ปัจจุบัน | Star Schema (`dim_currency`, `fact_daily_exchange_rate`) |
 |   2   | [`db-thai_customs/`](db-thai_customs/)               | `thai_customs`            | ข้อมูลสถิติการนำเข้า-ส่งออกสินค้า กรมศุลกากรไทย (8 Datasets) ปี 2017–ปัจจุบัน | Star Schema (4 Fact Tables, 5 Dimension Tables)          |
 |   3   | [`db-dit-prices/`](db-dit-prices/)                   | `dit_product_prices`      | ข้อมูลราคาจำหน่ายปลีก-ส่ง สินค้าอุปโภคบริโภค กรมการค้าภายใน (DIT) ปี 2010–ปัจจุบัน | Star Schema (`dim_product`, `fact_daily_product_price`) |
-|   4   | _(Future Databases: `db-<project_name>/`)_            | _TBD_                     | _(สามารถเพิ่มโฟลเดอร์สำหรับฐานข้อมูลใหม่ได้ตามโครงสร้างนี้)_             | -                                                        |
+|   4   | [`db-food-export/`](db-food-export/)                 | `food_export`             | ข้อมูลสถิติการส่งออกสินค้าเกษตรและอาหาร กระทรวงพาณิชย์ (MOC) ปี 2015–ปัจจุบัน | Star Schema (`dim_hs11_code`, `dim_country`, `fact_food_export`) |
+|   5   | _(Future Databases: `db-<project_name>/`)_            | _TBD_                     | _(สามารถเพิ่มโฟลเดอร์สำหรับฐานข้อมูลใหม่ได้ตามโครงสร้างนี้)_             | -                                                        |
 
 ---
 
