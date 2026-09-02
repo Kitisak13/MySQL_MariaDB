@@ -106,3 +106,47 @@ def load_fact_exchange_rates(fact_df: pd.DataFrame, chunk_size: int = 10000, con
         cursor.close()
         if should_close:
             conn.close()
+
+def calculate_file_hash(file_path: str) -> str:
+    """Calculates SHA-256 hash of a file."""
+    import hashlib
+    sha256 = hashlib.sha256()
+    with open(file_path, "rb") as f:
+        for chunk in iter(lambda: f.read(65536), b""):
+            sha256.update(chunk)
+    return sha256.hexdigest()
+
+def log_ingestion(
+    dataset_name: str,
+    file_or_source: str,
+    period_start: Optional[str],
+    period_end: Optional[str],
+    total_rows: int,
+    file_hash: Optional[str] = None,
+    status: str = "SUCCESS",
+    duration_seconds: Optional[float] = None,
+    conn = None
+):
+    """Records entry into data_ingestion_log."""
+    should_close = False
+    if conn is None:
+        conn = get_connection()
+        should_close = True
+
+    sql = """
+        INSERT INTO data_ingestion_log (
+            dataset_name, file_or_source, period_start, period_end,
+            total_rows, file_hash, status, duration_seconds
+        ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s);
+    """
+    cursor = conn.cursor()
+    try:
+        cursor.execute(sql, (
+            dataset_name, file_or_source, period_start, period_end,
+            total_rows, file_hash, status, duration_seconds
+        ))
+        conn.commit()
+    finally:
+        cursor.close()
+        if should_close:
+            conn.close()

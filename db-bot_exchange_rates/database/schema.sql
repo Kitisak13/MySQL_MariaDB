@@ -36,3 +36,18 @@ CREATE TABLE IF NOT EXISTS `fact_daily_exchange_rate` (
         REFERENCES `dim_currency` (`currency_code`) 
         ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Fact Table for Bank of Thailand Daily Exchange Rates';
+
+-- 3. Audit & Ingestion Logs
+CREATE TABLE IF NOT EXISTS `data_ingestion_log` (
+    `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `dataset_name` VARCHAR(100) NOT NULL COMMENT 'Dataset Name (e.g. historical_backfill, monthly_batch)',
+    `file_or_source` VARCHAR(255) NOT NULL COMMENT 'Source file name or batch description',
+    `period_start` DATE NULL COMMENT 'Earliest observation date in batch',
+    `period_end` DATE NULL COMMENT 'Latest observation date in batch',
+    `total_rows` INT NOT NULL DEFAULT 0 COMMENT 'Number of rows inserted/updated',
+    `file_hash` CHAR(64) NULL COMMENT 'SHA-256 Checksum of source file',
+    `status` VARCHAR(20) NOT NULL DEFAULT 'SUCCESS' COMMENT 'SUCCESS, FAILED',
+    `duration_seconds` DECIMAL(10, 2) NULL COMMENT 'Processing time in seconds',
+    `ingested_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    INDEX `idx_dataset_source` (`dataset_name`, `file_or_source`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Audit: Ingestion History and Data Provenance';

@@ -8,7 +8,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from config.db_config import get_connection
 from etl.transformers import transform_monthly_pivoted
-from etl.loaders import load_fact_exchange_rates
+from etl.loaders import load_fact_exchange_rates, log_ingestion, calculate_file_hash
 
 def ingest_monthly_file(file_path: str):
     """
@@ -38,7 +38,25 @@ def ingest_monthly_file(file_path: str):
 
         # Load
         rows_loaded = load_fact_exchange_rates(df, chunk_size=5000, conn=conn)
-        print(f"[MONTHLY PIPELINE] Ingestion completed: {rows_loaded:,} records processed.")
+        
+        # Log Ingestion
+        min_date = str(df["rate_date"].min()) if not df.empty else None
+        max_date = str(df["rate_date"].max()) if not df.empty else None
+        file_hash = calculate_file_hash(file_path)
+        duration = round(time.time() - t0, 2)
+        
+        log_ingestion(
+            dataset_name="monthly_batch",
+            file_or_source=os.path.basename(file_path),
+            period_start=min_date,
+            period_end=max_date,
+            total_rows=rows_loaded,
+            file_hash=file_hash,
+            status="SUCCESS",
+            duration_seconds=duration,
+            conn=conn
+        )
+        print(f"[MONTHLY PIPELINE] Ingestion completed & logged: {rows_loaded:,} records processed.")
         return rows_loaded
     finally:
         cursor.close()

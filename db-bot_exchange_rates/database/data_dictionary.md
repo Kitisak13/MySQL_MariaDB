@@ -5,6 +5,7 @@
 ```mermaid
 erDiagram
     dim_currency ||--o{ fact_daily_exchange_rate : "references"
+    data_ingestion_log
 
     dim_currency {
         char(3) currency_code PK "ISO 4217 Currency Code"
@@ -24,6 +25,19 @@ erDiagram
         decimal(12_4) selling "Selling Rate (Nullable)"
         timestamp created_at "Record Creation Time"
         timestamp updated_at "Record Last Update Time"
+    }
+
+    data_ingestion_log {
+        bigint id PK "Auto Increment"
+        varchar(100) dataset_name "Dataset Identifier"
+        varchar(255) file_or_source "Source File or Batch Name"
+        date period_start "Earliest Date in Batch"
+        date period_end "Latest Date in Batch"
+        int total_rows "Rows Ingested"
+        char(64) file_hash "SHA-256 Checksum"
+        varchar(20) status "SUCCESS / FAILED"
+        decimal(10_2) duration_seconds "Processing Time"
+        timestamp ingested_at "Logged Timestamp"
     }
 ```
 
@@ -57,7 +71,24 @@ erDiagram
 
 ---
 
-## 4. Business Transformation & Ingestion Rules
+## 4. Table: `data_ingestion_log`
+
+| Column Name | Data Type | Constraints | Nullable | Default | Description |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `id` | `BIGINT` | `PRIMARY KEY`, `AUTO_INCREMENT` | No | - | รหัสลำดับ Audit Log |
+| `dataset_name` | `VARCHAR(100)` | `INDEX` | No | - | ชื่อชุดข้อมูล เช่น `historical_backfill`, `monthly_batch` |
+| `file_or_source`| `VARCHAR(255)` | `INDEX` | No | - | ชื่อไฟล์หรือ Batch Source |
+| `period_start` | `DATE` | - | Yes | `NULL` | วันที่เริ่มต้นของข้อมูลในงวด |
+| `period_end` | `DATE` | - | Yes | `NULL` | วันที่สิ้นสุดของข้อมูลในงวด |
+| `total_rows` | `INT` | - | No | `0` | จำนวนแถวที่นำเข้าสำเร็จ |
+| `file_hash` | `CHAR(64)` | - | Yes | `NULL` | SHA-256 Checksum ของไฟล์ต้นฉบับ |
+| `status` | `VARCHAR(20)` | - | No | `'SUCCESS'` | สถานะการทำงาน (`SUCCESS`, `FAILED`) |
+| `duration_seconds`| `DECIMAL(10, 2)`| - | Yes | `NULL` | ระยะเวลาประมวลผล (วินาที) |
+| `ingested_at` | `TIMESTAMP` | - | No | `CURRENT_TIMESTAMP` | เวลาที่โหลดข้อมูล |
+
+---
+
+## 5. Business Transformation & Ingestion Rules
 1. **Date Normalization:**
    - Input format `MM/DD/YYYY` (File 1) and `DD/MM/YYYY` (File 2) $\rightarrow$ Converted to `YYYY-MM-DD`.
 2. **Type Mapping & Clean:**
