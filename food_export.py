@@ -16,8 +16,10 @@ import os
 import sys
 import time
 import ssl
+import json
 import logging
 import threading
+import urllib.request
 from typing import List, Dict, Any, Optional, Tuple, Set
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import pandas as pd
@@ -25,6 +27,15 @@ import requests
 from requests.adapters import HTTPAdapter
 import urllib3
 from urllib3.util import Retry
+
+# Global SSL context for native urllib fallback
+urllib_ssl_ctx = ssl.create_default_context()
+urllib_ssl_ctx.check_hostname = False
+urllib_ssl_ctx.verify_mode = ssl.CERT_NONE
+try:
+    urllib_ssl_ctx.options |= getattr(ssl, "OP_LEGACY_SERVER_CONNECT", 0x4)
+except Exception:
+    pass
 
 # Suppress SSL verification warnings
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -220,19 +231,24 @@ class TradeExportScraper:
         return filtered_hs_df
 
     def fetch_single_query(self, year: int, month: int, hs_code: str) -> Tuple[Optional[pd.DataFrame], Optional[Dict[str, Any]]]:
-        """Fetches trade export data for a single (year, month, hs_code) with internal retries."""
+        """
+        Fetches trade export data for a single (year, month, hs_code).
+        Uses requests with automatic fallback to native urllib if SSL negotiation fails.
+        """
         params = {
             "limit": 0,
             "year": year,
             "month": month,
             "hs_code": hs_code
         }
+        query_url = f"{self.BASE_URL}?limit=0&year={year}&month={month}&hs_code={hs_code}"
 
         last_err = None
         for attempt in range(1, self.config.MAX_RETRIES_PER_QUERY + 1):
+            # Attempt 1 & 2: Requests Session
             try:
                 session = self._get_session()
-                response = session.get(self.BASE_URL, params=params, timeout=self.config.REQUEST_TIMEOUT)
+                response = session.get(self.BASE_URL, params=params, timeout=self.config.REQUEST_TIMEOUT, verify=False)
 
                 if response.status_code == 200:
                     if not response.text or not response.text.strip():
@@ -242,7 +258,7 @@ class TradeExportScraper:
                         data = response.json()
                     except Exception as e:
                         last_err = f"JSONDecodeError: {e}"
-                        time.sleep(1.0 * attempt)
+                        time.sleep(0.5 * attempt)
                         continue
 
                     if data and isinstance(data, list) and len(data) > 0:
@@ -252,18 +268,36 @@ class TradeExportScraper:
                         df["query_month"] = month
                         return df, None
                     else:
-                        # Legitimate empty result (No trade transactions for this commodity in this month)
                         return None, None
                 elif response.status_code in (500, 502, 503, 504, 429):
                     last_err = f"HTTP {response.status_code}"
-                    time.sleep(1.5 * attempt)
+                    time.sleep(1.0 * attempt)
                     continue
                 else:
                     return None, {"year": year, "month": month, "hs_code": hs_code, "error": f"HTTP {response.status_code}"}
 
             except Exception as e:
                 last_err = str(e)
-                time.sleep(1.0 * attempt)
+
+            # Fallback Attempt: Native urllib (Bypasses urllib3 connection pool SSL issues)
+            try:
+                req = urllib.request.Request(query_url, headers=self.DEFAULT_HEADERS)
+                with urllib.request.urlopen(req, context=urllib_ssl_ctx, timeout=self.config.REQUEST_TIMEOUT) as resp:
+                    raw_bytes = resp.read()
+                    text = raw_bytes.decode("utf-8") if raw_bytes else ""
+                    if text and text.strip():
+                        data = json.loads(text)
+                        if data and isinstance(data, list) and len(data) > 0:
+                            df = pd.DataFrame(data)
+                            df["hs_code_query"] = hs_code
+                            df["query_year"] = year
+                            df["query_month"] = month
+                            return df, None
+                        else:
+                            return None, None
+            except Exception as e:
+                last_err = str(e)
+                time.sleep(0.8 * attempt)
 
         err_msg = last_err or "Max retries exceeded"
         logger.warning(f"⚠️ [Error] Year: {year}, Month: {month:02d}, HS: {hs_code} -> {err_msg}")
