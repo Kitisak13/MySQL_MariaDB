@@ -30,6 +30,14 @@ MySQL_MariaDB/
 │   ├── scripts/                    # CKAN Downloader, Ingestion, Monthly Sync, Verification
 │   └── README.md                   # คู่มือเฉพาะสำหรับฐานข้อมูล db-thai_customs
 │
+├── db-dit-prices/                  # [Database 3] ฐานข้อมูลราคาสินค้าอุปโภคบริโภค (กรมการค้าภายใน)
+│   ├── config/                     # Connection helper & database configuration
+│   ├── database/                   # DDL schema.sql, init_db.py, data_dictionary.md
+│   ├── etl/                        # Normalizers, transformers & bulk loaders
+│   ├── master_data/                # Product & Unit catalog (730 items)
+│   ├── scripts/                    # API Downloader, Historical Ingest, Monthly Sync, Verify
+│   └── README.md                   # คู่มือเฉพาะสำหรับฐานข้อมูล db-dit-prices
+│
 ├── demo/                           # โค้ดตัวอย่างการใช้งาน MySQL Connector / Tutorials
 │   ├── mysql-connector-create-tables.ipynb
 │   ├── mysql-connector-insert-data.ipynb
@@ -48,7 +56,8 @@ MySQL_MariaDB/
 | :---: | :---------------------------------------------------- | :------------------------ | :----------------------------------------------------------------------- | :------------------------------------------------------- |
 |   1   | [`db-bot_exchange_rates/`](db-bot_exchange_rates/)   | `bot_exchange_rates`      | ข้อมูลอัตราแลกเปลี่ยนรายวันจากธนาคารแห่งประเทศไทย (BOT) ปี 2002–ปัจจุบัน | Star Schema (`dim_currency`, `fact_daily_exchange_rate`) |
 |   2   | [`db-thai_customs/`](db-thai_customs/)               | `thai_customs`            | ข้อมูลสถิติการนำเข้า-ส่งออกสินค้า กรมศุลกากรไทย (8 Datasets) ปี 2017–ปัจจุบัน | Star Schema (4 Fact Tables, 5 Dimension Tables)          |
-|   3   | _(Future Databases: `db-<project_name>/`)_            | _TBD_                     | _(สามารถเพิ่มโฟลเดอร์สำหรับฐานข้อมูลใหม่ได้ตามโครงสร้างนี้)_             | -                                                        |
+|   3   | [`db-dit-prices/`](db-dit-prices/)                   | `dit_product_prices`      | ข้อมูลราคาจำหน่ายปลีก-ส่ง สินค้าอุปโภคบริโภค กรมการค้าภายใน (DIT) ปี 2010–ปัจจุบัน | Star Schema (`dim_product`, `fact_daily_product_price`) |
+|   4   | _(Future Databases: `db-<project_name>/`)_            | _TBD_                     | _(สามารถเพิ่มโฟลเดอร์สำหรับฐานข้อมูลใหม่ได้ตามโครงสร้างนี้)_             | -                                                        |
 
 ---
 
