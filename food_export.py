@@ -15,6 +15,7 @@ Enhancements:
 import os
 import sys
 import time
+import ssl
 import logging
 import threading
 from typing import List, Dict, Any, Optional, Tuple, Set
@@ -22,7 +23,28 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import pandas as pd
 import requests
 from requests.adapters import HTTPAdapter
+import urllib3
 from urllib3.util import Retry
+
+# Suppress SSL verification warnings
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+class SSLAdapter(HTTPAdapter):
+    """
+    Custom SSL adapter that allows legacy TLS connection (SECLEVEL=1)
+    and handles unexpected server EOF resets on older government servers.
+    """
+    def init_poolmanager(self, *args, **kwargs):
+        ctx = urllib3.util.ssl_.create_urllib3_context()
+        ctx.set_ciphers("DEFAULT@SECLEVEL=1")
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+        try:
+            ctx.options |= getattr(ssl, "OP_LEGACY_SERVER_CONNECT", 0x4)
+        except Exception:
+            pass
+        kwargs["ssl_context"] = ctx
+        return super().init_poolmanager(*args, **kwargs)
 
 # Attempt to import tqdm for progress bar
 try:
@@ -104,10 +126,10 @@ class Config:
     HS_CODE_PREFIXES = ["07", "08", "20"]            # Targets Chapter 07, 08, 20 (Veg, Fruit, Prep)
 
     # Network & Concurrency Settings (Tuned for MOC Server Stability)
-    MAX_WORKERS = 2          # 2 workers prevents MOC server rate-limit blocks on Colab
-    REQUEST_DELAY = 0.30     # Delay between requests (0.3s)
-    REQUEST_TIMEOUT = 30     # HTTP Timeout (30s)
-    MAX_RETRIES_PER_QUERY = 3 # Retries per item on 500/502/Timeout
+    MAX_WORKERS = 3          # Concurrent parallel workers
+    REQUEST_DELAY = 0.15     # Delay between requests (0.15s)
+    REQUEST_TIMEOUT = 25     # HTTP Timeout (25s)
+    MAX_RETRIES_PER_QUERY = 3 # Retries per item
     RESUME_CHECKPOINT = True # Auto-Resume from previous run
 
 # --- Scraper & Processor Class ---
@@ -120,7 +142,7 @@ class TradeExportScraper:
         "Accept-Language": "th-TH,th;q=0.9,en-US;q=0.8,en;q=0.7",
         "Referer": "https://tradereport.moc.go.th/TradeThai/CustomsHarmonizeExportCountry",
         "Origin": "https://tradereport.moc.go.th",
-        "Connection": "keep-alive"
+        "Connection": "close"
     }
 
     def __init__(self, config: Config):
@@ -129,16 +151,16 @@ class TradeExportScraper:
         self._thread_local = threading.local()
 
     def _create_session(self) -> requests.Session:
-        """Creates a requests session with retry adapters and warm-up cookies."""
+        """Creates a requests session with SSLAdapter and warm-up cookies."""
         session = requests.Session()
         session.headers.update(self.DEFAULT_HEADERS)
         retry_strategy = Retry(
             total=2,
-            backoff_factor=1.0,
+            backoff_factor=0.5,
             status_forcelist=[500, 502, 503, 504],
             raise_on_status=False
         )
-        adapter = HTTPAdapter(
+        adapter = SSLAdapter(
             max_retries=retry_strategy,
             pool_connections=self.config.MAX_WORKERS * 2,
             pool_maxsize=self.config.MAX_WORKERS * 2
@@ -148,7 +170,7 @@ class TradeExportScraper:
 
         # Warm-up session to receive initial session cookies
         try:
-            session.get(self.HOME_URL, timeout=10)
+            session.get(self.HOME_URL, timeout=10, verify=False)
         except Exception:
             pass
 
