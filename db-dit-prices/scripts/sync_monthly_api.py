@@ -4,6 +4,7 @@ import time
 import argparse
 from datetime import datetime, date, timedelta
 import calendar
+from typing import List, Optional, Tuple
 import pandas as pd
 
 # Ensure UTF-8 output
