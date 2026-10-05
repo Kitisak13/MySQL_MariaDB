@@ -75,6 +75,23 @@ To maintain clean separation between multiple databases in this repository and e
    - `scripts/`: Executable runners (`ingest_historical.py`, `ingest_monthly.py`, `verify_database.py`).
    - `README.md`: Dedicated documentation and CLI instructions for that specific database.
 
+### 6. BI Tools & Semantic Model Integration Standard (Excel Power Query/Pivot, Power BI)
+
+When designing data access layers for downstream analytics, reporting, and Business Intelligence tools (Excel Power Query, Power Pivot Data Model, Power BI, Tableau):
+
+- **Star Schema in Analytical Model (Strict Separation of Fact & Dimensions):**
+  - **Do NOT pre-join wide flat tables** on the database before loading into BI tools. Flattening dimensions repeats long textual descriptions (e.g., Thai/English HS descriptions, country names) across millions of rows, bloating memory and network payloads.
+  - **Expose Lean Fact Views:** Deliver filtered Fact views containing only Surrogate/Foreign Keys (`Date`, `year`, `month`, `country_code`, `hs_11_code`) and numeric additive measures (`quantity`, `value_usd`, `value_baht`).
+  - **Establish 1-to-Many Relationships in BI Model:** Ingest Dimension tables (`dim_country`, `dim_hs11_code`) separately into the columnar in-memory model (VertiPaQ) and define 1-to-many relationships. This guarantees optimal data compression (up to 10x), blazing-fast refresh times, clean Slicers, and robust DAX calculations.
+
+- **Dynamic Scope & Configuration Tables (`cfg_*` / Filter Lookups):**
+  - When reports require a specific subset of records (e.g., specific target HS Codes or monitored countries), **NEVER hardcode literal lists in SQL `WHERE ... IN (...)` inside Views or Power Query M-code**.
+  - **Implement Configuration Tables:** Create dedicated lookup tables (e.g., `cfg_target_hs_codes`) containing keys and business metadata:
+    - Primary Key: `hs_11_code`
+    - Metadata: `category_group` (e.g., 'ผลไม้เศรษฐกิจ', 'ผักส่งออกหลัก'), `is_active` (TINYINT 1/0), `created_at`
+  - **Dynamic View Integration:** Build analytical Views by performing an `INNER JOIN` against the configuration table filtering `WHERE cfg.is_active = 1`.
+  - **Separation of Data vs DDL:** Business users can add, remove, or categorize target items via simple `INSERT/UPDATE` without altering SQL DDL views or modifying Power Query scripts.
+
 ---
 
 ## Agent Workflow (How to Assist Me)

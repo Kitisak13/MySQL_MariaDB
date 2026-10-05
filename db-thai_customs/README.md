@@ -73,6 +73,8 @@ python db-thai_customs/scripts/ingest_all_customs.py
 
 ### 3.4 รันระบบ Sync รายเดือนและปรับปรุงข้อมูลงวดแก้ปรับปรุงย้อนหลัง 2 ปี (Monthly Restatement Sync)
 
+**รัน command นี้**
+
 ```powershell
 python db-thai_customs/scripts/sync_monthly_customs.py
 ```

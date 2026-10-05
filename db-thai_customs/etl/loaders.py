@@ -30,7 +30,7 @@ def load_dimension_records(table_name: str, records: List[tuple], columns: List[
     val_placeholders = ", ".join(["%s"] * len(columns))
     
     if update_cols:
-        update_str = ", ".join([f"`{c}` = VALUES(`{c}`)" for c in update_cols])
+        update_str = ", ".join([f"`{c}` = COALESCE(VALUES(`{c}`), `{c}`)" for c in update_cols])
         sql = f"INSERT INTO `{table_name}` ({col_str}) VALUES ({val_placeholders}) ON DUPLICATE KEY UPDATE {update_str};"
     else:
         sql = f"INSERT IGNORE INTO `{table_name}` ({col_str}) VALUES ({val_placeholders});"
@@ -96,8 +96,8 @@ def ingest_fact_partition(
             
         deleted_count = cursor.rowcount
 
-        # Step 2: High-throughput Bulk Insert in chunks of 15,000
-        chunk_size = 15000
+        # Step 2: High-throughput Bulk Insert in chunks of 2,500
+        chunk_size = 2500
         total_rows = len(records)
         for i in range(0, total_rows, chunk_size):
             chunk = records[i : i + chunk_size]

@@ -1,0 +1,30 @@
+📁 db-food-export/
+├── 📄 README.md                        # คู่มือระบบ สถาปัตยกรรมคลังข้อมูล และ SOP ฉบับสมบูรณ์
+├── 📄 information.md                   # เอกสารอ้างอิง API Endpoint ของกระทรวงพาณิชย์
+├── 📁 config/
+│   └── 📄 db_config.py                 # จัดการ Connection Pooling เชื่อมต่อ MariaDB Localhost
+├── 📁 dags/
+│   └── 📄 dag_food_export_monthly.py   # Apache Airflow DAG สำหรับรันอัปเดตข้อมูลรายเดือนอัตโนมัติ
+├── 📁 database/
+│   ├── 📄 schema.sql                   # DDL ตาราง Star Schema, Collation utf8mb4, Indexes & Constraints
+│   ├── 📄 init_db.py                   # สคริปต์ Initialize สร้าง Database & Schema
+│   └── 📄 data_dictionary.md           # Data Dictionary อธิบาย Metadata และ ER-Diagram
+├── 📁 etl/
+│   ├── 📄 transformers.py              # โมดูล Transform ข้อมูลและ Data Type Casting
+│   ├── 📄 normalizers.py               # โมดูลทำความสะอาดและ Normalize ข้อความภาษาไทย/อังกฤษ
+│   └── 📄 loaders.py                   # โมดูล Bulk Upsert โหลดข้อมูลลงฐานข้อมูล
+├── 📁 master_data/
+│   ├── 📄 dim_country_master.csv       # Master Data รายชื่อ 266 ประเทศและภูมิภาค
+│   ├── 📄 dim_hs11_code_master.csv     # Master Data พิกัดศุลกากร 30,906 รหัส (4 Revisions)
+│   ├── 📄 food_hs_ex_database_updated.csv # ข้อมูลประวัติศาสตร์ต้นทาง (2016 - 2026)
+│   └── 📄 food_07_08_20_export.csv     # ข้อมูลส่งออกอาหารหมวด 07, 08, 20 ที่ Clean และ Enriched แล้ว
+└── 📁 scripts/
+    ├── 📄 build_dim_hs_code.py         # สร้าง/อัปเดต Master HS Dimension Table
+    ├── 📄 sync_dim_country.py          # ตรวจสอบและ Sync รายชื่อประเทศเข้าสู่ dim_country
+    ├── 📄 ingest_monthly.py            # สคริปต์อัปเดตข้อมูลรายเดือนอัตโนมัติ (> ก.ค. 2026)
+    ├── 📄 sync_food_export_api.py      # สคริปต์ดึงข้อมูลย้อนหลังจาก API (< 2016)
+    ├── 📄 ingest_historical_csv.py     # สคริปต์นำเข้าข้อมูลจาก Flat CSV แบบ Vectorized Fast Ingest
+    ├── 📄 clean_zero_facts.py          # สคริปต์ลบรายการที่ไม่มียอดส่งออก (0 Trade) และ Optimize Table
+    ├── 📄 export_chapter_dataset.py    # สคริปต์ Reusable ส่งออกข้อมูลตามพิกัดหมวดที่ต้องการ
+    ├── 📄 verify_database.py           # สคริปต์ตรวจสอบความสมบูรณ์ของ Master Dimensions
+    └── 📄 verify_ingestion_summary.py  # สคริปต์สรุปสถิติตาราง Fact Table รายปีและรายเดือน

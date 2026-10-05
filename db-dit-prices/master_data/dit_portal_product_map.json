@@ -1,0 +1,5826 @@
+{
+  "P11001": {
+    "product_id": "P11001",
+    "product_name": "สุกรชำแหละ เนื้อสัน สันใน",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11002": {
+    "product_id": "P11002",
+    "product_name": "สุกรชำแหละ เนื้อสัน สันนอก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11037": {
+    "product_id": "P11037",
+    "product_name": "สุกรชำแหละ เนื้อแดง สะโพก (ไม่ได้ตัดแต่ง)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11003": {
+    "product_id": "P11003",
+    "product_name": "สุกรชำแหละ เนื้อแดง สะโพก (ตัดแต่ง)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11038": {
+    "product_id": "P11038",
+    "product_name": "สุกรชำแหละ เนื้อแดง ไหล่ (ไม่ได้ตัดแต่ง)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11004": {
+    "product_id": "P11004",
+    "product_name": "สุกรชำแหละ เนื้อแดง ไหล่ (ตัดแต่ง)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11005": {
+    "product_id": "P11005",
+    "product_name": "สุกรชำแหละ เนื้อสามชั้น",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11006": {
+    "product_id": "P11006",
+    "product_name": "สุกรชำแหละ มันแข็ง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11007": {
+    "product_id": "P11007",
+    "product_name": "สุกรชำแหละ เศษมัน",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11008": {
+    "product_id": "P11008",
+    "product_name": "สุกรชำแหละ มันเปลว",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11009": {
+    "product_id": "P11009",
+    "product_name": "ไก่สดทั้งตัว (รวมเครื่องใน)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11010": {
+    "product_id": "P11010",
+    "product_name": "ไก่สดทั้งตัว (ไม่รวมเครื่องใน)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11011": {
+    "product_id": "P11011",
+    "product_name": "ไก่สดชำแหละ เนื้อสันใน",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11012": {
+    "product_id": "P11012",
+    "product_name": "ไก่สดชำแหละ เนื้ออก (เนื้อล้วน)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11046": {
+    "product_id": "P11046",
+    "product_name": "ไก่สดชำแหละ เนื้ออก (ติดหนัง)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11013": {
+    "product_id": "P11013",
+    "product_name": "ไก่สดชำแหละ น่อง สะโพก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11044": {
+    "product_id": "P11044",
+    "product_name": "ไก่สดชำแหละ น่อง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11045": {
+    "product_id": "P11045",
+    "product_name": "ไก่สดชำแหละ สะโพก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11014": {
+    "product_id": "P11014",
+    "product_name": "ไก่สดชำแหละ ปีก ทั้งปีก (ปีกเต็ม)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11015": {
+    "product_id": "P11015",
+    "product_name": "ไก่สดชำแหละ ปีกบน",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11016": {
+    "product_id": "P11016",
+    "product_name": "ไก่สดชำแหละ เครื่องใน",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11017": {
+    "product_id": "P11017",
+    "product_name": "ไก่สดชำแหละ หนัง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11018": {
+    "product_id": "P11018",
+    "product_name": "ไก่สดชำแหละ แข้ง ขา ตีน",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11019": {
+    "product_id": "P11019",
+    "product_name": "ไก่สดชำแหละ โครงกระดูก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11020": {
+    "product_id": "P11020",
+    "product_name": "ไข่เป็ด ใหญ่",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11021": {
+    "product_id": "P11021",
+    "product_name": "ไข่เป็ด กลาง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11022": {
+    "product_id": "P11022",
+    "product_name": "ไข่เป็ด เล็ก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11023": {
+    "product_id": "P11023",
+    "product_name": "ไข่เป็ดเค็ม ใหญ่",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11024": {
+    "product_id": "P11024",
+    "product_name": "ไข่เป็ดเค็ม กลาง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11025": {
+    "product_id": "P11025",
+    "product_name": "ไข่ไก่ เบอร์ 0",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11026": {
+    "product_id": "P11026",
+    "product_name": "ไข่ไก่ เบอร์ 1",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11027": {
+    "product_id": "P11027",
+    "product_name": "ไข่ไก่ เบอร์ 2",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11028": {
+    "product_id": "P11028",
+    "product_name": "ไข่ไก่ เบอร์ 3",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11029": {
+    "product_id": "P11029",
+    "product_name": "ไข่ไก่ เบอร์ 4",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11030": {
+    "product_id": "P11030",
+    "product_name": "ไข่ไก่ เบอร์ 5",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11031": {
+    "product_id": "P11031",
+    "product_name": "เนื้อโค สะโพก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11032": {
+    "product_id": "P11032",
+    "product_name": "เนื้อโค สันนอก ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11033": {
+    "product_id": "P11033",
+    "product_name": "เนื้อโค สันใน",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11039": {
+    "product_id": "P11039",
+    "product_name": "เนื้อโค ติดกระดูก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11040": {
+    "product_id": "P11040",
+    "product_name": "เนื้อโค เลาะกระดูกขาหน้า",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11041": {
+    "product_id": "P11041",
+    "product_name": "เนื้อโค เลาะกระดูกขาหลัง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11042": {
+    "product_id": "P11042",
+    "product_name": "เนื้อโค ส่วนน่อง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11043": {
+    "product_id": "P11043",
+    "product_name": "เนื้อโค สามชั้น",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11034": {
+    "product_id": "P11034",
+    "product_name": "เนื้อกระบือ ธรรมดา",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11035": {
+    "product_id": "P11035",
+    "product_name": "เนื้อกระบือ สันนอก สะโพก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11036": {
+    "product_id": "P11036",
+    "product_name": "เนื้อกระบือ สันใน",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11047": {
+    "product_id": "P11047",
+    "product_name": "เป็ดสด (ทั้งตัว) ขนาดไซส์ s",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11048": {
+    "product_id": "P11048",
+    "product_name": "เป็ดสด (ทั้งตัว) ขนาดไซส์ M-MM",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11049": {
+    "product_id": "P11049",
+    "product_name": "เป็ดสด (ทั้งตัว) ขนาดไซส์ L",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P11050": {
+    "product_id": "P11050",
+    "product_name": "เป็ดสด (ทั้งตัว) ขนาดไซส์ XL",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "P12024": {
+    "product_id": "P12024",
+    "product_name": "ปลากระพงขาว (0.7-2 กก./ตัว)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12001": {
+    "product_id": "P12001",
+    "product_name": "กุ้งขาว (40 ตัว/กก.)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12002": {
+    "product_id": "P12002",
+    "product_name": "กุ้งขาว (50 ตัว/กก.)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12003": {
+    "product_id": "P12003",
+    "product_name": "กุ้งขาว (60 ตัว/กก.)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12004": {
+    "product_id": "P12004",
+    "product_name": "กุ้งขาว (70 ตัว/กก.)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12005": {
+    "product_id": "P12005",
+    "product_name": "กุ้งขาว (80 ตัว/กก.)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12006": {
+    "product_id": "P12006",
+    "product_name": "กุ้งแชบ๊วย (40-50 ตัว/กก.)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12007": {
+    "product_id": "P12007",
+    "product_name": "กุ้งเปลือกแข็ง (40-50 ตัว/กก.)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12008": {
+    "product_id": "P12008",
+    "product_name": "กุ้งก้ามกรามบ่อเลี้ยงไทย (ขนาดกลาง) 15-16 ตัว/กก.",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12009": {
+    "product_id": "P12009",
+    "product_name": "ปลาหมึกกล้วย คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12010": {
+    "product_id": "P12010",
+    "product_name": "ปลาหมึกกระดอง คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12011": {
+    "product_id": "P12011",
+    "product_name": "หอยแครง คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12012": {
+    "product_id": "P12012",
+    "product_name": "หอยลาย คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12013": {
+    "product_id": "P12013",
+    "product_name": "หอยแมลงภู่ คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12014": {
+    "product_id": "P12014",
+    "product_name": "ปลาทูสด (9-12 ตัว/กก.)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12015": {
+    "product_id": "P12015",
+    "product_name": "ปลาช่อน",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12016": {
+    "product_id": "P12016",
+    "product_name": "ปลาดุก (พันธุ์บิ๊กอุย)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12017": {
+    "product_id": "P12017",
+    "product_name": "ปลานิล",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12018": {
+    "product_id": "P12018",
+    "product_name": "ปลาสวาย",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12019": {
+    "product_id": "P12019",
+    "product_name": "ปลาทับทิม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12020": {
+    "product_id": "P12020",
+    "product_name": "ปลาทูเข่ง (3 ตัว/เข่ง)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P12023": {
+    "product_id": "P12023",
+    "product_name": "ปลาทูเข่ง (2-3 ตัว/เข่ง)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "P13001": {
+    "product_id": "P13001",
+    "product_name": "ผักคะน้า คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13002": {
+    "product_id": "P13002",
+    "product_name": "ผักคะน้า คัด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13003": {
+    "product_id": "P13003",
+    "product_name": "ผักบุ้งจีน คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13004": {
+    "product_id": "P13004",
+    "product_name": "ผักบุ้งจีน คัด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13005": {
+    "product_id": "P13005",
+    "product_name": "ผักกวางตุ้ง คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13006": {
+    "product_id": "P13006",
+    "product_name": "ผักกวางตุ้ง คัด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13007": {
+    "product_id": "P13007",
+    "product_name": "ผักกาดหอม คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13008": {
+    "product_id": "P13008",
+    "product_name": "ผักกาดหอม คัด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13009": {
+    "product_id": "P13009",
+    "product_name": "ผักกาดขาว (ลุ้ย) คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13010": {
+    "product_id": "P13010",
+    "product_name": "ผักกาดขาว (ลุ้ย) คัด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13011": {
+    "product_id": "P13011",
+    "product_name": "กะหล่ำปลี คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13012": {
+    "product_id": "P13012",
+    "product_name": "กะหล่ำปลี คัด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13033": {
+    "product_id": "P13033",
+    "product_name": "ผักชี คละ (บาท/ขีด)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13034": {
+    "product_id": "P13034",
+    "product_name": "ผักชี คัด (บาท/ขีด)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13082": {
+    "product_id": "P13082",
+    "product_name": "ผักชี คละ (บาท/กก.)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13083": {
+    "product_id": "P13083",
+    "product_name": "ผักชี คัด (บาท/กก.)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13035": {
+    "product_id": "P13035",
+    "product_name": "ต้นหอม คละ (บาท/ขีด)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13036": {
+    "product_id": "P13036",
+    "product_name": "ต้นหอม คัด (บาท/ขีด)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13084": {
+    "product_id": "P13084",
+    "product_name": "ต้นหอม คละ (บาท/กก.)\n",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13085": {
+    "product_id": "P13085",
+    "product_name": "ต้นหอม คัด (บาท/กก.)\n",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13039": {
+    "product_id": "P13039",
+    "product_name": "ขึ้นฉ่าย คละ (บาท/ขีด)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13040": {
+    "product_id": "P13040",
+    "product_name": "ขึ้นฉ่าย คัด (บาท/ขีด)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13088": {
+    "product_id": "P13088",
+    "product_name": "ขึ้นฉ่าย คละ (บาท/กก.)\n",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13089": {
+    "product_id": "P13089",
+    "product_name": "ขึ้นฉ่าย คัด (บาท/กก.)\n",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13015": {
+    "product_id": "P13015",
+    "product_name": "มะระจีน คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13016": {
+    "product_id": "P13016",
+    "product_name": "มะระจีน คัด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13017": {
+    "product_id": "P13017",
+    "product_name": "มะเขือเทศสีดา คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13018": {
+    "product_id": "P13018",
+    "product_name": "มะเขือเทศสีดา คัด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13019": {
+    "product_id": "P13019",
+    "product_name": "มะเขือเทศผลใหญ่ คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13020": {
+    "product_id": "P13020",
+    "product_name": "มะเขือเทศผลใหญ่ คัด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13021": {
+    "product_id": "P13021",
+    "product_name": "มะเขือเจ้าพระยา",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13022": {
+    "product_id": "P13022",
+    "product_name": "ถั่วฝักยาว คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13023": {
+    "product_id": "P13023",
+    "product_name": "ถั่วฝักยาว คัด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13024": {
+    "product_id": "P13024",
+    "product_name": "แตงกวา คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13025": {
+    "product_id": "P13025",
+    "product_name": "แตงกวา คัด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13026": {
+    "product_id": "P13026",
+    "product_name": "ฟักเขียว คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13027": {
+    "product_id": "P13027",
+    "product_name": "ฟักเขียว คัด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13037": {
+    "product_id": "P13037",
+    "product_name": "พริกสดชี้ฟ้า (บาท/ขีด)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13086": {
+    "product_id": "P13086",
+    "product_name": "พริกสดชี้ฟ้า (แดง) (บาท/กก.)\n",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13038": {
+    "product_id": "P13038",
+    "product_name": "พริกขี้หนูจินดา (แดง) (บาท/ขีด)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13087": {
+    "product_id": "P13087",
+    "product_name": "พริกขี้หนูจินดา (แดง) (บาท/กก.)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13091": {
+    "product_id": "P13091",
+    "product_name": "พริกขี้หนูสวน (เม็ดกลาง)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13043": {
+    "product_id": "P13043",
+    "product_name": "มะนาว เบอร์ 1-2",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13044": {
+    "product_id": "P13044",
+    "product_name": "มะนาว เบอร์ 3-4",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13092": {
+    "product_id": "P13092",
+    "product_name": "มะละกอ (พันธุ์แขกดำดำเนิน) คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13013": {
+    "product_id": "P13013",
+    "product_name": "กะหล่ำดอก คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13014": {
+    "product_id": "P13014",
+    "product_name": "กะหล่ำดอก คัด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13028": {
+    "product_id": "P13028",
+    "product_name": "หัวผักกาด คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13029": {
+    "product_id": "P13029",
+    "product_name": "หัวผักกาด คัด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13059": {
+    "product_id": "P13059",
+    "product_name": "กระชายขาว คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13041": {
+    "product_id": "P13041",
+    "product_name": "ผักกะเฉด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13042": {
+    "product_id": "P13042",
+    "product_name": "ผักบุ้งไทย",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13090": {
+    "product_id": "P13090",
+    "product_name": "ผักบุ้งไทย (10 กำ)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13030": {
+    "product_id": "P13030",
+    "product_name": "หน่อไม้ฝรั่ง คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13031": {
+    "product_id": "P13031",
+    "product_name": "หน่อไม้ฝรั่ง คัด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13032": {
+    "product_id": "P13032",
+    "product_name": "ข้าวโพดฝักอ่อน",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13045": {
+    "product_id": "P13045",
+    "product_name": "ขิง อ่อน",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P13046": {
+    "product_id": "P13046",
+    "product_name": "ขิงแก่",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P13000",
+    "group_name": "ผักสด"
+  },
+  "P14003": {
+    "product_id": "P14003",
+    "product_name": "ส้มเขียวหวาน สายน้ำผึ้ง เบอร์ 6",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14002": {
+    "product_id": "P14002",
+    "product_name": "ส้มเขียวหวาน สายน้ำผึ้ง เบอร์ 5",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14001": {
+    "product_id": "P14001",
+    "product_name": "ส้มเขียวหวาน สายน้ำผึ้ง เบอร์ 4",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14024": {
+    "product_id": "P14024",
+    "product_name": "ส้มโอ ขาวทองดี ใหญ่",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14025": {
+    "product_id": "P14025",
+    "product_name": "ส้มโอ ขาวทองดี เล็ก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14035": {
+    "product_id": "P14035",
+    "product_name": "ส้มโอ ขาวน้ำผึ้ง ใหญ่",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14036": {
+    "product_id": "P14036",
+    "product_name": "ส้มโอ ขาวน้ำผึ้ง เล็ก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14004": {
+    "product_id": "P14004",
+    "product_name": "มะละกอแขกดำ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14033": {
+    "product_id": "P14033",
+    "product_name": "มะละกอฮอลแลนด์",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14005": {
+    "product_id": "P14005",
+    "product_name": "แตงโม พันธุ์กินรี",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14034": {
+    "product_id": "P14034",
+    "product_name": "กล้วยหอมทอง ใหญ่ (14 ผล)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14006": {
+    "product_id": "P14006",
+    "product_name": "กล้วยหอมทอง ใหญ่",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14007": {
+    "product_id": "P14007",
+    "product_name": "กล้วยน้ำว้า",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14008": {
+    "product_id": "P14008",
+    "product_name": "กล้วยไข่ ใหญ่",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14009": {
+    "product_id": "P14009",
+    "product_name": "กล้วยไข่ กลาง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14011": {
+    "product_id": "P14011",
+    "product_name": "ฝรั่งกิมจู คัด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14010": {
+    "product_id": "P14010",
+    "product_name": "ฝรั่งกิมจู คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14014": {
+    "product_id": "P14014",
+    "product_name": "มะม่วงเขียวเสวย เบอร์ 0",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14015": {
+    "product_id": "P14015",
+    "product_name": "มะม่วงเขียวเสวย เบอร์ 1",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14012": {
+    "product_id": "P14012",
+    "product_name": "มะม่วงน้ำดอกไม้ เบอร์ 0",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14013": {
+    "product_id": "P14013",
+    "product_name": "มะม่วงน้ำดอกไม้ เบอร์ 1",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14016": {
+    "product_id": "P14016",
+    "product_name": "เงาะโรงเรียน",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14017": {
+    "product_id": "P14017",
+    "product_name": "มังคุด (ผิวมัน)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14018": {
+    "product_id": "P14018",
+    "product_name": "มังคุด (ผิวกระ)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14019": {
+    "product_id": "P14019",
+    "product_name": "ทุเรียนชะนี",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14020": {
+    "product_id": "P14020",
+    "product_name": "ทุเรียนหมอนทอง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14021": {
+    "product_id": "P14021",
+    "product_name": "ลองกอง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14022": {
+    "product_id": "P14022",
+    "product_name": "ลิ้นจี่ พันธุ์ฮงฮวย",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14023": {
+    "product_id": "P14023",
+    "product_name": "ลิ้นจี่ พันธุ์จักรพรรดิ์",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14026": {
+    "product_id": "P14026",
+    "product_name": "สับปะรด ศรีราชา เบอร์ 1",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14027": {
+    "product_id": "P14027",
+    "product_name": "สับปะรด ศรีราชา เบอร์ 2",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14028": {
+    "product_id": "P14028",
+    "product_name": "สับปะรด ศรีราชา เบอร์ 3",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14029": {
+    "product_id": "P14029",
+    "product_name": "น้อยหน่า",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14030": {
+    "product_id": "P14030",
+    "product_name": "ลำไย อีดอ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14031": {
+    "product_id": "P14031",
+    "product_name": "องุ่นพันธุ์ไวท์มะละกา คัด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P14032": {
+    "product_id": "P14032",
+    "product_name": "องุ่นพันธุ์ไวท์มะละกา คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P14000",
+    "group_name": "ผลไม้"
+  },
+  "P15045": {
+    "product_id": "P15045",
+    "product_name": "หอมหัวใหญ่ (หอมภาคเหนือ) เบอร์ 0-1",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15046": {
+    "product_id": "P15046",
+    "product_name": "หอมหัวใหญ่ (หอมภาคเหนือ) เบอร์ 2",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15001": {
+    "product_id": "P15001",
+    "product_name": "กระเทียมแห้ง มัดจุก หัวใหญ่",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15002": {
+    "product_id": "P15002",
+    "product_name": "กระเทียมแห้ง มัดจุก หัวกลาง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15003": {
+    "product_id": "P15003",
+    "product_name": "กระเทียมแห้ง มัดจุก หัวเล็ก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15004": {
+    "product_id": "P15004",
+    "product_name": "กระเทียมแห้ง ตัดจุก หัวใหญ่",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15005": {
+    "product_id": "P15005",
+    "product_name": "กระเทียมแห้ง ตัดจุก หัวกลาง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15006": {
+    "product_id": "P15006",
+    "product_name": "กระเทียมแห้งตัดจุก หัวเล็ก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15007": {
+    "product_id": "P15007",
+    "product_name": "กระเทียมแห้ง แกะกลีบ กลีบใหญ่",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15008": {
+    "product_id": "P15008",
+    "product_name": "กระเทียมแห้ง แกะกลีบ กลีบกลาง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15009": {
+    "product_id": "P15009",
+    "product_name": "กระเทียมแห้ง แกะกลีบ กลีบเล็ก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15041": {
+    "product_id": "P15041",
+    "product_name": "กระเทียมนำเข้า กระเทียมจีน เบอร์ใหญ่",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15042": {
+    "product_id": "P15042",
+    "product_name": "กระเทียมนำเข้า กระเทียมจีน เบอร์กลาง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15043": {
+    "product_id": "P15043",
+    "product_name": "กระเทียมนำเข้า กระเทียมจีน เบอร์เล็ก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15044": {
+    "product_id": "P15044",
+    "product_name": "กระเทียมนำเข้า กระเทียมจีน แกะกลีบ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15010": {
+    "product_id": "P15010",
+    "product_name": "หอมแดงภาคเหนือ มัดจุก หัวใหญ่",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15011": {
+    "product_id": "P15011",
+    "product_name": "หอมแดงภาคเหนือ มัดจุก หัวกลาง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15012": {
+    "product_id": "P15012",
+    "product_name": "หอมแดงภาคเหนือ มัดจุก หัวเล็ก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15013": {
+    "product_id": "P15013",
+    "product_name": "หอมแดงภาคเหนือ ตัดจุก หัวใหญ่",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15014": {
+    "product_id": "P15014",
+    "product_name": "หอมแดงภาคเหนือ ตัดจุก หัวกลาง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15015": {
+    "product_id": "P15015",
+    "product_name": "หอมแดงภาคเหนือ ตัดจุก หัวเล็ก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15016": {
+    "product_id": "P15016",
+    "product_name": "หอมแดงศรีสะเกษ มัดจุก หัวใหญ่",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15017": {
+    "product_id": "P15017",
+    "product_name": "หอมแดงศรีสะเกษ มัดจุก หัวกลาง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15018": {
+    "product_id": "P15018",
+    "product_name": "หอมแดงศรีสะเกษ มัดจุก หัวเล็ก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15019": {
+    "product_id": "P15019",
+    "product_name": "หอมแดงศรีสะเกษ ตัดจุก หัวใหญ่",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15020": {
+    "product_id": "P15020",
+    "product_name": "หอมแดงศรีสะเกษ ตัดจุก หัวกลาง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15021": {
+    "product_id": "P15021",
+    "product_name": "หอมแดงศรีสะเกษ ตัดจุก หัวเล็ก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15022": {
+    "product_id": "P15022",
+    "product_name": "หอมหัวใหญ่ สันป่าตอง เบอร์ 0-1",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15023": {
+    "product_id": "P15023",
+    "product_name": "หอมหัวใหญ่ สันป่าตอง เบอร์ 2",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15024": {
+    "product_id": "P15024",
+    "product_name": "หอมหัวใหญ่ กาญจนบุรี เบอร์ 0-1",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15025": {
+    "product_id": "P15025",
+    "product_name": "หอมหัวใหญ่ กาญจนบุรี เบอร์ 2",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15026": {
+    "product_id": "P15026",
+    "product_name": "หอมหัวใหญ่ ห้องเย็น เบอร์ 0-1",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15027": {
+    "product_id": "P15027",
+    "product_name": "หอมหัวใหญ่ ห้องเย็น เบอร์ 2",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15028": {
+    "product_id": "P15028",
+    "product_name": "หอมหัวใหญ่ ฝาง เบอร์ 0-1",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15029": {
+    "product_id": "P15029",
+    "product_name": "หอมหัวใหญ่ ฝาง เบอร์ 2",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15030": {
+    "product_id": "P15030",
+    "product_name": "มันฝรั่ง เกรดโอ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15031": {
+    "product_id": "P15031",
+    "product_name": "มันฝรั่ง เกรดเอ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15032": {
+    "product_id": "P15032",
+    "product_name": "มันฝรั่ง เกรดบี",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15033": {
+    "product_id": "P15033",
+    "product_name": "มะขามเปียก แกะเมล็ด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15034": {
+    "product_id": "P15034",
+    "product_name": "มะขามเปียก ไม่แกะเมล็ด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15035": {
+    "product_id": "P15035",
+    "product_name": "กระเจี๊ยบแห้ง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15036": {
+    "product_id": "P15036",
+    "product_name": "ลูกเดือย กะเทาะเปลือก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15037": {
+    "product_id": "P15037",
+    "product_name": "พริกไทยขาว อย่างดี",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15038": {
+    "product_id": "P15038",
+    "product_name": "พริกไทยดำ อย่างดี",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15039": {
+    "product_id": "P15039",
+    "product_name": "พริกแห้ง (ยอดสน) อย่างดี",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P15040": {
+    "product_id": "P15040",
+    "product_name": "พริกแห้ง (ยอดสน) อย่างรอง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P15000",
+    "group_name": "พืชอาหาร"
+  },
+  "P16001": {
+    "product_id": "P16001",
+    "product_name": "ถั่วลิสงกะเทาะเปลือก คัดพิเศษ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16002": {
+    "product_id": "P16002",
+    "product_name": "ถั่วลิสงกะเทาะเปลือก คัดธรรมดา",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16003": {
+    "product_id": "P16003",
+    "product_name": "ถั่วลิสงกะเทาะเปลือก คละ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16004": {
+    "product_id": "P16004",
+    "product_name": "น้ำมันถั่วลิสงบริสุทธิ์ บรรจุขวด 2 ลิตร",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16005": {
+    "product_id": "P16005",
+    "product_name": "น้ำมันถั่วลิสงบริสุทธิ์ บรรจุขวด 1 ลิตร ตรากวางบิน",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16024": {
+    "product_id": "P16024",
+    "product_name": "น้ำมันถั่วลิสงบริสุทธิ์ บรรจุปี๊ป 13.75 ลิตร (12.50 กก.)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16025": {
+    "product_id": "P16025",
+    "product_name": "น้ำมันถั่วลิสงบริสุทธิ์ บรรจุขวด 5 ลิตร",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16006": {
+    "product_id": "P16006",
+    "product_name": "น้ำมันถั่วเหลืองบริสุทธิ์ บรรจุขวด 1 ลิตร ตราองุ่น",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16007": {
+    "product_id": "P16007",
+    "product_name": "น้ำมันถั่วเหลืองบริสุทธิ์ บรรจุขวด 1 ลิตร ตรากุ๊ก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16008": {
+    "product_id": "P16008",
+    "product_name": "น้ำมันรำข้าวบริสุทธิ์สำเร็จรูป บรรจุขวด 1 ลิตร ตราคิง",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16009": {
+    "product_id": "P16009",
+    "product_name": "น้ำมันรำข้าวบริสุทธิ์สำเร็จรูป บรรจุขวด 1 ลิตร ตราชิม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16023": {
+    "product_id": "P16023",
+    "product_name": "น้ำมันรำข้าวบริสุทธิ์สำเร็จรูป บรรจุขวด 1 ลิตร ตราอโรซ่า",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16010": {
+    "product_id": "P16010",
+    "product_name": "น้ำมันปาล์มสำเร็จรูป บรรจุถุงไม่มีตรา",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16011": {
+    "product_id": "P16011",
+    "product_name": "น้ำมันปาล์มสำเร็จรูป บรรจุขวด1 ลิตร",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16012": {
+    "product_id": "P16012",
+    "product_name": "มะพร้าวทับสะแก ผลใหญ่ ปอกเปลือก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16013": {
+    "product_id": "P16013",
+    "product_name": "มะพร้าวขาวขูด (ไม่ขูดผิว)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16014": {
+    "product_id": "P16014",
+    "product_name": "น้ำมันมะพร้าวสำเร็จรูป บรรจุปี๊บ 13.75 ลิตร (12.50 กก.)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16015": {
+    "product_id": "P16015",
+    "product_name": "น้ำมันมะพร้าวสำเร็จรูป บรรจุปี๊บ 13.75 ลิตร (12.50 กก.) ตราผักกาด",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16016": {
+    "product_id": "P16016",
+    "product_name": "น้ำมันมะพร้าวสำเร็จรูป บรรจุปี๊บ 13.75 ลิตร (12.50 กก.). ตราไพ่ป๊อก",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16017": {
+    "product_id": "P16017",
+    "product_name": "น้ำมันมะพร้าวสำเร็จรูป บรรจุปี๊บ 13.75 ลิตร (12.50 กก.) ตราดอกไม้",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16026": {
+    "product_id": "P16026",
+    "product_name": "น้ำมันมะพร้าวสำเร็จรูป บรรจุขวด 1 ลิตร ตราไทยเพียว",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16027": {
+    "product_id": "P16027",
+    "product_name": "น้ำมันมะพร้าวสำเร็จรูป บรรจุขวด 1 ลิตร ตราเนเชอเรล",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16028": {
+    "product_id": "P16028",
+    "product_name": "น้ำมันมะพร้าวสำเร็จรูป บรรจุขวด 1 ลิตร ตรารอยไทย",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16018": {
+    "product_id": "P16018",
+    "product_name": "น้ำมันทานตะวันสำเร็จรูป บรรจุขวด ตรากุ๊ก (น้ำมันในประเทศ)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16019": {
+    "product_id": "P16019",
+    "product_name": "น้ำมันทานตะวันสำเร็จรูป บรรจุขวด ตราชิม (น้ำมันในประเทศ)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16022": {
+    "product_id": "P16022",
+    "product_name": "น้ำมันทานตะวันสำเร็จรูป บรรจุขวด ตราองุ่น (น้ำมันในประเทศ)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16020": {
+    "product_id": "P16020",
+    "product_name": "งาดำ",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "P16021": {
+    "product_id": "P16021",
+    "product_name": "งาขาว เมล็ดใหญ่",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P16000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "R13001": {
+    "product_id": "R13001",
+    "product_name": "ข้าวสารเจ้า 100% ข้าวหอม ร้านค้าทั่วไป",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "R13000",
+    "group_name": "ราคาขายปลีกข้าวสาร"
+  },
+  "R13002": {
+    "product_id": "R13002",
+    "product_name": "ข้าวสารเจ้า 100% ข้าวหอม (ข้าวใหม่)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "R13000",
+    "group_name": "ราคาขายปลีกข้าวสาร"
+  },
+  "R13003": {
+    "product_id": "R13003",
+    "product_name": "ข้าวสารเจ้า 100% ธรรมดา ร้านค้าทั่วไป",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "R13000",
+    "group_name": "ราคาขายปลีกข้าวสาร"
+  },
+  "R13004": {
+    "product_id": "R13004",
+    "product_name": "ข้าวสารเจ้า 100% ธรรมดา (ข้าวใหม่)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "R13000",
+    "group_name": "ราคาขายปลีกข้าวสาร"
+  },
+  "R13005": {
+    "product_id": "R13005",
+    "product_name": "ข้าวสารเจ้า 5% ร้านค้าทั่วไป",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "R13000",
+    "group_name": "ราคาขายปลีกข้าวสาร"
+  },
+  "R13006": {
+    "product_id": "R13006",
+    "product_name": "ข้าวสารเจ้า 5% (ข้าวใหม่)",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "R13000",
+    "group_name": "ราคาขายปลีกข้าวสาร"
+  },
+  "R13007": {
+    "product_id": "R13007",
+    "product_name": "ข้าวสารเหนียว สันป่าตอง (เขี้ยวงู) 100%",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "R13000",
+    "group_name": "ราคาขายปลีกข้าวสาร"
+  },
+  "R13008": {
+    "product_id": "R13008",
+    "product_name": "ข้าวสารเหนียว สันป่าตอง (เขี้ยวงู) 5%",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "R13000",
+    "group_name": "ราคาขายปลีกข้าวสาร"
+  },
+  "R13009": {
+    "product_id": "R13009",
+    "product_name": "ข้าวสารเหนียว สันป่าตอง (เขี้ยวงู) 10% เมล็ดยาว",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "R13000",
+    "group_name": "ราคาขายปลีกข้าวสาร"
+  },
+  "R13010": {
+    "product_id": "R13010",
+    "product_name": "ข้าวสารเหนียว สันป่าตอง (เขี้ยวงู) 10% เมล็ดสั้น",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "R13000",
+    "group_name": "ราคาขายปลีกข้าวสาร"
+  },
+  "P13047": {
+    "product_id": "P13047",
+    "product_name": "ผักคะน้า อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13048": {
+    "product_id": "P13048",
+    "product_name": "ผักคะน้า อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13049": {
+    "product_id": "P13049",
+    "product_name": "ผักบุ้งจีน อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13050": {
+    "product_id": "P13050",
+    "product_name": "ผักบุ้งจีน อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13051": {
+    "product_id": "P13051",
+    "product_name": "ผักกวางตุ้ง อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13052": {
+    "product_id": "P13052",
+    "product_name": "ผักกวางตุ้ง อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13053": {
+    "product_id": "P13053",
+    "product_name": "ผักกาดหอม อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13054": {
+    "product_id": "P13054",
+    "product_name": "ผักกาดหอม อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13055": {
+    "product_id": "P13055",
+    "product_name": "ผักกาดขาวปลี อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13056": {
+    "product_id": "P13056",
+    "product_name": "ผักกาดขาวปลี อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13057": {
+    "product_id": "P13057",
+    "product_name": "กะหล่ำปลี อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13058": {
+    "product_id": "P13058",
+    "product_name": "กะหล่ำปลี อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13060": {
+    "product_id": "P13060",
+    "product_name": "ผักชี อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13061": {
+    "product_id": "P13061",
+    "product_name": "ผักชี อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13062": {
+    "product_id": "P13062",
+    "product_name": "ต้นหอม อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13063": {
+    "product_id": "P13063",
+    "product_name": "ต้นหอม อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13064": {
+    "product_id": "P13064",
+    "product_name": "ขึ้นฉ่าย อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13065": {
+    "product_id": "P13065",
+    "product_name": "ขึ้นฉ่าย อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13066": {
+    "product_id": "P13066",
+    "product_name": "มะเขือเจ้าพระยา อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13067": {
+    "product_id": "P13067",
+    "product_name": "มะเขือเจ้าพระยา อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13068": {
+    "product_id": "P13068",
+    "product_name": "ถั่วฝักยาว อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13069": {
+    "product_id": "P13069",
+    "product_name": "ถั่วฝักยาว อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13070": {
+    "product_id": "P13070",
+    "product_name": "แตงกวา อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13071": {
+    "product_id": "P13071",
+    "product_name": "แตงกวา อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13072": {
+    "product_id": "P13072",
+    "product_name": "ฟักเขียว อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13073": {
+    "product_id": "P13073",
+    "product_name": "ฟักเขียว อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13074": {
+    "product_id": "P13074",
+    "product_name": "พริกขี้หนูจินดา อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13075": {
+    "product_id": "P13075",
+    "product_name": "พริกขี้หนูจินดา อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13076": {
+    "product_id": "P13076",
+    "product_name": "มะนาว อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13077": {
+    "product_id": "P13077",
+    "product_name": "มะนาว อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13078": {
+    "product_id": "P13078",
+    "product_name": "หน่อไม้ฝรั่ง อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13079": {
+    "product_id": "P13079",
+    "product_name": "หน่อไม้ฝรั่ง อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13080": {
+    "product_id": "P13080",
+    "product_name": "ข้าวโพดฝักอ่อน อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P13081": {
+    "product_id": "P13081",
+    "product_name": "ข้าวโพดฝักอ่อน อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P14037": {
+    "product_id": "P14037",
+    "product_name": "กล้วยหอมทอง อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P14038": {
+    "product_id": "P14038",
+    "product_name": "กล้วยหอมทอง อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P14039": {
+    "product_id": "P14039",
+    "product_name": "กล้วยน้ำว้า อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P14040": {
+    "product_id": "P14040",
+    "product_name": "กล้วยน้ำว้า อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P14041": {
+    "product_id": "P14041",
+    "product_name": "กล้วยไข่ อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P14042": {
+    "product_id": "P14042",
+    "product_name": "กล้วยไข่ อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P14043": {
+    "product_id": "P14043",
+    "product_name": "กล้วยเล็บมือนาง อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P14044": {
+    "product_id": "P14044",
+    "product_name": "กล้วยเล็บมือนาง อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P14045": {
+    "product_id": "P14045",
+    "product_name": "ฝรั่งพันธุ์กิมจู อินทรีย์ ร้านเลมอนฟาร์ม",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "P14046": {
+    "product_id": "P14046",
+    "product_name": "ฝรั่งพันธุ์กิมจู อินทรีย์ ท็อปซูเปอร์มาร์เก็ต",
+    "type_id": 1,
+    "category_name": "ขายปลีก",
+    "group_id": "P20000",
+    "group_name": "ผัก-ผลไม้อินทรีย์"
+  },
+  "R11001": {
+    "product_id": "R11001",
+    "product_name": "ข้าวขาว 100% ชั้น 1",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11002": {
+    "product_id": "R11002",
+    "product_name": "ข้าวขาว 100% ชั้น 1 (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11003": {
+    "product_id": "R11003",
+    "product_name": "ข้าวขาว 100% ชั้น 2",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11004": {
+    "product_id": "R11004",
+    "product_name": "ข้าวขาว 100% ชั้น 2 (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11005": {
+    "product_id": "R11005",
+    "product_name": "ข้าวขาว 100% ชั้น 3",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11006": {
+    "product_id": "R11006",
+    "product_name": "ข้าวขาว 100% ชั้น 3 (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11007": {
+    "product_id": "R11007",
+    "product_name": "ข้าวขาว 5%",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11008": {
+    "product_id": "R11008",
+    "product_name": "ข้าวขาว 5% (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11009": {
+    "product_id": "R11009",
+    "product_name": "ข้าวขาว 10%",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11010": {
+    "product_id": "R11010",
+    "product_name": "ข้าวขาว 10% (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11011": {
+    "product_id": "R11011",
+    "product_name": "ข้าวขาว 15% (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11012": {
+    "product_id": "R11012",
+    "product_name": "ข้าวขาว 25% (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11013": {
+    "product_id": "R11013",
+    "product_name": "ปลายข้าวขาว เอ วัน เลิศ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11014": {
+    "product_id": "R11014",
+    "product_name": "ปลายข้าวขาว เอ วัน เลิศ (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11015": {
+    "product_id": "R11015",
+    "product_name": "ปลายข้าว เอ วัน พิเศษ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11016": {
+    "product_id": "R11016",
+    "product_name": "ปลายข้าว เอ วัน พิเศษ (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11017": {
+    "product_id": "R11017",
+    "product_name": "ปลายข้าวขาว ซี วัน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11018": {
+    "product_id": "R11018",
+    "product_name": "ข้าวสารเหนียว กข.6",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11019": {
+    "product_id": "R11019",
+    "product_name": "ข้าวสารเหนียว กข.6 (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11020": {
+    "product_id": "R11020",
+    "product_name": "ข้าวสารเหนียว 10% เมล็ดยาว",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11021": {
+    "product_id": "R11021",
+    "product_name": "ข้าวสารเหนียว 10% เมล็ดยาว (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11022": {
+    "product_id": "R11022",
+    "product_name": "ข้าวสารเหนียว 10% เมล็ดสั้น",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11023": {
+    "product_id": "R11023",
+    "product_name": "ข้าวสารเหนียว 10% เมล็ดสั้น (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11024": {
+    "product_id": "R11024",
+    "product_name": "ปลายข้าวสารเหนียว เอ วัน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11025": {
+    "product_id": "R11025",
+    "product_name": "ปลายข้าวสารเหนียว เอ วัน (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11026": {
+    "product_id": "R11026",
+    "product_name": "ข้าวนึ่ง 100%",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11027": {
+    "product_id": "R11027",
+    "product_name": "ข้าวนึ่ง 5%",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11028": {
+    "product_id": "R11028",
+    "product_name": "ปลายข้าวนึ่ง เอ วัน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11029": {
+    "product_id": "R11029",
+    "product_name": "ข้าวหอมมะลิ 100% ชั้น 1",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11030": {
+    "product_id": "R11030",
+    "product_name": "ข้าวหอมมะลิ 100% ชั้น 1 (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11031": {
+    "product_id": "R11031",
+    "product_name": "ข้าวหอมมะลิ 100% ชั้น 2",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11032": {
+    "product_id": "R11032",
+    "product_name": "ข้าวหอมมะลิ 100% ชั้น 2 (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11033": {
+    "product_id": "R11033",
+    "product_name": "ปลายข้าวหอมมะลิ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11034": {
+    "product_id": "R11034",
+    "product_name": "ปลายข้าวหอมมะลิ (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11035": {
+    "product_id": "R11035",
+    "product_name": "ข้าวหอมจังหวัด",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11036": {
+    "product_id": "R11036",
+    "product_name": "ข้าวหอมจังหวัด (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11037": {
+    "product_id": "R11037",
+    "product_name": "ข้าวหอมปทุมธานี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11038": {
+    "product_id": "R11038",
+    "product_name": "ข้าวหอมปทุมธานี (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11039": {
+    "product_id": "R11039",
+    "product_name": "ปลายข้าวหอมปทุมธานี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11040": {
+    "product_id": "R11040",
+    "product_name": "ปลายข้าวหอมปทุมธานี (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11041": {
+    "product_id": "R11041",
+    "product_name": "รำข้าว ขาว",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11042": {
+    "product_id": "R11042",
+    "product_name": "รำข้าว นึ่ง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11043": {
+    "product_id": "R11043",
+    "product_name": "รำข้าว สกัด",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11044": {
+    "product_id": "R11044",
+    "product_name": "รำข้าวกล้อง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11045": {
+    "product_id": "R11045",
+    "product_name": "แป้งข้าวเจ้าโม่น้ำ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11046": {
+    "product_id": "R11046",
+    "product_name": "แป้งข้าวเหนียวโม่น้ำ ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11047": {
+    "product_id": "R11047",
+    "product_name": "กระสอบป่าน 29x43 นิ้ว (ใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11048": {
+    "product_id": "R11048",
+    "product_name": "กระสอบป่าน 29x43 นิ้ว ใช้แล้ว (ไม่มีตรา)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11049": {
+    "product_id": "R11049",
+    "product_name": "กระสอบป่าน 29x43 นิ้ว ใช้แล้ว (มีตรา)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11050": {
+    "product_id": "R11050",
+    "product_name": "กระสอบจัมโบ้ ขนาด 1,000 กก. (นน. 2.5 kg. ไม่รวม VAT)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11051": {
+    "product_id": "R11051",
+    "product_name": "กระสอบใหม่ 50 กก. (ไม่มีตรา)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11052": {
+    "product_id": "R11052",
+    "product_name": "กระสอบจัมโบ้ ขนาด 1,000 กก. (นน. 2 kg. ไม่รวม VAT)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11053": {
+    "product_id": "R11053",
+    "product_name": "ข้าวเปลือกเจ้า 5% นาปรัง จ.สุพรรณบุรี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11054": {
+    "product_id": "R11054",
+    "product_name": "ข้าวเปลือกเจ้า 5% นาปี จ.สุพรรณบุรี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11055": {
+    "product_id": "R11055",
+    "product_name": "ข้าวเปลือกหอมมะลิ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11056": {
+    "product_id": "R11056",
+    "product_name": "ข้าวเปลือกหอมมะลินอกพื้นที่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11057": {
+    "product_id": "R11057",
+    "product_name": "ข้าวเปลือกเจ้า",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11058": {
+    "product_id": "R11058",
+    "product_name": "ข้าวเปลือกปทุมธานี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R11059": {
+    "product_id": "R11059",
+    "product_name": "ข้าวเปลือกเหนียวเมล็ดยาว",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R11000",
+    "group_name": "ราคาขายส่งข้าว ผลิตภัณฑ์ข้าวและกระสอบป่าน"
+  },
+  "R12001": {
+    "product_id": "R12001",
+    "product_name": "ข้าวสารเจ้า 100% ข้าวหอม",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R12000",
+    "group_name": "ราคาขายส่งข้าวสารให้ร้านขายปลีก"
+  },
+  "R12002": {
+    "product_id": "R12002",
+    "product_name": "ข้าวสารเจ้า 100% ข้าวหอม (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R12000",
+    "group_name": "ราคาขายส่งข้าวสารให้ร้านขายปลีก"
+  },
+  "R12003": {
+    "product_id": "R12003",
+    "product_name": "ข้าวสารเจ้า 100%",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R12000",
+    "group_name": "ราคาขายส่งข้าวสารให้ร้านขายปลีก"
+  },
+  "R12004": {
+    "product_id": "R12004",
+    "product_name": "ข้าวสารเจ้า 100% (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R12000",
+    "group_name": "ราคาขายส่งข้าวสารให้ร้านขายปลีก"
+  },
+  "R12005": {
+    "product_id": "R12005",
+    "product_name": "ข้าวสารเจ้า 5%",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R12000",
+    "group_name": "ราคาขายส่งข้าวสารให้ร้านขายปลีก"
+  },
+  "R12006": {
+    "product_id": "R12006",
+    "product_name": "ข้าวสารเจ้า 5% (ข้าวใหม่)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R12000",
+    "group_name": "ราคาขายส่งข้าวสารให้ร้านขายปลีก"
+  },
+  "R12007": {
+    "product_id": "R12007",
+    "product_name": "ข้าวสารเหนียว สันป่าตอง (เขี้ยวงู) 100%",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R12000",
+    "group_name": "ราคาขายส่งข้าวสารให้ร้านขายปลีก"
+  },
+  "R12008": {
+    "product_id": "R12008",
+    "product_name": "ข้าวสารเหนียว สันป่าตอง (เขี้ยวงู) 5%",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R12000",
+    "group_name": "ราคาขายส่งข้าวสารให้ร้านขายปลีก"
+  },
+  "R12009": {
+    "product_id": "R12009",
+    "product_name": "ข้าวสารเหนียว สันป่าตอง (เขี้ยวงู) 10% เมล็ดยาว",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R12000",
+    "group_name": "ราคาขายส่งข้าวสารให้ร้านขายปลีก"
+  },
+  "R12010": {
+    "product_id": "R12010",
+    "product_name": "ข้าวสารเหนียว สันป่าตอง (เขี้ยวงู) 10% เมล็ดสั้น",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "R12000",
+    "group_name": "ราคาขายส่งข้าวสารให้ร้านขายปลีก"
+  },
+  "W11001": {
+    "product_id": "W11001",
+    "product_name": "ลูกสุกรทั่วไป (นน. 12 กก./ตัว)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11002": {
+    "product_id": "W11002",
+    "product_name": "ลูกสุกรซีพี (นน. 16 กก./ตัว)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11003": {
+    "product_id": "W11003",
+    "product_name": "สุกรมีชีวิต ทั่วไป",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11004": {
+    "product_id": "W11004",
+    "product_name": "สุกรมีชีวิต ฟาร์ม",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11005": {
+    "product_id": "W11005",
+    "product_name": "สุกรชำแหละ ทั่วไป",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11006": {
+    "product_id": "W11006",
+    "product_name": "สุกรชำแหละ ฟาร์ม",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11007": {
+    "product_id": "W11007",
+    "product_name": "สุกรชำแหละ เนื้อสัน สันใน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11008": {
+    "product_id": "W11008",
+    "product_name": "สุกรชำแหละ เนื้อสัน สันนอก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11009": {
+    "product_id": "W11009",
+    "product_name": "สุกรชำแหละ เนื้อแดง สะโพก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11010": {
+    "product_id": "W11010",
+    "product_name": "สุกรชำแหละ เนื้อแดง ไหล่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11011": {
+    "product_id": "W11011",
+    "product_name": "สุกรชำแหละ เนื้อสามชั้น",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11012": {
+    "product_id": "W11012",
+    "product_name": "สุกรชำแหละ มันแข็ง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11013": {
+    "product_id": "W11013",
+    "product_name": "สุกรชำแหละ เศษมัน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11014": {
+    "product_id": "W11014",
+    "product_name": "สุกรชำแหละ มันเปลว",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11016": {
+    "product_id": "W11016",
+    "product_name": "ลูกไก่เนื้อ ทั่วไป",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11017": {
+    "product_id": "W11017",
+    "product_name": "ลูกไก่เนื้อ ซีพี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11018": {
+    "product_id": "W11018",
+    "product_name": "ไก่มีชีวิต (ทั่วไป)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11019": {
+    "product_id": "W11019",
+    "product_name": "ไก่มีชีวิต (ซี.พี.)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11020": {
+    "product_id": "W11020",
+    "product_name": "ไก่สดทั้งตัว (รวมเครื่องใน)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11042": {
+    "product_id": "W11042",
+    "product_name": "ไก่สดชำแหละ เนื้อสันใน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11043": {
+    "product_id": "W11043",
+    "product_name": "ไก่สดชำแหละ เนื้ออก (เนื้อล้วน)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11058": {
+    "product_id": "W11058",
+    "product_name": "ไก่สดชำแหละ เนื้ออก (ติดหนัง)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11044": {
+    "product_id": "W11044",
+    "product_name": "ไก่สดชำแหละ น่อง สะโพก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11056": {
+    "product_id": "W11056",
+    "product_name": "ไก่สดชำแหละ น่อง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11057": {
+    "product_id": "W11057",
+    "product_name": "ไก่สดชำแหละ สะโพก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11045": {
+    "product_id": "W11045",
+    "product_name": "ไก่สดชำแหละ ปีก ทั้งปีก (ปีกเต็ม)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11046": {
+    "product_id": "W11046",
+    "product_name": "ไก่สดชำแหละ ปีกบน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11047": {
+    "product_id": "W11047",
+    "product_name": "ไก่สดชำแหละ เครื่องใน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11048": {
+    "product_id": "W11048",
+    "product_name": "ไก่สดชำแหละ หนัง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11049": {
+    "product_id": "W11049",
+    "product_name": "ไก่สดชำแหละ แข้ง ขา ตีน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11050": {
+    "product_id": "W11050",
+    "product_name": "ไก่สดชำแหละ โครงกระดูก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11015": {
+    "product_id": "W11015",
+    "product_name": "ลูกไก่ไข่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11021": {
+    "product_id": "W11021",
+    "product_name": "ไข่เป็ด คละ ณ แหล่งผลิต",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11022": {
+    "product_id": "W11022",
+    "product_name": "ไข่เป็ด ใหญ่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11023": {
+    "product_id": "W11023",
+    "product_name": "ไข่เป็ด กลาง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11024": {
+    "product_id": "W11024",
+    "product_name": "ไข่เป็ด เล็ก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11025": {
+    "product_id": "W11025",
+    "product_name": "ไข่เป็ดเค็ม ใหญ่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11026": {
+    "product_id": "W11026",
+    "product_name": "ไข่เป็ดเค็ม กลาง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11027": {
+    "product_id": "W11027",
+    "product_name": "ไข่ไก่ คละ ณ แหล่งผลิต",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11028": {
+    "product_id": "W11028",
+    "product_name": "ไข่ไก่ เบอร์ 0",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11029": {
+    "product_id": "W11029",
+    "product_name": "ไข่ไก่ เบอร์ 1",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11030": {
+    "product_id": "W11030",
+    "product_name": "ไข่ไก่ เบอร์ 2",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11031": {
+    "product_id": "W11031",
+    "product_name": "ไข่ไก่ เบอร์ 3",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11032": {
+    "product_id": "W11032",
+    "product_name": "ไข่ไก่ เบอร์ 4",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11033": {
+    "product_id": "W11033",
+    "product_name": "ไข่ไก่ เบอร์ 5",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11034": {
+    "product_id": "W11034",
+    "product_name": "โคมีชีวิต",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11035": {
+    "product_id": "W11035",
+    "product_name": "เนื้อโค ติดกระดูก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11036": {
+    "product_id": "W11036",
+    "product_name": "เนื้อโค เลาะกระดูกขาหน้า",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11037": {
+    "product_id": "W11037",
+    "product_name": "เนื้อโค เลาะกระดูกขาหลัง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11051": {
+    "product_id": "W11051",
+    "product_name": "เนื้อโค สะโพก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11052": {
+    "product_id": "W11052",
+    "product_name": "เนื้อโค สันนอก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11053": {
+    "product_id": "W11053",
+    "product_name": "เนื้อโค สันใน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11054": {
+    "product_id": "W11054",
+    "product_name": "เนื้อโค ส่วนน่อง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11055": {
+    "product_id": "W11055",
+    "product_name": "เนื้อโค สามชั้น",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11038": {
+    "product_id": "W11038",
+    "product_name": "กระบือ มีชีวิต",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11039": {
+    "product_id": "W11039",
+    "product_name": "เนื้อกระบือ ติดกระดูก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11040": {
+    "product_id": "W11040",
+    "product_name": "เนื้อกระบือ เลาะกระดูกขาหน้า",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11041": {
+    "product_id": "W11041",
+    "product_name": "เนื้อกระบือ เลาะกระดูกขาหลัง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11059": {
+    "product_id": "W11059",
+    "product_name": "เป็ดสด (ทั้งตัว) ขนาดไซส์ S",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11060": {
+    "product_id": "W11060",
+    "product_name": "เป็ดสด (ทั้งสด) ขนาดไซส์ M-MM",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11061": {
+    "product_id": "W11061",
+    "product_name": "เป็ดสด (ทั้งตัว) ขนาดไซส์ L",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W11062": {
+    "product_id": "W11062",
+    "product_name": "เป็ดสด (ทั้งตัว) ขนาดไซส์ XL",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W11000",
+    "group_name": "เนื้อสัตว์"
+  },
+  "W12021": {
+    "product_id": "W12021",
+    "product_name": "ปลากระพงขาว (0.7-2 กก./ตัว)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12001": {
+    "product_id": "W12001",
+    "product_name": "กุ้งขาว (40 ตัว/กก.)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12002": {
+    "product_id": "W12002",
+    "product_name": "กุ้งขาว (50 ตัว/กก.)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12003": {
+    "product_id": "W12003",
+    "product_name": "กุ้งขาว (60 ตัว/กก.)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12004": {
+    "product_id": "W12004",
+    "product_name": "กุ้งขาว (70 ตัว/กก.)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12005": {
+    "product_id": "W12005",
+    "product_name": "กุ้งขาว (80 ตัว/กก.)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12006": {
+    "product_id": "W12006",
+    "product_name": "กุ้งแชบ๊วย (40-50 ตัว/กก.)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12007": {
+    "product_id": "W12007",
+    "product_name": "กุ้งเปลือกแข็ง (40-50 ตัว/กก.)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12008": {
+    "product_id": "W12008",
+    "product_name": "กุ้งก้ามกรามบ่อเลี้ยงไทย (ขนาดกลาง) 15-16 ตัว/กก.",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12009": {
+    "product_id": "W12009",
+    "product_name": "ปลาหมึกกล้วย คละ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12010": {
+    "product_id": "W12010",
+    "product_name": "ปลาหมึกกระดอง คละ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12011": {
+    "product_id": "W12011",
+    "product_name": "หอยแครง คละ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12012": {
+    "product_id": "W12012",
+    "product_name": "หอยลาย คละ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12013": {
+    "product_id": "W12013",
+    "product_name": "หอยแมลงภู่ คละ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12014": {
+    "product_id": "W12014",
+    "product_name": "ปลาทูสด (9-12 ตัว/กก.)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12015": {
+    "product_id": "W12015",
+    "product_name": "ปลาช่อน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12016": {
+    "product_id": "W12016",
+    "product_name": "ปลาดุก (พันธุ์บิ๊กอุย)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12017": {
+    "product_id": "W12017",
+    "product_name": "ปลานิล",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12018": {
+    "product_id": "W12018",
+    "product_name": "ปลาสวาย",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12019": {
+    "product_id": "W12019",
+    "product_name": "ปลาทับทิม",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W12020": {
+    "product_id": "W12020",
+    "product_name": "ปลาทูเข่ง (2-3 ตัว/เข่ง)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W12000",
+    "group_name": "สัตว์น้ำ"
+  },
+  "W13001": {
+    "product_id": "W13001",
+    "product_name": "ผักคะน้า",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13002": {
+    "product_id": "W13002",
+    "product_name": "ผักบุ้งจีน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13003": {
+    "product_id": "W13003",
+    "product_name": "ผักกวางตุ้ง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13004": {
+    "product_id": "W13004",
+    "product_name": "ผักกาดหอม",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13005": {
+    "product_id": "W13005",
+    "product_name": "ผักกาดขาว (ลุ้ย)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13006": {
+    "product_id": "W13006",
+    "product_name": "กะหล่ำปลี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13018": {
+    "product_id": "W13018",
+    "product_name": "ผักชี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13019": {
+    "product_id": "W13019",
+    "product_name": "ต้นหอม",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13022": {
+    "product_id": "W13022",
+    "product_name": "ขึ้นฉ่าย",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13008": {
+    "product_id": "W13008",
+    "product_name": "มะระจีน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13009": {
+    "product_id": "W13009",
+    "product_name": "มะเขือเทศสีดา",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13010": {
+    "product_id": "W13010",
+    "product_name": "มะเขือเทศผลใหญ่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13031": {
+    "product_id": "W13031",
+    "product_name": "มะละกอ พันธุ์แขกดำดำเนิน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13011": {
+    "product_id": "W13011",
+    "product_name": "มะเขือเจ้าพระยา",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13012": {
+    "product_id": "W13012",
+    "product_name": "ถั่วฝักยาว",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13013": {
+    "product_id": "W13013",
+    "product_name": "แตงกวา",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13014": {
+    "product_id": "W13014",
+    "product_name": "ฟักเขียว",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13020": {
+    "product_id": "W13020",
+    "product_name": "พริกสดชี้ฟ้า (แดง)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13021": {
+    "product_id": "W13021",
+    "product_name": "พริกขี้หนูจินดา (แดง)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13030": {
+    "product_id": "W13030",
+    "product_name": "พริกขี้หนูสวน (เม็ดกลาง)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13025": {
+    "product_id": "W13025",
+    "product_name": "มะนาว เบอร์ 1-2",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13026": {
+    "product_id": "W13026",
+    "product_name": "มะนาว เบอร์ 3-4",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13007": {
+    "product_id": "W13007",
+    "product_name": "กะหล่ำดอก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13015": {
+    "product_id": "W13015",
+    "product_name": "หัวผักกาด",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13029": {
+    "product_id": "W13029",
+    "product_name": "กระชายขาว",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13023": {
+    "product_id": "W13023",
+    "product_name": "ผักกะเฉด 1 กำ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13024": {
+    "product_id": "W13024",
+    "product_name": "ผักบุ้งไทย 10 กำ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13016": {
+    "product_id": "W13016",
+    "product_name": "หน่อไม้ฝรั่ง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13017": {
+    "product_id": "W13017",
+    "product_name": "ข้าวโพดฝักอ่อน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13027": {
+    "product_id": "W13027",
+    "product_name": "ขิงอ่อน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W13028": {
+    "product_id": "W13028",
+    "product_name": "ขิงแก่ คละ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W13000",
+    "group_name": "ผักสด"
+  },
+  "W14003": {
+    "product_id": "W14003",
+    "product_name": "ส้มเขียวหวาน สายน้ำผึ้ง เบอร์ 6",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14002": {
+    "product_id": "W14002",
+    "product_name": "ส้มเขียวหวาน สายน้ำผึ้ง เบอร์ 5",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14001": {
+    "product_id": "W14001",
+    "product_name": "ส้มเขียวหวาน สายน้ำผึ้ง เบอร์ 4",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14004": {
+    "product_id": "W14004",
+    "product_name": "ส้มโอ ขาวทองดี ใหญ่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14005": {
+    "product_id": "W14005",
+    "product_name": "ส้มโอ ขาวทองดี เล็ก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14035": {
+    "product_id": "W14035",
+    "product_name": "ส้มโอ ขาวน้ำผึ้ง ใหญ่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14036": {
+    "product_id": "W14036",
+    "product_name": "ส้มโอ ขาวน้ำผึ้ง เล็ก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14006": {
+    "product_id": "W14006",
+    "product_name": "มะละกอแขกดำ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14033": {
+    "product_id": "W14033",
+    "product_name": "มะละกอฮอลแลนด์",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14007": {
+    "product_id": "W14007",
+    "product_name": "แตงโม พันธุ์กินรี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14034": {
+    "product_id": "W14034",
+    "product_name": "กล้วยหอมทอง ใหญ่ (14 ผล)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14008": {
+    "product_id": "W14008",
+    "product_name": "กล้วยหอมทอง ใหญ่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14009": {
+    "product_id": "W14009",
+    "product_name": "กล้วยน้ำว้า",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14010": {
+    "product_id": "W14010",
+    "product_name": "กล้วยไข่ ใหญ่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14011": {
+    "product_id": "W14011",
+    "product_name": "กล้วยไข่ กลาง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14013": {
+    "product_id": "W14013",
+    "product_name": "ฝรั่งกิมจู คัด",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14012": {
+    "product_id": "W14012",
+    "product_name": "ฝรั่งกิมจู คละ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14014": {
+    "product_id": "W14014",
+    "product_name": "สับปะรด ศรีราชา เบอร์ 1",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14015": {
+    "product_id": "W14015",
+    "product_name": "สับปะรด ศรีราชา เบอร์ 2",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14016": {
+    "product_id": "W14016",
+    "product_name": "สับปะรด ศรีราชา เบอร์ 3",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14017": {
+    "product_id": "W14017",
+    "product_name": "องุ่นพันธุ์ไวท์มะละกา คัด",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14018": {
+    "product_id": "W14018",
+    "product_name": "องุ่นพันธุ์ไวท์มะละกา คละ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14019": {
+    "product_id": "W14019",
+    "product_name": "เงาะโรงเรียน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14020": {
+    "product_id": "W14020",
+    "product_name": "ทุเรียนชะนี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14021": {
+    "product_id": "W14021",
+    "product_name": "ทุเรียนหมอนทอง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14022": {
+    "product_id": "W14022",
+    "product_name": "มังคุด (ผิวมัน)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14023": {
+    "product_id": "W14023",
+    "product_name": "มังคุด (ผิวกระ)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14026": {
+    "product_id": "W14026",
+    "product_name": "มะม่วงเขียวเสวย เบอร์ 0",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14027": {
+    "product_id": "W14027",
+    "product_name": "มะม่วงเขียวเสวย เบอร์ 1",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14024": {
+    "product_id": "W14024",
+    "product_name": "มะม่วงน้ำดอกไม้ เบอร์ 0",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14025": {
+    "product_id": "W14025",
+    "product_name": "มะม่วงน้ำดอกไม้ เบอร์ 1",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14028": {
+    "product_id": "W14028",
+    "product_name": "ลิ้นจี่ พันธุ์ฮงฮวย",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14029": {
+    "product_id": "W14029",
+    "product_name": "ลิ้นจี่ พันธุ์จักรพรรดิ์",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14030": {
+    "product_id": "W14030",
+    "product_name": "ลองกอง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14031": {
+    "product_id": "W14031",
+    "product_name": "น้อยหน่า",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W14032": {
+    "product_id": "W14032",
+    "product_name": "ลำไย อีดอ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W14000",
+    "group_name": "ผลไม้"
+  },
+  "W15047": {
+    "product_id": "W15047",
+    "product_name": "หอมหัวใหญ่ (หอมภาคเหนือ) เบอร์ 0-1",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15048": {
+    "product_id": "W15048",
+    "product_name": "หอมหัวใหญ่ (หอมภาคเหนือ) เบอร์ 2",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15001": {
+    "product_id": "W15001",
+    "product_name": "กระเทียมแห้ง มัดจุก หัวใหญ่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15002": {
+    "product_id": "W15002",
+    "product_name": "กระเทียมแห้ง มัดจุก หัวกลาง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15003": {
+    "product_id": "W15003",
+    "product_name": "กระเทียมแห้ง มัดจุก หัวเล็ก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15004": {
+    "product_id": "W15004",
+    "product_name": "กระเทียมแห้ง ตัดจุก หัวใหญ่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15005": {
+    "product_id": "W15005",
+    "product_name": "กระเทียมแห้ง ตัดจุก หัวกลาง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15006": {
+    "product_id": "W15006",
+    "product_name": "กระเทียมแห้ง ตัดจุก หัวเล็ก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15007": {
+    "product_id": "W15007",
+    "product_name": "กระเทียมแห้ง แกะกลีบ กลีบใหญ่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15008": {
+    "product_id": "W15008",
+    "product_name": "กระเทียมแห้ง แกะกลีบ กลีบกลาง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15009": {
+    "product_id": "W15009",
+    "product_name": "กระเทียมแห้ง แกะกลีบ กลีบเล็ก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15043": {
+    "product_id": "W15043",
+    "product_name": "กระเทียมนำเข้า กระเทียมจีน เบอร์ใหญ่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15044": {
+    "product_id": "W15044",
+    "product_name": "กระเทียมนำเข้า กระเทียมจีน เบอร์กลาง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15045": {
+    "product_id": "W15045",
+    "product_name": "กระเทียมนำเข้า กระเทียมจีน เบอร์เล็ก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15046": {
+    "product_id": "W15046",
+    "product_name": "กระเทียมนำเข้า กระเทียมจีน แกะกลีบ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15010": {
+    "product_id": "W15010",
+    "product_name": "หอมแดงภาคเหนือ มัดจุก หัวใหญ่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15011": {
+    "product_id": "W15011",
+    "product_name": "หอมแดงภาคเหนือ มัดจุก หัวกลาง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15012": {
+    "product_id": "W15012",
+    "product_name": "หอมแดงภาคเหนือ มัดจุก หัวเล็ก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15013": {
+    "product_id": "W15013",
+    "product_name": "หอมแดงภาคเหนือ ตัดจุก หัวใหญ่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15014": {
+    "product_id": "W15014",
+    "product_name": "หอมแดงภาคเหนือ ตัดจุก หัวกลาง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15015": {
+    "product_id": "W15015",
+    "product_name": "หอมแดงภาคเหนือ ตัดจุก หัวเล็ก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15016": {
+    "product_id": "W15016",
+    "product_name": "หอมแดงศรีสะเกษ มัดจุก หัวใหญ่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15017": {
+    "product_id": "W15017",
+    "product_name": "หอมแดงศรีสะเกษ มัดจุก หัวกลาง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15018": {
+    "product_id": "W15018",
+    "product_name": "หอมแดงศรีสะเกษ มัดจุก หัวเล็ก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15019": {
+    "product_id": "W15019",
+    "product_name": "หอมแดงศรีสะเกษ ตัดจุก หัวใหญ่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15020": {
+    "product_id": "W15020",
+    "product_name": "หอมแดงศรีสะเกษ ตัดจุก หัวกลาง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15021": {
+    "product_id": "W15021",
+    "product_name": "หอมแดงศรีสะเกษ ตัดจุก หัวเล็ก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15022": {
+    "product_id": "W15022",
+    "product_name": "หอมหัวใหญ่ กาญจนบุรี เบอร์ 0-1",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15023": {
+    "product_id": "W15023",
+    "product_name": "หอมหัวใหญ่ กาญจนบุรี เบอร์ 2",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15024": {
+    "product_id": "W15024",
+    "product_name": "หอมหัวใหญ่ สันป่าตอง เบอร์ 0-1",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15025": {
+    "product_id": "W15025",
+    "product_name": "หอมหัวใหญ่ สันป่าตอง เบอร์ 2",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15026": {
+    "product_id": "W15026",
+    "product_name": "หอมหัวใหญ่ ฝาง เบอร์ 0-1",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15027": {
+    "product_id": "W15027",
+    "product_name": "หอมหัวใหญ่ ฝาง เบอร์ 2",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15028": {
+    "product_id": "W15028",
+    "product_name": "หอมหัวใหญ่ ห้องเย็น เบอร์ 0-1",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15029": {
+    "product_id": "W15029",
+    "product_name": "หอมหัวใหญ่ ห้องเย็น เบอร์ 2",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15030": {
+    "product_id": "W15030",
+    "product_name": "มันฝรั่ง เกรดโอ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15031": {
+    "product_id": "W15031",
+    "product_name": "มันฝรั่ง เกรดเอ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15032": {
+    "product_id": "W15032",
+    "product_name": "มันฝรั่ง เกรดบี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15033": {
+    "product_id": "W15033",
+    "product_name": "มะขามเปียก แกะเมล็ด",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15034": {
+    "product_id": "W15034",
+    "product_name": "มะขามเปียก ไม่แกะเมล็ด",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15035": {
+    "product_id": "W15035",
+    "product_name": "กระเจี๊ยบแห้ง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15036": {
+    "product_id": "W15036",
+    "product_name": "ลูกเดือย ทั้งเปลือก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15037": {
+    "product_id": "W15037",
+    "product_name": "ลูกเดือย กระเทาะเปลือก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15038": {
+    "product_id": "W15038",
+    "product_name": "พริกไทยขาว อย่างดี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15039": {
+    "product_id": "W15039",
+    "product_name": "พริกไทยดำ อย่างดี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15040": {
+    "product_id": "W15040",
+    "product_name": "พริกไทยดำ อย่างรอง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15041": {
+    "product_id": "W15041",
+    "product_name": "พริกขี้หนูแห้ง อย่างดี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W15042": {
+    "product_id": "W15042",
+    "product_name": "พริกแห้ง (ยอดสน) อย่างรอง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W15000",
+    "group_name": "พืชอาหาร"
+  },
+  "W16041": {
+    "product_id": "W16041",
+    "product_name": "ข้าวโพดเลี้ยงสัตว์ ฝัก ความชื้นไม่เกิน 30 % จ. เพชรบูรณ์",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16042": {
+    "product_id": "W16042",
+    "product_name": "ข้าวโพดเลี้ยงสัตว์ เมล็ด ความชื้นไม่เกิน 30% จ.เพชรบูรณ์",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16044": {
+    "product_id": "W16044",
+    "product_name": "แอลกอฮอล์จากมันเส้น ราคาประเทศจีน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16045": {
+    "product_id": "W16045",
+    "product_name": "ข้าวโพดโรงงานอาหารสัตว์ เมล็ดความชื้นไม่เกิน 14.5% (กทม./ปริมณฑล)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16031": {
+    "product_id": "W16031",
+    "product_name": "มันสำปะหลัง ราคาเกษตรกรขายได้ (นครราชสีมา แป้ง 25%)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16001": {
+    "product_id": "W16001",
+    "product_name": "มันเส้นราคาซื้อขายในประเทศ (ส่งมอบ ณ คลังสินค้าเขตจ.อยุธยา)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16002": {
+    "product_id": "W16002",
+    "product_name": "มันเส้น ราคาซื้อขายในประเทศ (ส่งมอบ ณ คลังสินค้าเขตจ.ชลบุรี)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16003": {
+    "product_id": "W16003",
+    "product_name": "แป้งมันประเภทสตาร์ช ชั้นพิเศษ ราคาซื้อขายในประเทศ (ส่งมอบณ คลังสินค้าเขต กรุงเทพและปริมณฑล)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16004": {
+    "product_id": "W16004",
+    "product_name": "มันเส้น ราคาส่งออก FOB",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16005": {
+    "product_id": "W16005",
+    "product_name": "มันเส้น ราคาส่งออก FOB (บาท/กก.)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16006": {
+    "product_id": "W16006",
+    "product_name": "แป้งมันประเภทสตาร์ช ชั้นพิเศษ ราคาส่งออก FOB",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16007": {
+    "product_id": "W16007",
+    "product_name": "แป้งมันประเภทสตาร์ช ชั้นพิเศษ ราคาส่งออก FOB (บาท/กก.)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16032": {
+    "product_id": "W16032",
+    "product_name": "มันเส้น บจ.สุวรรณเกลียวทอง อ.ท่าเรือ จ.อยุธยา (บาท/กก.)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16008": {
+    "product_id": "W16008",
+    "product_name": "มันอัดเม็ดแข็งราคาส่งออก FOB",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16009": {
+    "product_id": "W16009",
+    "product_name": "มันอัดเม็ดแข็งราคาส่งออก FOB (บาท/กก.)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16010": {
+    "product_id": "W16010",
+    "product_name": "แป้งมันซุปเปอร์ไฮเกรด",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16011": {
+    "product_id": "W16011",
+    "product_name": "แป้งมันละเอียด อย่างดี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16012": {
+    "product_id": "W16012",
+    "product_name": "แป้งมันละเอียด อย่างรอง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16013": {
+    "product_id": "W16013",
+    "product_name": "แป้งมันอย่างหยาบ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16014": {
+    "product_id": "W16014",
+    "product_name": "สาคูเม็ดเล็ก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16015": {
+    "product_id": "W16015",
+    "product_name": "สาคูเม็ดใหญ่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16040": {
+    "product_id": "W16040",
+    "product_name": "ข้าวโพดเลี้ยงสัตว์ ราคาส่งออก FOB",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16016": {
+    "product_id": "W16016",
+    "product_name": "ข้าวโพดเลี้ยงสัตว์ ไซโล",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16017": {
+    "product_id": "W16017",
+    "product_name": "ข้าวโพดเลี้ยงสัตว์ โรงงานอาหารสัตว์",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16035": {
+    "product_id": "W16035",
+    "product_name": "ข้าวโพดเลี้ยงสัตว์ เมล็ด ความชื้นไม่เกิน 14.5% จ.เพชรบูรณ์",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16037": {
+    "product_id": "W16037",
+    "product_name": "ข้าวโพดเลี้ยงสัตว์ ราคาซื้อขายล่วงหน้าตลาดชิคาโก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16038": {
+    "product_id": "W16038",
+    "product_name": "ข้าวสาลี ราคาซื้อขายล่วงหน้าตลาดชิคาโก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16039": {
+    "product_id": "W16039",
+    "product_name": "ข้าวบาร์เลย์ ราคาซื้อขายล่วงหน้าตลาด NCDEX, ออสเตรเลีย",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16018": {
+    "product_id": "W16018",
+    "product_name": "ข้าวฟ่าง ขาว",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16019": {
+    "product_id": "W16019",
+    "product_name": "ข้าวฟ่าง แดง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16020": {
+    "product_id": "W16020",
+    "product_name": "ถั่วเขียวผิวมัน อย่างดี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16021": {
+    "product_id": "W16021",
+    "product_name": "ถั่วเขียวผิวมัน อย่างรอง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16022": {
+    "product_id": "W16022",
+    "product_name": "ถั่วดำ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16033": {
+    "product_id": "W16033",
+    "product_name": "ยางแผ่นรมควัน ชั้น 3 ตลาดกลาง จ.สงขลา",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16030": {
+    "product_id": "W16030",
+    "product_name": "ยางแผ่นดิบรมควันชั้น 3 (ราคา FOB ชั้น 3 (แหลมฉบัง)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16023": {
+    "product_id": "W16023",
+    "product_name": "ยางแผ่นดิบชั้น 3 ราคาเกษตรกรขายได้ จ.สุราษฎร์ธานี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16024": {
+    "product_id": "W16024",
+    "product_name": "ยางแผ่นดิบชั้น 3 ราคาเกษตรกรขายได้ จ.สงขลา",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16025": {
+    "product_id": "W16025",
+    "product_name": "ยางแผ่นดิบชั้น 3 ราคาเกษตรกรขายได้ จ.นครศรีธรรมราช",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16026": {
+    "product_id": "W16026",
+    "product_name": "ยางแผ่นดิบชั้น 3 ราคาตลาดกลาง จ.สุราษฎร์ธานี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16027": {
+    "product_id": "W16027",
+    "product_name": "ยางแผ่นดิบชั้น 3 ราคาตลาดกลาง จ.สงขลา",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16028": {
+    "product_id": "W16028",
+    "product_name": "ยางแผ่นดิบชั้น 3 ราคาตลาดกลาง จ.นครศรีธรรมราช",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16029": {
+    "product_id": "W16029",
+    "product_name": "เศษยาง 100% จ.สงขลา",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16036": {
+    "product_id": "W16036",
+    "product_name": "น้ำยางสด ราคากลางเปิดตลาด",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W16034": {
+    "product_id": "W16034",
+    "product_name": "ยางก้อนถ้วย 100% ราคากลางเปิดตลาด",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W16000",
+    "group_name": "พืชไร่"
+  },
+  "W17015": {
+    "product_id": "W17015",
+    "product_name": "ปลาป่นเกรดกุ้ง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W17000",
+    "group_name": "อาหารสัตว์และวัตถุดิบอาหารสัตว์"
+  },
+  "W17001": {
+    "product_id": "W17001",
+    "product_name": "ปลาป่นโปรตีนร้อยละ 60 ขึ้นไป กลิ่นเบอร์ 1",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W17000",
+    "group_name": "อาหารสัตว์และวัตถุดิบอาหารสัตว์"
+  },
+  "W17002": {
+    "product_id": "W17002",
+    "product_name": "ปลาป่นโปรตีนร้อยละ 60 ลงมา กลิ่นเบอร์ 1",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W17000",
+    "group_name": "อาหารสัตว์และวัตถุดิบอาหารสัตว์"
+  },
+  "W17003": {
+    "product_id": "W17003",
+    "product_name": "ปลาป่นโปรตีนร้อยละ 60 ขึ้นไป กลิ่นเบอร์ 2",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W17000",
+    "group_name": "อาหารสัตว์และวัตถุดิบอาหารสัตว์"
+  },
+  "W17004": {
+    "product_id": "W17004",
+    "product_name": "ปลาป่นโปรตีนร้อยละ 60 ลงมา กลิ่นเบอร์ 2",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W17000",
+    "group_name": "อาหารสัตว์และวัตถุดิบอาหารสัตว์"
+  },
+  "W17005": {
+    "product_id": "W17005",
+    "product_name": "ปลาป่นโปรตีนร้อยละ 60 ขึ้นไป กลิ่นเบอร์ 3",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W17000",
+    "group_name": "อาหารสัตว์และวัตถุดิบอาหารสัตว์"
+  },
+  "W17006": {
+    "product_id": "W17006",
+    "product_name": "ปลาป่นโปรตีนร้อยละ 60 ลงมา กลิ่นเบอร์ 3",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W17000",
+    "group_name": "อาหารสัตว์และวัตถุดิบอาหารสัตว์"
+  },
+  "W17007": {
+    "product_id": "W17007",
+    "product_name": "หัวปลาโปรตีนร้อยละ 45 ขึ้นไป",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W17000",
+    "group_name": "อาหารสัตว์และวัตถุดิบอาหารสัตว์"
+  },
+  "W17008": {
+    "product_id": "W17008",
+    "product_name": "หัวปลาโปรตีนร้อยละ 55 ขึ้นไป",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W17000",
+    "group_name": "อาหารสัตว์และวัตถุดิบอาหารสัตว์"
+  },
+  "W17009": {
+    "product_id": "W17009",
+    "product_name": "หัวปลาโปรตีนร้อยละ 55 ลงมา",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W17000",
+    "group_name": "อาหารสัตว์และวัตถุดิบอาหารสัตว์"
+  },
+  "W17010": {
+    "product_id": "W17010",
+    "product_name": "ปลาขาย โปรตีนร้อยละ 60",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W17000",
+    "group_name": "อาหารสัตว์และวัตถุดิบอาหารสัตว์"
+  },
+  "W17011": {
+    "product_id": "W17011",
+    "product_name": "กากถั่วเหลืองนำเข้า โปรตีนร้อยละ 42-45",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W17000",
+    "group_name": "อาหารสัตว์และวัตถุดิบอาหารสัตว์"
+  },
+  "W17012": {
+    "product_id": "W17012",
+    "product_name": "กากถั่วเหลืองนำเข้า โปรตีนร้อยละ 47",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W17000",
+    "group_name": "อาหารสัตว์และวัตถุดิบอาหารสัตว์"
+  },
+  "W17013": {
+    "product_id": "W17013",
+    "product_name": "กากถั่วเหลืองผลิตในประเทศ (เมล็ดนำเข้า)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W17000",
+    "group_name": "อาหารสัตว์และวัตถุดิบอาหารสัตว์"
+  },
+  "W17014": {
+    "product_id": "W17014",
+    "product_name": "กากถั่วเหลืองผลิตในประเทศ (เมล็ดในประเทศ)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W17000",
+    "group_name": "อาหารสัตว์และวัตถุดิบอาหารสัตว์"
+  },
+  "W18106": {
+    "product_id": "W18106",
+    "product_name": " น้ำมันปาล์มสำเร็จรูป บรรจุขวด 1 ลิตร (12 ขวด/หีบ) ราคาขายส่ง โรงงานกลั่นส่งมอบถึงยี่ปั๊ว บาท/หีบ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18107": {
+    "product_id": "W18107",
+    "product_name": "น้ำมันทานตะวันสำเร็จรูป บรรจุขวด (12 ขวด/หีบ) ตรากุ๊ก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18108": {
+    "product_id": "W18108",
+    "product_name": "น้ำมันทานตะวันสำเร็จรูป บรรจุขวด (12 ขวด/หีบ) ตราองุ่น",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18086": {
+    "product_id": "W18086",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (18%)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18088": {
+    "product_id": "W18088",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (18%) จ.สุราษฎร์ธานี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18087": {
+    "product_id": "W18087",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (18%) จ.กระบี่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18089": {
+    "product_id": "W18089",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (18%) จ.ชุมพร",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18095": {
+    "product_id": "W18095",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (18%) จ.นครศรีธรรมราช",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18096": {
+    "product_id": "W18096",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (18%) จ.พังงา",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18090": {
+    "product_id": "W18090",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (18%) จ.ตรัง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18091": {
+    "product_id": "W18091",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (18%) จ.สตูล",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18104": {
+    "product_id": "W18104",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (18%) จ.ปัตตานี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18092": {
+    "product_id": "W18092",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (18%) จ.ชลบุรี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18019": {
+    "product_id": "W18019",
+    "product_name": "ผลปาล์มร่วง จ. ชุมพร",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18105": {
+    "product_id": "W18105",
+    "product_name": "เมล็ดในปาล์ม กะเทาะเปลือก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18020": {
+    "product_id": "W18020",
+    "product_name": "น้ำมันปาล์มดิบ (ราคาซื้อขายทั่วไปส่งมอบถึงผู้ซื้อ) เกรด A (น้ำมันจากเปลือก)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18021": {
+    "product_id": "W18021",
+    "product_name": "น้ำมันปาล์มดิบ (ราคาซื้อขายทั่วไปส่งมอบถึงผู้ซื้อ) เกรด B (น้ำมันรวม)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18022": {
+    "product_id": "W18022",
+    "product_name": "น้ำมันปาล์มดิบ น้ำมันเมล็ดในปาล์มดิบ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18023": {
+    "product_id": "W18023",
+    "product_name": "น้ำมันปาล์มกึ่งบริสุทธิ์ (ปาล์มออยล์)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18024": {
+    "product_id": "W18024",
+    "product_name": "น้ำมันปาล์มบริสุทธิ์ โอลีอีน (ราคาซื้อขายทั่วไปส่งมอบถึงผู้ซื้อ)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18025": {
+    "product_id": "W18025",
+    "product_name": "น้ำมันปาล์มบริสุทธิ์ สเตอรีน (ราคาซื้อขายทั่วไปส่งมอบถึงผู้ซื้อ)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18026": {
+    "product_id": "W18026",
+    "product_name": "น้ำมันปาล์มสำเร็จรูป (ราคารวม VAT โรงกลั่นส่งมอบถึงยี่ปั๊ว) บรรจุปีบ 13.75 ลิตร (12.50 กก.)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18027": {
+    "product_id": "W18027",
+    "product_name": "น้ำมันปาล์มสำเร็จรูป (ราคารวม VAT โรงกลั่นส่งมอบถึงยี่ปั๊ว) บรรจุปีบ 13.75 ลิตร (12.50 กก.) ตรามรกต",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18028": {
+    "product_id": "W18028",
+    "product_name": "น้ำมันปาล์มสำเร็จรูป (ราคารวม VAT โรงกลั่นส่งมอบถึงยี่ปั๊ว) บรรจุปีบ 13.75 ลิตร (12.50 กก.) ตราหยก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18029": {
+    "product_id": "W18029",
+    "product_name": "น้ำมันปาล์มสำเร็จรูป (ราคารวม VAT โรงกลั่นส่งมอบถึงยี่ปั๊ว) บรรจุปีบ 13.75 ลิตร (12.50 กก.) ตราโอลีน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18030": {
+    "product_id": "W18030",
+    "product_name": "น้ำมันปาล์มสำเร็จรูป (ราคารวม VAT โรงกลั่นส่งมอบถึงยี่ปั๊ว) บรรจุปีบ 13.75 ลิตร (12.50 กก.) ตราเกสร ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18093": {
+    "product_id": "W18093",
+    "product_name": "น้ำมันปาล์มสำเร็จรูป (ราคา VAT โรงกลั่นส่งมอบถึงยี่ปั๊ว) บรรจุปี๊บ 13.75 ลิตร (12.50 กก.) ตราทับทิม",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18031": {
+    "product_id": "W18031",
+    "product_name": "น้ำมันปาล์มสำเร็จรูป บรรจุขวด 1 ลิตร ราคาขายส่ง โรงงานกลั่นส่งมอบถึงยี่ปั๊ว",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18032": {
+    "product_id": "W18032",
+    "product_name": "น้ำมันปาล์มสำเร็จรูป บรรจุขวด 1 ลิตร (12 ขวด/หีบ) ตรามรกต",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18033": {
+    "product_id": "W18033",
+    "product_name": "น้ำมันปาล์มสำเร็จรูป บรรจุขวด 1 ลิตร (12 ขวด/หีบ) ตราหยก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18034": {
+    "product_id": "W18034",
+    "product_name": "น้ำมันปาล์มสำเร็จรูป บรรจุขวด 1 ลิตร (12 ขวด/หีบ) ตราโอลีน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18035": {
+    "product_id": "W18035",
+    "product_name": "น้ำมันปาล์มสำเร็จรูป บรรจุขวด 1 ลิตร (12 ขวด/หีบ) ตราเกสร",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18094": {
+    "product_id": "W18094",
+    "product_name": "น้ำมันปาล์มสำเร็จรูป บรรจุขวด 1 ลิตร (12 ขวด/หีบ) ตราทับทิม",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18036": {
+    "product_id": "W18036",
+    "product_name": "น้ำมันปาล์มดิบ (Crude Palm Oil) ตลาดมาเลเซีย",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18037": {
+    "product_id": "W18037",
+    "product_name": "น้ำมันปาล์มดิบ (Crude Palm Oil) ตลาดมาเลเซีย",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18038": {
+    "product_id": "W18038",
+    "product_name": "น้ำมันกึ่งบริสุทธิ์ (RBD Palm Oil) ตลาดมาเลเซีย",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18039": {
+    "product_id": "W18039",
+    "product_name": "น้ำมันกึ่งบริสุทธิ์ (RBD Palm Oil) ตลาดมาเลเซีย",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18040": {
+    "product_id": "W18040",
+    "product_name": "น้ำมันบริสุทธิ์ (RBD Palm Olein) ตลาดมาเลเซีย",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18041": {
+    "product_id": "W18041",
+    "product_name": "น้ำมันบริสุทธิ์ (RBD Palm Olein) ตลาดมาเลเซีย",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18042": {
+    "product_id": "W18042",
+    "product_name": "สเตียรีนบริสุทธิ์ (RBD Palm Stearin) ตลาดมาเลเซีย",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18043": {
+    "product_id": "W18043",
+    "product_name": "สเตียรีนบริสุทธิ์ (RBD Palm Stearin) ตลาดมาเลเซีย",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18001": {
+    "product_id": "W18001",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน คละ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18003": {
+    "product_id": "W18003",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน คละ จ.สุราษฏร์ธานี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18002": {
+    "product_id": "W18002",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน คละ จ.กระบี่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18004": {
+    "product_id": "W18004",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน คละ จ.ชุมพร",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18005": {
+    "product_id": "W18005",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน คละ จ.ตรัง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18006": {
+    "product_id": "W18006",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน คละ จ.สตูล",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18083": {
+    "product_id": "W18083",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน คละ จ.ชลบุรี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18007": {
+    "product_id": "W18007",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (15%)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18009": {
+    "product_id": "W18009",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (15%) จ.สุราษฏร์ธานี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18008": {
+    "product_id": "W18008",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (15%) จ.กระบี่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18010": {
+    "product_id": "W18010",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (15%) จ.ชุมพร",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18011": {
+    "product_id": "W18011",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (15%) จ.ตรัง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18012": {
+    "product_id": "W18012",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (15%) จ.สตูล",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18081": {
+    "product_id": "W18081",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน 15% จ.ชลบุรี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18013": {
+    "product_id": "W18013",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (17%)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18015": {
+    "product_id": "W18015",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (17%) จ.สุราษฏร์ธานี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18014": {
+    "product_id": "W18014",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (17%) จ.กระบี่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18016": {
+    "product_id": "W18016",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (17%) จ.ชุมพร",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18017": {
+    "product_id": "W18017",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (17%) จ.ตรัง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18018": {
+    "product_id": "W18018",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน (17%) จ.สตูล",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18082": {
+    "product_id": "W18082",
+    "product_name": "ผลปาล์มทะลาย คุณภาพเปอร์เซ็นต์น้ำมัน 17% จ.ชลบุรี",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18044": {
+    "product_id": "W18044",
+    "product_name": "มะพร้าวทับสะแก ผลใหญ่ (ปอกเปลือก)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18045": {
+    "product_id": "W18045",
+    "product_name": "เนื้อมะพร้าวแห้ง 90%",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18046": {
+    "product_id": "W18046",
+    "product_name": "เนื้อมะพร้าวขาว รับซื้อหน้าโรงงาน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18047": {
+    "product_id": "W18047",
+    "product_name": "น้ำมันมะพร้าวดิบ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18048": {
+    "product_id": "W18048",
+    "product_name": "น้ำมันมะพร้าวดิบ ราคาซื้อขายทั่วไปส่งมอบถึงผู้ซื้อ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18049": {
+    "product_id": "W18049",
+    "product_name": "น้ำมันมะพร้าวสำเร็จรูป บรรจุปีบ 13.75 ลิตร (12.50 กก.) (ราคาที่โรงงานกลั่นขายส่ง ส่งมอบถึงยี่ปั๊ว)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18050": {
+    "product_id": "W18050",
+    "product_name": "น้ำมันมะพร้าวสำเร็จรูป บรรจุปีบ 13.75 ลิตร (12.50 กก.) ตราผักกาด",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18051": {
+    "product_id": "W18051",
+    "product_name": "น้ำมันมะพร้าวสำเร็จรูป บรรจุปีบ 13.75 ลิตร (12.50 กก.) ตราไพ่ป๊อก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18052": {
+    "product_id": "W18052",
+    "product_name": "น้ำมันมะพร้าวสำเร็จรูป บรรจุปีบ 13.75 ลิตร (12.50 กก.) ตราดอกไม้",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18101": {
+    "product_id": "W18101",
+    "product_name": "น้ำมันมะพร้าวสำเร็จรูป บรรจุขวด 1 ลิตร ตราไทยเพียว",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18102": {
+    "product_id": "W18102",
+    "product_name": "น้ำมันมะพร้าวสำเร็จรูป บรรจุขวด 1 ลิตร ตราเนเชอเรล",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18103": {
+    "product_id": "W18103",
+    "product_name": "น้ำมันมะพร้าวสำเร็จรูป บรรจุขวด 1 ลิตร ตรารอยไทย",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18053": {
+    "product_id": "W18053",
+    "product_name": "เมล็ดถั่วเหลือง เกรดแปรรูป-ผลิตภัณฑ์อาหาร",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18054": {
+    "product_id": "W18054",
+    "product_name": "เมล็ดถั่วเหลือง เกรดผลิตอาหารสัตว์",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18055": {
+    "product_id": "W18055",
+    "product_name": "เมล็ดถั่วเหลือง เกรดสกัดน้ำมัน (สกัดน้ำมัน ความชื้นไม่เกิน 13%)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18056": {
+    "product_id": "W18056",
+    "product_name": "น้ำมันถั่วเหลืองบริสุทธิ์ บรรจุถัง 200 ลิตร",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18057": {
+    "product_id": "W18057",
+    "product_name": "น้ำมันถั่วเหลืองบริสุทธิ์ บรรจุปี๊บ 13.75 ลิตร (12.50 กก.)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18058": {
+    "product_id": "W18058",
+    "product_name": "น้ำมันถั่วเหลืองบริสุทธิ์ บรรจุขวด 1 ลิตร หน้าโรงงาน ตราองุ่น",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18059": {
+    "product_id": "W18059",
+    "product_name": "น้ำมันถั่วเหลืองบริสุทธิ์ บรรจุขวด 1 ลิตร หน้าโรงงาน ตรากุ๊ก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18060": {
+    "product_id": "W18060",
+    "product_name": "น้ำมันถั่วเหลืองบริสุทธิ์ บรรจุขวด 1 ลิตร ตลาดกรุงเทพฯ ตราองุ่น",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18061": {
+    "product_id": "W18061",
+    "product_name": "น้ำมันถั่วเหลืองบริสุทธิ์ บรรจุขวด 1 ลิตร ตลาดกรุงเทพฯ ตรากุ๊ก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18062": {
+    "product_id": "W18062",
+    "product_name": "น้ำมันรำข้าวบริสุทธิ์ บรรจุปี๊บ 13.75 ลิตร (12.50 กก.)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18063": {
+    "product_id": "W18063",
+    "product_name": "น้ำมันรำข้าวบริสุทธิ์ บรรจุขวด 1 ลิตร ตราคิง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18064": {
+    "product_id": "W18064",
+    "product_name": "น้ำมันรำข้าวบริสุทธิ์ บรรจุขวด 1 ลิตร ตราชิม",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18085": {
+    "product_id": "W18085",
+    "product_name": "น้ำมันรำข้าวบริสุทธิ์ บรรจุขวด 1 ลิตร ตราอโรซ่า",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18099": {
+    "product_id": "W18099",
+    "product_name": "น้ำมันรำข้าวบริสุทธิ์ บรรจุแกลลอน 5 ลิตร ตราคิง",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18065": {
+    "product_id": "W18065",
+    "product_name": "ถั่วลิสงกะเทาะเปลือก คัดพิเศษ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18066": {
+    "product_id": "W18066",
+    "product_name": "ถั่วลิสงกะเทาะเปลือก คัดธรรมดา",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18067": {
+    "product_id": "W18067",
+    "product_name": "ถั่วลิสงกะเทาะเปลือก คละ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18068": {
+    "product_id": "W18068",
+    "product_name": "น้ำมันถั่วลิสงบริสุทธิ์ บรรจุปี๊ป 15 กก.",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18069": {
+    "product_id": "W18069",
+    "product_name": "น้ำมันถั่วลิสงบริสุทธิ์ บรรจุปี๊ป 13.75 ลิตร (12.50 กก.)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18097": {
+    "product_id": "W18097",
+    "product_name": "น้ำมันถั่วเหลืองบริสุทธิ์ บรรจุปี๊บ 13.75 ลิตร (12.50 กก.) ตราองุ่น",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18098": {
+    "product_id": "W18098",
+    "product_name": "น้ำมันถั่วเหลืองบริสุทธิ์บรรจุปี๊บ 13.75 ลิตร (12.50 กก.) ตรากุ๊ก",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18071": {
+    "product_id": "W18071",
+    "product_name": "น้ำมันถั่วลิสงบริสุทธิ์ บรรจุขวด 1 ลิตร ตรากวางบิน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18070": {
+    "product_id": "W18070",
+    "product_name": "น้ำมันถั่วลิสงบริสุทธิ์ บรรจุขวด 2 ลิตร",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18100": {
+    "product_id": "W18100",
+    "product_name": "น้ำมันถั่วลิสงบริสุทธิ์ บรรจุขวด 5 ลิตร",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18072": {
+    "product_id": "W18072",
+    "product_name": "เมล็ดทานตะวัน ราคารับซื้อ ณ แหล่งผลิต",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18073": {
+    "product_id": "W18073",
+    "product_name": "เมล็ดทานตะวัน ที่โรงงานหีบ รับซื้อหน้าโรงงาน",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18074": {
+    "product_id": "W18074",
+    "product_name": "น้ำมันทานตะวันสำเร็จรูป (ราคาที่โรงงานกลั่น ขายส่งถึงยี่ปั๊ว)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18075": {
+    "product_id": "W18075",
+    "product_name": "น้ำมันทานตะวันสำเร็จรูป บรรจุขวด (1 ลิตร) ตรากุ๊ก (น้ำมันในประเทศ)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18076": {
+    "product_id": "W18076",
+    "product_name": "น้ำมันทานตะวันสำเร็จรูป บรรจุขวด (1 ลิตร) ตราชิม (น้ำมันในประเทศ)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18084": {
+    "product_id": "W18084",
+    "product_name": "น้ำมันทานตะวันสำเร็จรูป บรรจุขวด (1 ลิตร) ตราองุ่น (น้ำมันในประเทศ)",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18077": {
+    "product_id": "W18077",
+    "product_name": "งาเกษตร",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18078": {
+    "product_id": "W18078",
+    "product_name": "งาดำ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18079": {
+    "product_id": "W18079",
+    "product_name": "งาขาว เมล็ดใหญ่",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  },
+  "W18080": {
+    "product_id": "W18080",
+    "product_name": "ละหุ่ง (กะเทาะเปลือก) ",
+    "type_id": 2,
+    "category_name": "ขายส่ง",
+    "group_id": "W18000",
+    "group_name": "พืชน้ำมันและน้ำมันพืช"
+  }
+}

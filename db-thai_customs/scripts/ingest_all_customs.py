@@ -145,8 +145,23 @@ def process_file(cfg: dict, csv_file: str, conn):
 
     # Step 1: Upsert Dimensions
     if dataset_id in ("ctm_06_11", "ctm_06_12") and dim_records:
-        # HS Dimension
-        load_dimension_records("dim_hs_code", list(dim_records), ["hs_code", "stat_code", "unit_code", "desc_th", "desc_en"], ["desc_th", "desc_en"], conn=conn)
+        # Format HS Dimension records for the 4-level dim_hs_code hierarchy schema
+        hs_dict = {}
+        for r in dim_records:
+            hs, stat, unit, desc_th, desc_en = r
+            hs11 = f"{hs}{stat}"
+            if hs11 not in hs_dict or (desc_th and not hs_dict[hs11][5]):
+                hs4 = hs[:4]
+                hs2 = hs[:2]
+                hs_dict[hs11] = (hs11, hs, stat, hs4, hs2, desc_th, desc_en, desc_th, desc_en, unit)
+        formatted_hs = list(hs_dict.values())
+        load_dimension_records(
+            "dim_hs_code",
+            formatted_hs,
+            ["hs_11_code", "hs_8_code", "stat_code", "hs_4_code", "hs_2_code", "desc_11_th", "desc_11_en", "desc_8_th", "desc_8_en", "unit_code"],
+            ["desc_11_th", "desc_11_en", "unit_code"],
+            conn=conn
+        )
     elif dataset_id in ("ctm_06_17", "ctm_06_18") and dim_records:
         load_dimension_records("dim_transport_type", list(dim_records), ["transport_code", "transport_name_th"], ["transport_name_th"], conn=conn)
     elif dataset_id in ("ctm_06_15", "ctm_06_16") and dim_records:

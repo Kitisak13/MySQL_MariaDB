@@ -43,3 +43,8 @@ Thumbs.db
 *.err
 *.pid
 *.dmp
+checkpoint*.json
+**/checkpoint*.json
+failed*.json
+**/failed*.json
+

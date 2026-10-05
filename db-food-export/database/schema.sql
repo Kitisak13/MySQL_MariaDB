@@ -101,3 +101,76 @@ CREATE TABLE IF NOT EXISTS `data_ingestion_log` (
     `ingested_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     INDEX `idx_dataset` (`dataset_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Audit: Ingestion History and Pipeline Observability';
+
+-- 5. Dynamic Scope & Configuration Table (Target HS Codes for BI Analytics)
+CREATE TABLE IF NOT EXISTS `cfg_target_hs_codes` (
+    `hs_11_code` CHAR(11) NOT NULL COMMENT '11-digit HS statistical code (FK)',
+    `group_key` VARCHAR(50) NOT NULL COMMENT 'System key (e.g. tapioca, coconut_juice)',
+    `group_name` VARCHAR(100) NOT NULL COMMENT 'Business Display Group Name (e.g. Tapioca products, Coconut juice products)',
+    `is_active` TINYINT(1) NOT NULL DEFAULT 1 COMMENT '1 = Active in Report, 0 = Inactive',
+    `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (`hs_11_code`, `group_key`),
+    INDEX `idx_group_key_active` (`group_key`, `is_active`),
+    INDEX `idx_hs_code_active` (`hs_11_code`, `is_active`),
+    CONSTRAINT `fk_cfg_hs11` FOREIGN KEY (`hs_11_code`)
+        REFERENCES `dim_hs11_code` (`hs_11_code`)
+        ON DELETE RESTRICT ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Config: Target HS Codes and Analytical Product Grouping for BI Reports';
+
+-- 6. Analytical Views for BI & Power Pivot Integration (Star Schema Lean Facts)
+
+-- 6.1 View: Tapioca Products Group
+CREATE OR REPLACE VIEW `_tapioca_group` AS
+SELECT 
+    f.export_date AS Date,
+    f.export_year AS year,
+    f.export_month AS month,
+    f.country_code,
+    f.hs_11_code,
+    cfg.group_name,
+    f.quantity,
+    f.value_usd,
+    f.value_thb AS value_baht,
+    f.unit_code
+FROM fact_food_export f
+INNER JOIN cfg_target_hs_codes cfg 
+    ON f.hs_11_code = cfg.hs_11_code
+WHERE cfg.group_key = 'tapioca' AND cfg.is_active = 1;
+
+-- 6.2 View: Coconut Juice Products Group
+CREATE OR REPLACE VIEW `_coconut_juice_group` AS
+SELECT 
+    f.export_date AS Date,
+    f.export_year AS year,
+    f.export_month AS month,
+    f.country_code,
+    f.hs_11_code,
+    cfg.group_name,
+    f.quantity,
+    f.value_usd,
+    f.value_thb AS value_baht,
+    f.unit_code
+FROM fact_food_export f
+INNER JOIN cfg_target_hs_codes cfg 
+    ON f.hs_11_code = cfg.hs_11_code
+WHERE cfg.group_key = 'coconut_juice' AND cfg.is_active = 1;
+
+-- 6.3 View: Consolidated Target Groups (All Active Target Groups)
+CREATE OR REPLACE VIEW `_all_target_groups` AS
+SELECT 
+    f.export_date AS Date,
+    f.export_year AS year,
+    f.export_month AS month,
+    f.country_code,
+    f.hs_11_code,
+    cfg.group_name,
+    f.quantity,
+    f.value_usd,
+    f.value_thb AS value_baht,
+    f.unit_code
+FROM fact_food_export f
+INNER JOIN cfg_target_hs_codes cfg 
+    ON f.hs_11_code = cfg.hs_11_code
+WHERE cfg.is_active = 1;
+

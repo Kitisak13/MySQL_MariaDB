@@ -97,3 +97,19 @@ erDiagram
 
 ### 4. `data_ingestion_log` (Pipeline Audit & Observability)
 - **Primary Key:** `id`
+
+### 5. `cfg_target_hs_codes` (Dynamic Filter Scope & Product Grouping)
+- **Primary Key:** (`hs_11_code`, `group_key`)
+- **Foreign Key:** `hs_11_code` -> `dim_hs11_code(hs_11_code)`
+- **Columns:**
+  - `hs_11_code` (CHAR(11)): 11-digit statistical code
+  - `group_key` (VARCHAR(50)): Internal identifier (e.g. `tapioca`, `coconut_juice`)
+  - `group_name` (VARCHAR(100)): Business display name (e.g. `Tapioca products`, `Coconut juice products`)
+  - `is_active` (TINYINT(1)): 1 = Active, 0 = Inactive
+  - `created_at`, `updated_at`: Audit timestamps
+
+### 6. Analytical Views for BI / Power Pivot Integration
+- **`_tapioca_group`**: Filtered fact records for Tapioca products group (`group_key = 'tapioca'`).
+- **`_coconut_juice_group`**: Filtered fact records for Coconut juice products group (`group_key = 'coconut_juice'`).
+- **`_all_target_groups`**: Consolidated view containing all active target groups with `group_name` exposed for Slicer/Filter in Power Pivot.
+
